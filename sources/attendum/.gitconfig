@@ -5,8 +5,8 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore-global
-[github]
-    user = calamitizer
+[credential "https://github.com"]
+    username = calamitizer
 [alias]
     a = add
     aa = add --all
