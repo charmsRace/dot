@@ -107,10 +107,8 @@ fi
 
 # Run external definition files
 # (e.g. aliases, symlinks)
-
-if [ -f ~/.bash_defs/.def_index.sh ]; then
-    . ~/.bash_defs/.def_index.sh
-fi
+DEF_INDEX=~/.bash_defs/def-index.sh
+test -f $DEF_INDEX && . $DEF_INDEX
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
