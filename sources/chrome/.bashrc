@@ -31,3 +31,5 @@ alias akasha="sudo startxfce4 -n akasha -X xorg"
 alias akasha@cli="sudo enter-chroot -n akasha"
 alias akasha@win="sudo startxfce4 -n akasha -X xiwi"
 alias akasha@tab="sudo startxfce4 -n akasha -X xiwi-tab"
+
+alias attendum="sudo startcli -n attendum"
