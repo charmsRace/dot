@@ -5,6 +5,8 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore-global
+[github]
+    user = calamitizer
 [alias]
     a = add
     aa = add --all
@@ -16,6 +18,8 @@
     dt = difftool
     ########
     f = fetch
+    ########
+    h = help
     ########
     ls = ls-files
     ########
