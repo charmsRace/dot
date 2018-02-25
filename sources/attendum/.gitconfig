@@ -1,0 +1,41 @@
+[user]
+    name = Alex Ruble
+    username = Calamitizer
+    email = jaruble@ncsu.edu
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore-global
+[alias]
+    a = add
+    aa = add --all
+    ########
+    c = commit
+    cm = commit -m
+    ########
+    d = diff
+    dt = difftool
+    ########
+    f = fetch
+    ########
+    ls = ls-files
+    ########
+    m = merge
+    ########
+    o = checkout
+    ########
+    ps = push
+    pso = push origin
+    psom = push origin master
+    ########
+    pl = pull
+    plo = pull origin
+    plom = pull origin master
+    plu = pull upstream
+    plum = pull upstream master
+    ########
+    r = remote
+    ra = remote add
+    rr = remote rm
+    rv = remote -v
+    ########
+    s = status
