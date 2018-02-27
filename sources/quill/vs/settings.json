@@ -1,5 +1,5 @@
 {
-    // 1. Editor
+    // Editor
     "editor.acceptSuggestionOnEnter": "off",
     "editor.autoClosingBrackets": false,
     "editor.cursorBlinking": "phase",
@@ -21,22 +21,25 @@
     "editor.tabSize": 4,
     "editor.wordWrap": "bounded",
 
-    // 2. Source Control
+    // Source Control
     "scm.alwaysShowProviders": true,
 
-    // 3. Workbench
+    // Workbench
     "workbench.colorTheme": "Monokai Dimmed",
     "workbench.commandPalette.history": 500,
     "workbench.editor.closeOnFileDelete": false,
 
-    // 4. Windows
+    // Windows
     "window.restoreWindows": "folders",
     "window.title": "[VS] ${dirty}${activeEditorShort}${separator}${rootName}",
 
     // Files
     "files.associations": {
-        "package.json": "json",
-        "jsconfig.json": "json",
+        ".babelrc": "json",
+        ".eslintrc": "json",
+        "*.geojson": "json",
+        "*.schema": "json",
+        //"*.vsext": "json",
     },
     "files.exclude": {
         "**/.git": true,
@@ -47,24 +50,24 @@
     },
     "files.insertFinalNewline": true,
 
-    // 6. Zen Mode
+    // Zen Mode
     "zenMode.fullScreen": false,
 
-    // 7. File Explorer
+    // File Explorer
 
-    // 8. Search
+    // Search
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true
     },
 
-    // 9. HTTP
+    // HTTP
 
-    // 10. Update
+    // Update
 
-    // 11. Debug
+    // Debug
 
-    // 12. HTML
+    // HTML
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
     "html.trace.server": "messages",
@@ -73,9 +76,15 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "./package.json",
+                "./.angular-cli.json"
             ],
-            "url": "./.json-schemata/package.json.schema",
+            "url": "./.json-schemata/.angular-cli.json.schema",
+        },
+        {
+            "fileMatch": [
+                "*.api.json",
+            ],
+            "url": "./.json-schemata/api.json.schema",
         },
         {
             "fileMatch": [
@@ -99,7 +108,7 @@
             "fileMatch": [
                 "*.geojson",
             ],
-            "url": "./json-schemata/geojson.schema",
+            "url": "./.json-schemata/geojson.schema",
         },
         {
             "fileMatch": [
@@ -109,20 +118,56 @@
         },
         {
             "fileMatch": [
-                "manifest.json",
+                "./manifest.json",
             ],
-            "url": "./.json-schetama/manifest.json.schema",
+            "url": "./.json-schemata/manifest.json.schema",
+        },
+        {
+            "fileMatch": [
+                "./package.json",
+            ],
+            "url": "./.json-schemata/package.json.schema",
+        },
+        {
+            "fileMatch": [
+                "*.mime.json",
+            ],
+            "url": "./.json-schemata/mime.json.schema",
+        },
+        {
+            "fileMatch": [
+                "*.schema",
+            ],
+            "url": "./.json-schemata/schema-6.schema",
+        },
+        {
+            "fileMatch": [
+                "./tsconfig.json",
+            ],
+            "url": "./.json-schemata/tsconfig.json.schema",
+        },
+        {
+            "fileMatch": [
+                "./typings.json",
+            ],
+            "url": "./.json-schetama/typings.json.schema",
+        },
+        {
+            "fileMatch": [
+                "*.vsext",
+            ],
+            "url": "./.json-schemata/vsext.schema",
         },
     ],
     "json.trace.server": "messages",
 
-    // 14. Markdown
+    // Markdown
     "markdown.previewFrontMatter": "show",
     "markdown.trace": "verbose",
 
-    // 15. TypeScript
+    // TypeScript
 
-    // 16. CSS
+    // CSS
     "css.lint.boxModel": "warning",
     "css.lint.compatibleVendorPrefixes": "warning",
     "css.lint.duplicateProperties": "warning",
@@ -137,7 +182,7 @@
     "css.lint.zeroUnits": "warning",
     "css.trace.server": "messages",
 
-    // 17. Less
+    // Less
     "less.lint.boxModel": "warning",
     "less.lint.compatibleVendorPrefixes": "warning",
     "less.lint.duplicateProperties": "warning",
@@ -151,17 +196,17 @@
     "less.lint.unknownVendorSpecificProperties": "warning",
     "less.lint.zeroUnits": "warning",
 
-    // 18. SCSS (Sass)
+    // SCSS (Sass)
 
-    // 19. Extensions
+    // Extensions
 
-    // 20. External Terminal
+    // External Terminal
     "terminal.explorerKind": "integrated",
     "terminal.external.linuxExec": "terminator",
     "terminal.external.osxExec": "",
     "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\cmd.exe",
 
-    // 21. Integrated Terminal
+    // Integrated Terminal
     "terminal.integrated.confirmOnExit": true,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.cursorBlinking": true,
@@ -172,11 +217,11 @@
     "terminal.integrated.shell.linux": "/bin/bash",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\Program Files\\Git\\git-bash.exe",
 
-    // 22. Problems View
+    // Problems View
 
-    // 23. Telemetry
+    // Telemetry
 
-    // 24. Default Configuration Overrides
+    // Default Configuration Overrides
 
     "[git-commit]": {
         "editor.rulers": [
@@ -195,7 +240,7 @@
         "editor.wrappingIndent": "indent",
     },
 
-    // 25. Git
+    // Git
     "git.defaultCloneDirectory": "C:\\Users\\alexb\\git",
     "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
     "git.promptToSaveFilesBeforeCommit": true,
@@ -206,13 +251,8 @@
 
     // Gulp
 
-    // 28. Emmet
 
-    // 29. NPM
+    // NPM
 
-    // 30. Merge Conflict
-
-    // 31. Grunt
-
-    // 32. Jake
+    // Merge Conflict
 }

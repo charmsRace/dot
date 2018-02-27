@@ -12,15 +12,23 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Associate json schema": {
-		"prefix": "jsch",
+	"Associate file to json": {
+		"prefix": "jsfile",
+		"body": [
+			"",
+			"\"$1\": \"json\",",
+		],
+		"description": "Insert a template for interpreting a filename as json",
+	},
+	"Associate json to schema": {
+		"prefix": "jschema",
 		"body": [
 			"",
 			"{",
 				"\t\"fileMatch\": [",
 					"\t\t\"$1\",",
 				"\t],",
-				"\t\"url\": \"./.json-schetama/$2\",",
+				"\t\"url\": \"./.json-schemata/$2\",",
 			"},$0",
 		],
 		"description": "Insert a template for associating a schema",
