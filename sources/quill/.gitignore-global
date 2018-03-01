@@ -1,0 +1,8 @@
+# Temporary files
+
+*~
+*.swp
+*.swo
+
+# Personal ad-hoc folders
+**/@alex/

@@ -1,0 +1,7 @@
+[core]
+	autocrlf = true
+[remote "origin"]
+	prune = true
+[user]
+	email = alex.ruble@q-free.com
+	name = Alex Ruble
