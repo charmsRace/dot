@@ -1,8 +1,23 @@
+<<<<<<< Updated upstream
 // Place your key bindings in this file to overwrite the defaults
+=======
+// all - "key": "[^"]*"
+// chords - "key": "[\w\+]+ [\w\+]+",
+
+>>>>>>> Stashed changes
 [
     {
         "key": "ctrl+f5",
         "command": "workbench.action.reloadWindow",
         "when": "editorTextFocus"
+<<<<<<< Updated upstream
     }
 ]
+=======
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "explorer.newFile",
+    },
+]
+>>>>>>> Stashed changes

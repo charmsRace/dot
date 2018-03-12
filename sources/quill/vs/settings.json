@@ -25,7 +25,11 @@
     "scm.alwaysShowProviders": true,
 
     // Workbench
+<<<<<<< Updated upstream
     "workbench.colorTheme": "Monokai Dimmed",
+=======
+    "workbench.colorTheme": "Monokai",
+>>>>>>> Stashed changes
     "workbench.commandPalette.history": 500,
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.editor.closeOnFileDelete": false,
@@ -37,11 +41,21 @@
     // Files
     "files.associations": {
         ".babelrc": "json",
+<<<<<<< Updated upstream
         ".eslintrc": "json",
         "*.geojson": "json",
         "*.schema": "json",
         ".gitconfig": "gitconfig",
         ".gitignore": "gitignore"
+=======
+        ".eslintignore": "gitignore",
+        ".eslintrc": "jsonc",
+        "*.geojson": "json",
+        "*.schema": "json",
+        ".gitconfig": "gitconfig",
+        ".gitignore": "gitignore",
+        "*.ne": "nearley",
+>>>>>>> Stashed changes
     },
     "files.exclude": {
         "**/.git": true,
@@ -70,9 +84,14 @@
     // Debug
 
     // HTML
+<<<<<<< Updated upstream
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
     "html.trace.server": "messages",
+=======
+    "html.format.indentInnerHtml": true,
+    "html.trace.server":"off",
+>>>>>>> Stashed changes
 
     // JSON
     "json.schemas": [
@@ -242,12 +261,27 @@
         "editor.autoClosingBrackets": true,
     },
 
+<<<<<<< Updated upstream
+=======
+    "[jsonc]": {
+        "editor.autoClosingBrackets": true,
+    },
+
+>>>>>>> Stashed changes
     "[log]": {
         "editor.rulers": [],
         "editor.wordWrap": "on",
         "editor.wrappingIndent": "indent",
     },
 
+<<<<<<< Updated upstream
+=======
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+    },
+
+>>>>>>> Stashed changes
     // Git
     "git.defaultCloneDirectory": "C:\\Users\\alexb\\git",
     "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
@@ -256,6 +290,10 @@
 
     // Database Configuration
     "database.connections": [],
+<<<<<<< Updated upstream
+=======
+    "window.zoomLevel": 0,
+>>>>>>> Stashed changes
 
     // Gulp
 
