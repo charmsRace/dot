@@ -7,6 +7,7 @@ alias python2="winpty /c/Python27/python.exe"
 alias brc="vim ~/.bashrc"
 alias vrc="vim ~/.vimrc"
 alias tailn="tail -n"
+alias g="git"
 
 ##### Directories
 
@@ -20,12 +21,12 @@ export D_DOT=~/git/dot
 
 ##### Maven
 
-DATEF=(date +%m%d%y-%H%M)
-export LOGD=${DATEF[@]}
-export MLOG_DIR=~/dev/maven/logs
-alias smvn-c="mvn -T 1C -e -l ${MLOG_DIR}/c-$($LOGD).log clean -P va"
-alias smvn-i="mvn -T 1C -e -l ${MLOG_DIR}/i-$($LOGD).log install -P va"
-alias smvn-ci="mvn -T 1C -e -l ${MLOG_DIR}/ci-$($LOGD).log clean install -P va"
+export DATEF=(date +%m%d%y-%H%M)
+alias smvn="mvn -T 1C -e -P va"
+alias smvn-c="mvn -T 1C -e -l ${D_MLOGS}/c-$(${DATEF[@]}).log clean -P va"
+alias smvn-i="mvn -T 1C -e -l ${D_MLOGS}/i-$(${DATEF[@]}).log install -P va"
+alias smvn-ci="mvn -T 1C -e -l ${D_MLOGS}/ci-$(${DATEF[@]}).log clean install -P va"
+alias tailw="tail -n +1 -f \"$(ls -t | head -n1)\""
 
 ##### OpenTMS general
 

@@ -12,6 +12,10 @@
     a = add
     aa = add --all
     ########
+    ch = checkout
+    chb = checkout -b
+    chm = checkout master
+    ########
     c = commit
     cm = commit -m
     ########
@@ -21,6 +25,9 @@
     f = fetch
     ########
     h = help
+    ########
+    l = log
+    lom = log origin/master..master
     ########
     ls = ls-files
     ########
@@ -42,5 +49,7 @@
     ra = remote add
     rr = remote rm
     rv = remote -v
+    ########
+    rmc = rm --cached
     ########
     s = status
