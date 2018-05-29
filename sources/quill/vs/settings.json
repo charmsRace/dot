@@ -3,8 +3,10 @@
     "editor.acceptSuggestionOnEnter": "off",
     "editor.autoClosingBrackets": false,
     "editor.cursorBlinking": "phase",
+    "editor.insertSpaces": true,
     "editor.minimap.showSlider": "always",
     "editor.mouseWheelZoom": true,
+    "editor.parameterHints": false,
     "editor.quickSuggestions": {
         "other": true,
         "comments": true,
@@ -27,12 +29,14 @@
     // Workbench
     "workbench.colorTheme": "Monokai",
     "workbench.commandPalette.history": 500,
-    "workbench.iconTheme": "vscode-great-icons",
     "workbench.editor.closeOnFileDelete": false,
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.sideBar.location": "left",
 
     // Windows
     "window.restoreWindows": "folders",
     "window.title": "[VS] ${dirty}${activeEditorShort}${separator}${rootName}",
+    "window.zoomLevel": 0,
 
     // Files
     "files.associations": {
@@ -43,6 +47,7 @@
         "*.schema": "json",
         ".gitconfig": "gitconfig",
         ".gitignore": "gitignore",
+        ".gitignore-global": "gitignore",
         "*.ne": "nearley",
     },
     "files.exclude": {
@@ -57,19 +62,11 @@
     // Zen Mode
     "zenMode.fullScreen": false,
 
-    // File Explorer
-
     // Search
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true
     },
-
-    // HTTP
-
-    // Update
-
-    // Debug
 
     // HTML
     "html.format.indentInnerHtml": true,
@@ -168,8 +165,6 @@
     "markdown.previewFrontMatter": "show",
     "markdown.trace": "verbose",
 
-    // TypeScript
-
     // CSS
     "css.lint.boxModel": "warning",
     "css.lint.compatibleVendorPrefixes": "warning",
@@ -199,10 +194,6 @@
     "less.lint.unknownVendorSpecificProperties": "warning",
     "less.lint.zeroUnits": "warning",
 
-    // SCSS (Sass)
-
-    // Extensions
-
     // External Terminal
     "terminal.explorerKind": "integrated",
     "terminal.external.linuxExec": "terminator",
@@ -222,12 +213,7 @@
         "-l",
     ],
 
-    // Problems View
-
-    // Telemetry
-
     // Language Overrides
-
     "[git-commit]": {
         "editor.rulers": [
             72,
@@ -241,10 +227,12 @@
 
     "[json]": {
         "editor.autoClosingBrackets": true,
+        "editor.tabSize": 2,
     },
 
     "[jsonc]": {
         "editor.autoClosingBrackets": true,
+        "editor.tabSize": 2,
     },
 
     "[log]": {
@@ -254,8 +242,19 @@
     },
 
     "[markdown]": {
+        "editor.tabSize": 2,
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 80,
+    },
+
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+
+    "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
     },
 
     // Git
@@ -264,14 +263,7 @@
     "git.promptToSaveFilesBeforeCommit": true,
     "extensions.ignoreRecommendations": false,
 
-    // Database Configuration
-    "database.connections": [],
-    "window.zoomLevel": 0,
-
-    // Gulp
-
-
-    // NPM
-
-    // Merge Conflict
+    // Emmet
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showExpandedAbbreviation": "never",
 }

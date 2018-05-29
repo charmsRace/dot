@@ -30,4 +30,6 @@ alias tailw="tail -n +1 -f \"$(ls -t | head -n1)\""
 
 ##### OpenTMS general
 
+alias otms="node ~/git/opentms-dev-tool/index.js"
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/AppData/Local/Yarn/bin"

@@ -1,0 +1,17 @@
+{
+  "Prettier-Ignore": {
+    "prefix": "pri",
+    "body": [
+      "// prettier-ignore",
+    ],
+    "description": "Command Prettier to ignore the next syntactic node",
+  },
+  "Block comment": {
+    "prefix": "blc",
+    "body": [
+      "",
+      "/*",
+      "*/",
+    ],
+  },
+}

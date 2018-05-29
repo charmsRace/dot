@@ -2,15 +2,21 @@
     name = Alex Ruble
     email = alex.ruble@q-free.com
 [core]
-    editor = vim
+    editor = code --wait
     excludesfile = ~/.gitignore-global
 [credential "https://github.com"]
     username = calamitizer
 [remote "origin"]
     prune = true
 [alias]
+    psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
+    ########
     a = add
     aa = add --all
+    ########
+    b = branch
+    ########
+    cf = config --global -e
     ########
     ch = checkout
     chb = checkout -b
@@ -35,9 +41,12 @@
     ########
     o = checkout
     ########
+    pop = stash pop
+    ########
     ps = push
     pso = push origin
     psom = push origin master
+    psuo = push -u origin
     ########
     pl = pull
     plo = pull origin
