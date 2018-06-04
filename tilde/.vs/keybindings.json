@@ -1,0 +1,122 @@
+// all - "key": "[^"]*"
+// chords - "key": "[\w\+]+ [\w\+]+",
+// taken alt menu keys: [defghstv]
+
+/*
+ * Commands unbound by default
+ * (as opposed to rebindings)
+ * TODO: fill out
+ *
+ * Set
+ * - editor.action.goToTypeDefinition
+ * - editor.action.joinLines
+ *
+ * Unset
+ * - editor.action.reindentlines
+ */
+
+ [
+  {
+      "key": "ctrl+f5",
+      "command": "workbench.action.reloadWindow",
+      "when": "editorTextFocus"
+  },
+  {
+      "key": "ctrl+alt+n",
+      "command": "explorer.newFile",
+  },
+  {
+      "key": "ctrl+k ctrl+m",
+      "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+
+  // alt + ...
+
+  {
+      "key": "alt+`",
+      "command": "workbench.action.terminal.kill"
+  },
+
+  // ctrl + alt + ...
+  {
+      "key": "ctrl+alt+a",
+      "command": "editor.action.goToDeclaration",
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+      "key": "ctrl+alt+s",
+      "command": "editor.action.goToImplementation",
+      "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+      "key": "ctrl+alt+d",
+      "command": "editor.action.goToTypeDefinition",
+      "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+      "key": "ctrl+alt+j",
+      "command": "editor.action.joinLines",
+      "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+      "key": "ctrl+alt+/",
+      "command": "editor.action.blockComment",
+      "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // shift + alt + ...
+  {
+      "key": "shift+alt+q",
+      "command": "workbench.action.focusFirstEditorGroup",
+  },
+  {
+      "key": "shift+alt+w",
+      "command": "workbench.action.focusSecondEditorGroup",
+  },
+  {
+      "key": "shift+alt+e",
+      "command": "workbench.action.focusThirdEditorGroup",
+  },
+  {
+      "key": "shift+alt+a",
+      "command": "workbench.files.action.focusOpenEditorsView",
+  },
+  {
+      "key": "shift+alt+z",
+      "command": "workbench.files.action.focusFilesExplorer",
+  },
+  {
+      "key": "shift+alt+x",
+      "command": "workbench.action.terminal.focus",
+  },
+  {
+      "key": "shift+alt+f",
+      "command": "settings.action.search",
+  },
+  {
+      "key": "shift+alt+c",
+      "command": "search.action.focusPreviousSearchResult",
+  },
+  {
+      "key": "shift+alt+v",
+      "command": "search.action.focusNextSearchResult",
+  },
+]
+
+// shift + alt + ...
+
+// q - workbench.action.focusFirstEditorGroup
+// w - workbench.action.focusSecondEditorGroup
+// e - workbench.action.focusThirdEditorGroup
+
+// a - workbench.files.action.focusOpenEditorsView
+// z - workbench.files.action.focusFilesExplorer
+// x - workbench.action.terminal.focus
+
+// f - workbench.action.terminal.focusFindWidget
+// c - search.action.focusPreviousSearchResult
+// v - search.action.focusNextSearchResult
+
+// workbench.action.focusSideBar
+// workbench.action.focusPanel
+// workbench.action.problems.focus
