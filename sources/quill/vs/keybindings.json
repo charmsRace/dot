@@ -30,6 +30,13 @@
       "command": "workbench.action.openGlobalKeybindingsFile"
   },
 
+  // alt + ...
+
+  {
+      "key": "alt+`",
+      "command": "workbench.action.terminal.kill"
+  },
+
   // ctrl + alt + ...
   {
       "key": "ctrl+alt+a",
