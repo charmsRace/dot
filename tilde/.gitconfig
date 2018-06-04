@@ -1,15 +1,35 @@
 [user]
     name = Alex Ruble
-    username = Calamitizer
     email = jaruble@ncsu.edu
-[core]
-    editor = vim
-    excludesfile = ~/.gitignore-global
+    # email = alex.ruble@q-free.com
+
 [credential "https://github.com"]
     username = calamitizer
+
+[core]
+    editor = vim
+    # editor = code --wait
+    excludesfile = ~/.gitignore-global
+
+[color]
+    ui = auto
+
+[web]
+    browser = google-chrome
+
 [alias]
+    psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
+    ########
     a = add
     aa = add --all
+    ########
+    b = branch
+    ########
+    cf = config --global -e
+    ########
+    ch = checkout
+    chb = checkout -b
+    chm = checkout master
     ########
     c = commit
     cm = commit -m
@@ -21,15 +41,21 @@
     ########
     h = help
     ########
+    l = log
+    lom = log origin/master..master
+    ########
     ls = ls-files
     ########
     m = merge
     ########
     o = checkout
     ########
+    pop = stash pop
+    ########
     ps = push
     pso = push origin
     psom = push origin master
+    psuo = push -u origin
     ########
     pl = pull
     plo = pull origin
@@ -41,5 +67,7 @@
     ra = remote add
     rr = remote rm
     rv = remote -v
+    ########
+    rmc = rm --cached
     ########
     s = status
