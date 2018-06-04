@@ -1,0 +1,169 @@
+[global_config]
+[keybindings]
+  split_horiz = <Alt>semicolon
+  split_vert = <Alt>apostrophe
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 29da5c83-70ab-4ead-8933-1a53b7896c8e
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:31
+      size = 1920, 971
+      title = (akasha)anti@localhost: ~/Downloads/dev/colorspace-curves/client/src/flag
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 1188
+      ratio = 0.61953125
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 634
+      ratio = 0.654479917611
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 592
+      ratio = 0.499579124579
+      type = HPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 592
+      ratio = 0.499579124579
+      type = HPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 632
+      ratio = 0.652420185376
+      type = VPaned
+    [[[terminal10]]]
+      order = 0
+      parent = child9
+      profile = default
+      type = Terminal
+      uuid = f9970aff-7d9a-412e-a38e-ae4b3aa64b00
+    [[[terminal11]]]
+      order = 1
+      parent = child9
+      profile = default
+      type = Terminal
+      uuid = c02337f6-ffb4-4f6e-b63d-13486a13db20
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = d46ff449-b778-49f6-984b-620ff89cf4ad
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 29da5c83-70ab-4ead-8933-1a53b7896c8e
+    [[[terminal7]]]
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 1daf5353-f0dc-4e74-989f-4c62404f6638
+    [[[terminal8]]]
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 790d3639-78a3-43d5-877d-2e302fd3700c
+  [[csc]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 29da5c83-70ab-4ead-8933-1a53b7896c8e
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:31
+      size = 1920, 971
+      title = (akasha)anti@localhost: ~/Downloads/dev/colorspace-curves/client/src/flag
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 1188
+      ratio = 0.61953125
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 634
+      ratio = 0.654479917611
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 592
+      ratio = 0.499579124579
+      type = HPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 592
+      ratio = 0.499579124579
+      type = HPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 632
+      ratio = 0.652420185376
+      type = VPaned
+    [[[terminal10]]]
+      order = 0
+      parent = child9
+      profile = default
+      type = Terminal
+      uuid = f9970aff-7d9a-412e-a38e-ae4b3aa64b00
+    [[[terminal11]]]
+      order = 1
+      parent = child9
+      profile = default
+      type = Terminal
+      uuid = c02337f6-ffb4-4f6e-b63d-13486a13db20
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = d46ff449-b778-49f6-984b-620ff89cf4ad
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 29da5c83-70ab-4ead-8933-1a53b7896c8e
+    [[[terminal7]]]
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 1daf5353-f0dc-4e74-989f-4c62404f6638
+    [[[terminal8]]]
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 790d3639-78a3-43d5-877d-2e302fd3700c
+[plugins]
+[profiles]
+  [[default]]
+    background_image = None
+    custom_command = TERM=xterm-256color bash -l
+    font = Monospace 11
+    use_custom_command = True
+    use_system_font = False
