@@ -15,84 +15,85 @@
  * - editor.action.reindentlines
  */
 
-[
-    {
-        "key": "ctrl+f5",
-        "command": "workbench.action.reloadWindow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+n",
-        "command": "explorer.newFile",
-    },
-    {
-        "key": "ctrl+k ctrl+m",
-        "command": "workbench.action.openGlobalKeybindingsFile"
-    },
+ [
+  {
+      "key": "ctrl+f5",
+      "command": "workbench.action.reloadWindow",
+      "when": "editorTextFocus"
+  },
+  {
+      "key": "ctrl+alt+n",
+      "command": "explorer.newFile",
+  },
+  {
+      "key": "ctrl+k ctrl+m",
+      "command": "workbench.action.openGlobalKeybindingsFile"
+  },
 
-    {
-        "key": "ctrl+alt+a",
-        "command": "editor.action.goToDeclaration",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
-    {
-        "key": "ctrl+alt+s",
-        "command": "editor.action.goToImplementation",
-        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
-    {
-        "key": "ctrl+alt+d",
-        "command": "editor.action.goToTypeDefinition",
-        "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
+  // ctrl + alt + ...
+  {
+      "key": "ctrl+alt+a",
+      "command": "editor.action.goToDeclaration",
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+      "key": "ctrl+alt+s",
+      "command": "editor.action.goToImplementation",
+      "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+      "key": "ctrl+alt+d",
+      "command": "editor.action.goToTypeDefinition",
+      "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+      "key": "ctrl+alt+j",
+      "command": "editor.action.joinLines",
+      "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+      "key": "ctrl+alt+/",
+      "command": "editor.action.blockComment",
+      "when": "editorTextFocus && !editorReadonly"
+  },
 
-    {
-        "key": "ctrl+shift+j",
-        "command": "editor.action.joinLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-
-    {
-        "key": "shift+alt+z",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+q",
-        "command": "workbench.action.focusFirstEditorGroup",
-    },
-    {
-        "key": "shift+alt+w",
-        "command": "workbench.action.focusSecondEditorGroup",
-    },
-    {
-        "key": "shift+alt+e",
-        "command": "workbench.action.focusThirdEditorGroup",
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "workbench.files.action.focusOpenEditorsView",
-    },
-    {
-        "key": "shift+alt+z",
-        "command": "workbench.files.action.focusFilesExplorer",
-    },
-    {
-        "key": "shift+alt+x",
-        "command": "workbench.action.terminal.focus",
-    },
-    {
-        "key": "shift+alt+f",
-        "command": "settings.action.search",
-    },
-    {
-        "key": "shift+alt+c",
-        "command": "search.action.focusPreviousSearchResult",
-    },
-    {
-        "key": "shift+alt+v",
-        "command": "search.action.focusNextSearchResult",
-    },
+  // shift + alt + ...
+  {
+      "key": "shift+alt+q",
+      "command": "workbench.action.focusFirstEditorGroup",
+  },
+  {
+      "key": "shift+alt+w",
+      "command": "workbench.action.focusSecondEditorGroup",
+  },
+  {
+      "key": "shift+alt+e",
+      "command": "workbench.action.focusThirdEditorGroup",
+  },
+  {
+      "key": "shift+alt+a",
+      "command": "workbench.files.action.focusOpenEditorsView",
+  },
+  {
+      "key": "shift+alt+z",
+      "command": "workbench.files.action.focusFilesExplorer",
+  },
+  {
+      "key": "shift+alt+x",
+      "command": "workbench.action.terminal.focus",
+  },
+  {
+      "key": "shift+alt+f",
+      "command": "settings.action.search",
+  },
+  {
+      "key": "shift+alt+c",
+      "command": "search.action.focusPreviousSearchResult",
+  },
+  {
+      "key": "shift+alt+v",
+      "command": "search.action.focusNextSearchResult",
+  },
 ]
 
 // shift + alt + ...
