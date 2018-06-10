@@ -159,7 +159,7 @@
             "url": "./.json-schemata/vsext.schema",
         },
     ],
-    "json.trace.server": "messages",
+    "json.trace.server": "off",
 
     // Markdown
     "markdown.previewFrontMatter": "show",
@@ -178,7 +178,7 @@
     "css.lint.universalSelector": "warning",
     "css.lint.unknownVendorSpecificProperties": "warning",
     "css.lint.zeroUnits": "warning",
-    "css.trace.server": "messages",
+    "css.trace.server": "off",
 
     // Less
     "less.lint.boxModel": "warning",
@@ -208,6 +208,7 @@
     "terminal.integrated.env.osx": {},
     "terminal.integrated.env.windows": {},
     "terminal.integrated.shell.linux": "/usr/bin/env bash",
+    // "terminal.integrated.shell.linux": "/bin/bash", // akasha
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "terminal.integrated.shellArgs.windows": [
         "-l",
@@ -223,6 +224,11 @@
 
     "[html]": {
         "editor.tabSize": 2,
+    },
+
+    "[java]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": false,
     },
 
     "[json]": {
