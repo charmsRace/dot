@@ -28,7 +28,7 @@ alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
 alias g="git" # more macros defined in ~/.gitconfig
 
 # maven
-alias smvn="mvn -T 1C -e"
+alias smvn="mvn -e -T 1C"
 alias smvn-l="mvn -T 1C -e -l ./$(${DATEF[@]}).log"
 
 # for chromebooks with chroots
