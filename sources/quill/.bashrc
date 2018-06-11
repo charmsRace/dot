@@ -33,7 +33,8 @@ alias dotms="cd ${D_OTMS}"
 
 ##### Maven
 
-alias smvn="mvn -T 1C -e -P va"
+alias smvn="mvn -e -T 1C"
+alias smva="mvn -e -T 1C -P va-dev"
 alias smvn-c="mvn -T 1C -e -l ${D_MLOGS}/c-$(${DATEF[@]}).log clean -P va"
 alias smvn-i="mvn -T 1C -e -l ${D_MLOGS}/i-$(${DATEF[@]}).log install -P va"
 alias smvn-ci="mvn -T 1C -e -l ${D_MLOGS}/ci-$(${DATEF[@]}).log clean install -P va"
