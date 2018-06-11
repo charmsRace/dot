@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 # local.sh
 
-# bash <(curl -s "${D_TILDE}/test.sh")
+# To run this script locally, run:
+# $ bash <(curl -s \
+"https://raw.githubusercontent.com/calamitizer/dot/master/tilde/init.sh")
+# This will run a script to clone this repo locally
+# and copy stuff to relevant places. Right now, it's
+# using a dummy home ("dottest") to perform dry runs.
+
 
 declare -r D_HOME="/home/anti/Downloads/dev/dottest"
+mkdir -p ${D_HOME}
 cd ${D_HOME}
 
 sudo apt-get install -qqy curl git vim
