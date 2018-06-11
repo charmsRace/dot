@@ -2,12 +2,10 @@
 # local.sh
 
 # To run this script locally, run:
-# $ bash <(curl -s \
-"https://raw.githubusercontent.com/calamitizer/dot/master/tilde/init.sh")
+# $ bash <(curl -s "https://raw.githubusercontent.com/calamitizer/dot/master/init.sh")
 # This will run a script to clone this repo locally
 # and copy stuff to relevant places. Right now, it's
 # using a dummy home ("dottest") to perform dry runs.
-
 
 declare -r D_HOME="/home/anti/Downloads/dev/dottest"
 mkdir -p ${D_HOME}
