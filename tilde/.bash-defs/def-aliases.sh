@@ -50,4 +50,7 @@ if false; then
     alias akasha@tab="sudo startxfce4 -n akasha -X xiwi-tab"
 
     alias attendum="sudo startcli -n attendum"
+
+    alias code="code-oss"
+    alias c.="code-oss ."
 fi

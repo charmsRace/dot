@@ -1,5 +1,5 @@
-// all - "key": "[^"]*"
-// chords - "key": "[\w\+]+ [\w\+]+",
+// all - "key": "[^"]*?"
+// chords - "key": "[^" ]+ [^" ]+"
 // taken alt menu keys: [defghstv]
 
 /*
@@ -15,108 +15,166 @@
  * - editor.action.reindentlines
  */
 
- [
+[
   {
-      "key": "ctrl+f5",
-      "command": "workbench.action.reloadWindow",
-      "when": "editorTextFocus"
+    "key": "ctrl+f5",
+    "command": "workbench.action.reloadWindow",
+    "when": "editorTextFocus"
   },
   {
-      "key": "ctrl+alt+n",
-      "command": "explorer.newFile",
+    "key": "ctrl+alt+n",
+    "command": "explorer.newFile"
   },
   {
-      "key": "ctrl+k ctrl+m",
-      "command": "workbench.action.openGlobalKeybindingsFile"
-  },
-
-  // alt + ...
-
-  {
-      "key": "alt+`",
-      "command": "workbench.action.terminal.kill"
+    "key": "ctrl+k ctrl+m",
+    "command": "workbench.action.openGlobalKeybindingsFile"
   },
 
-  // ctrl + alt + ...
+  /*
+   * alt + ...
+   */
+
   {
-      "key": "ctrl+alt+a",
-      "command": "editor.action.goToDeclaration",
-      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-      "key": "ctrl+alt+s",
-      "command": "editor.action.goToImplementation",
-      "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-      "key": "ctrl+alt+d",
-      "command": "editor.action.goToTypeDefinition",
-      "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-      "key": "ctrl+alt+j",
-      "command": "editor.action.joinLines",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "ctrl+alt+/",
-      "command": "editor.action.blockComment",
-      "when": "editorTextFocus && !editorReadonly"
+    "key": "alt+`",
+    "command": "workbench.action.terminal.kill"
   },
 
-  // shift + alt + ...
+  /*
+   * ctrl + alt + ...
+   */
+
   {
-      "key": "shift+alt+q",
-      "command": "workbench.action.focusFirstEditorGroup",
+    "key": "ctrl+alt+a",
+    "command": "editor.action.goToDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-      "key": "shift+alt+w",
-      "command": "workbench.action.focusSecondEditorGroup",
+    "key": "ctrl+alt+s",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-      "key": "shift+alt+e",
-      "command": "workbench.action.focusThirdEditorGroup",
+    "key": "ctrl+alt+d",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-      "key": "shift+alt+a",
-      "command": "workbench.files.action.focusOpenEditorsView",
+    "key": "ctrl+alt+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-      "key": "shift+alt+z",
-      "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+alt+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /*
+   * shift + alt + ...
+   */
+
+  {
+    "key": "shift+alt+q",
+    "command": "workbench.action.focusFirstEditorGroup"
   },
   {
-      "key": "shift+alt+x",
-      "command": "workbench.action.terminal.focus",
+    "key": "shift+alt+w",
+    "command": "workbench.action.focusSecondEditorGroup"
   },
   {
-      "key": "shift+alt+f",
-      "command": "settings.action.search",
+    "key": "shift+alt+e",
+    "command": "workbench.action.focusThirdEditorGroup"
   },
   {
-      "key": "shift+alt+c",
-      "command": "search.action.focusPreviousSearchResult",
+    "key": "shift+alt+a",
+    "command": "workbench.files.action.focusOpenEditorsView"
   },
   {
-      "key": "shift+alt+v",
-      "command": "search.action.focusNextSearchResult",
+    "key": "shift+alt+z",
+    "command": "workbench.files.action.focusFilesExplorer"
   },
+  {
+    "key": "shift+alt+x",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "settings.action.search"
+  },
+  {
+    "key": "shift+alt+c",
+    "command": "search.action.focusPreviousSearchResult"
+  },
+  {
+    "key": "shift+alt+v",
+    "command": "search.action.focusNextSearchResult"
+  },
+  {
+    "key": "shift+alt+s",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /*
+   * whitespace chords
+   * alt + q -> ...
+   *
+   * -> q - indentationToSpaces
+   * -> a - indentUsingSpaces
+   * -> w - indentationToTabs
+   * -> s - indentUsingTabs
+   * -> e - detectIndentation
+   * -> r - reindentLines
+   * -> x - trimTrailingWhitespace
+   */
+
+  {
+    "key": "alt+q q",
+    "command": "editor.action.indentationToSpaces",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q a",
+    "command": "editor.action.indentUsingSpaces",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q w",
+    "command": "editor.action.indentationToTabs",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q s",
+    "command": "editor.action.indentUsingTabs",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q e",
+    "command": "editor.action.detectIndentation",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q r",
+    "command": "editor.action.reindentlines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+q x",
+    "command": "editor.action.trimTrailingWhitespace",
+    "when": "editorTextFocus && !editorReadonly"
+  }
 ]
 
 // shift + alt + ...
-
 // q - workbench.action.focusFirstEditorGroup
 // w - workbench.action.focusSecondEditorGroup
 // e - workbench.action.focusThirdEditorGroup
-
 // a - workbench.files.action.focusOpenEditorsView
 // z - workbench.files.action.focusFilesExplorer
 // x - workbench.action.terminal.focus
-
 // f - workbench.action.terminal.focusFindWidget
 // c - search.action.focusPreviousSearchResult
 // v - search.action.focusNextSearchResult
-
 // workbench.action.focusSideBar
 // workbench.action.focusPanel
 // workbench.action.problems.focus
