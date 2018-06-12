@@ -1,0 +1,1 @@
+cp -r ~/.bash{rc,-defs,_profile} ${D_DOT}/sources/quill

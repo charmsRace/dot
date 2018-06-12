@@ -31,6 +31,12 @@
    */
 
   "scm.alwaysShowProviders": true,
+
+  /*
+   * Workbench
+   */
+
+  "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
   "workbench.iconTheme": "vscode-great-icons",
@@ -316,6 +322,5 @@
    */
 
   "emmet.showAbbreviationSuggestions": false,
-  "emmet.showExpandedAbbreviation": false,
-  "workbench.colorTheme": "Monokai Dimmed"
+  "emmet.showExpandedAbbreviation": "never"
 }
