@@ -27,6 +27,8 @@ alias dotms="cd ${D_OTMS}"
 
 alias smvn="mvn -e -T 1C"
 alias smva="mvn -e -T 1C -P va-dev"
+alias smvac="mvn -e -T 1C -P va-dev clean"
+alias smvai="mvn -e -T 1C -P va-dev install"
 alias smvaci="mvn -e -T 1C -P va-dev clean install"
 alias smvn-c="mvn -T 1C -e -l ${D_MLOGS}/c-$(${DATEF[@]}).log clean -P va"
 alias smvn-i="mvn -T 1C -e -l ${D_MLOGS}/i-$(${DATEF[@]}).log install -P va"

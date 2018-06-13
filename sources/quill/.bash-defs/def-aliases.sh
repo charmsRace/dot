@@ -6,6 +6,7 @@ alias brc="vim ~/.bashrc"
 alias bdi="vim ${D_DEFS}/index.sh"
 alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
+alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
 
 # general
@@ -27,6 +28,7 @@ alias tailf="clear && tail -fn +1"
 alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
 
 alias g="git" # more macros defined in ~/.gitconfig
+alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias isup="ping 8.8.8.8"
 

@@ -9,7 +9,8 @@
 [remote "origin"]
     prune = true
 [alias]
-    psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
+    root = !pwd
+    # psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
     ########
     a = add
     aa = add --all
@@ -38,6 +39,7 @@
     ls = ls-files
     ########
     m = merge
+    mm = merge master
     ########
     o = checkout
     ########

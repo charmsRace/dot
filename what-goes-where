@@ -1,1 +1,2 @@
-cp -r ~/.bash{rc,-defs,_profile} ${D_DOT}/sources/quill
+cp -r ~/.{gitconfig,bash{rc,-defs,_profile}} ${D_DOT}/sources/quill
+cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_DOT}/sources/quill/vs
