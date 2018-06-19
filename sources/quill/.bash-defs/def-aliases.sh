@@ -38,6 +38,10 @@ alias ~~="cd ~"
 alias c.="cd ${D_DOT}"
 alias c-="cd - > /dev/null"
 
+# dotfile tools
+alias cpdot="cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}"
+alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
+
 # maven
 alias smvn="mvn -T 1C -e"
 alias smvn-l="mvn -T 1C -e -l ./$(${DATEF[@]}).log"
