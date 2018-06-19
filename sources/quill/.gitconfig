@@ -28,6 +28,8 @@
     ########
     d = diff
     dt = difftool
+    dn = diff --name-status
+    dnm = diff --name-status master
     ########
     f = fetch
     ########

@@ -30,7 +30,7 @@
 			" */",
 			"$0"
 		],
-		"description": "Insert a parameter documentation comment"
+		"description": "Insert a @parameter Javadoc comment"
 	},
 
 	"Return Documentation Comment": {
@@ -41,6 +41,6 @@
 			" */",
 			"$0"
 		],
-		"description": "Insert a return documentation comment"
-	}
+		"description": "Insert a @return Javadoc comment"
+	},
 }

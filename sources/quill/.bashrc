@@ -7,8 +7,6 @@ declare DEF_INDEX="${D_DEFS}/index.sh"
 [[ -f $DEF_INDEX ]] && . $DEF_INDEX
 unset DEF_INDEX
 
-export PATH=$PATH:/c/Users/alexb/apache-maven-3.5.0/bin
-
 alias python2="winpty /c/Python27/python.exe"
 
 ##### Directories
@@ -25,11 +23,13 @@ alias dotms="cd ${D_OTMS}"
 
 ##### Maven
 
+export PATH=$PATH:/c/Users/alexb/apache-maven-3.5.0/bin
+
 alias smvn="mvn -e -T 1C"
 alias smva="mvn -e -T 1C -P va-dev"
 alias smvac="mvn -e -T 1C -P va-dev clean"
 alias smvai="mvn -e -T 1C -P va-dev install"
-alias smvaci="mvn -e -T 1C -P va-dev clean install"
+alias smvaci="mvn -e -T 1C -P va-dev clean && mvn -e -T 1C -P va-dev install"
 alias smvn-c="mvn -T 1C -e -l ${D_MLOGS}/c-$(${DATEF[@]}).log clean -P va"
 alias smvn-i="mvn -T 1C -e -l ${D_MLOGS}/i-$(${DATEF[@]}).log install -P va"
 alias smvn-ci="mvn -T 1C -e -l ${D_MLOGS}/ci-$(${DATEF[@]}).log clean install -P va"
