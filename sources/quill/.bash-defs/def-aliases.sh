@@ -44,7 +44,7 @@ alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
 
 # maven
 alias smvn="mvn -T 1C -e"
-alias smvn-l="mvn -T 1C -e -l ./$(${DATEF[@]}).log"
+alias smvn-l="mvn -T 1C -e -l ./$(${DATE_FORMAT[@]}).log"
 
 # otms-dev-tool
 alias odev="node ~/git/opentms-dev-tool/index.js"

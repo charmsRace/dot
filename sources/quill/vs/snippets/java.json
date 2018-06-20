@@ -10,6 +10,15 @@
 		"description": "Insert a block comment"
 	},
 
+	"Assign Member Variable": {
+		"prefix": "mem",
+		"body": [
+			"this.$1 = $1;",
+			"$0"
+		],
+		"description": "Member assignment boilerplate for constructors"
+	},
+
 	"Q-Free Copyright": {
 		"prefix": "qfc",
 		"body": [
