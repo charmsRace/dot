@@ -42,12 +42,16 @@ alias c-="cd - > /dev/null"
 alias cpdot="cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}"
 alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
 
+# maven
+alias smvn="mvn -e -T 1C"
+alias smvnc="mvn -e -T 1C clean"
+alias smvni="mvn -e -T 1C -P va-dev install"
+alias smvnci="mvn -e -T 1C clean && mvn -e -T 1C -P va-dev install"
+alias smvnl="mvn -e -T 1C -l ${D_OTMS}/@alex/mvn-$(${DATE_FORMAT[@]}).log"
+
 # otms-dev-tool
 alias odev="node ~/git/opentms-dev-tool/index.js"
 
-# maven
-alias smvn="mvn -e -T 1C"
-alias smvn-l="mvn -e -T 1C -l ./$(${DATE_FORMAT[@]}).log"
 
 # for chromebooks with chroots
 if false; then
