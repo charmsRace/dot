@@ -42,12 +42,12 @@ alias c-="cd - > /dev/null"
 alias cpdot="cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}"
 alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
 
-# maven
-alias smvn="mvn -T 1C -e"
-alias smvn-l="mvn -T 1C -e -l ./$(${DATE_FORMAT[@]}).log"
-
 # otms-dev-tool
 alias odev="node ~/git/opentms-dev-tool/index.js"
+
+# maven
+alias smvn="mvn -e -T 1C"
+alias smvn-l="mvn -e -T 1C -l ./$(${DATE_FORMAT[@]}).log"
 
 # for chromebooks with chroots
 if false; then
@@ -68,4 +68,7 @@ if false; then
     alias akasha@tab="sudo startxfce4 -n akasha -X xiwi-tab"
 
     alias attendum="sudo startcli -n attendum"
+
+    alias code="code-oss"
+    alias c.="code-oss ."
 fi

@@ -11,6 +11,9 @@
     # editor = code --wait
     excludesfile = ~/.gitignore-global
 
+[remote "origin"]
+    prune = true
+
 [color]
     ui = auto
 
@@ -18,7 +21,8 @@
     browser = google-chrome
 
 [alias]
-    psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
+    root = !pwd
+    # psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
     ########
     a = add
     aa = add --all
@@ -36,6 +40,8 @@
     ########
     d = diff
     dt = difftool
+    dn = diff --name-status
+    dnm = diff --name-status master
     ########
     f = fetch
     ########
@@ -47,6 +53,7 @@
     ls = ls-files
     ########
     m = merge
+    mm = merge master
     ########
     o = checkout
     ########

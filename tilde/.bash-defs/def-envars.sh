@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # echo "def-envars.sh entered"
 
-### Directories ###
-declare -r D_DEFS=~/.bash-defs
-declare -r D_GIT=~/git
-declare -r D_VIM=~/.vim
-declare -r D_DOT=${D_GIT}/dot
-
 ### Constants ###
-declare -ar DATE_FORMAT=(date +%m%d%y-%H%M)
+declare DOTFILE_HOSTNAME= # contingent
+declare -a DATE_FORMAT=(date +%m%d%y-%H%M)
+
+### Directories ###
+# declare D_DEFS=~/.bash-defs # already in ~/.bashrc
+declare D_GIT=~/git
+declare D_VIM=~/.vim
+declare D_VS= # contingent
+declare D_DOT=${D_GIT}/dot
+declare D_SOURCE=${D_DOT}/sources/${DOTFILE_HOSTNAME}

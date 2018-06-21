@@ -9,9 +9,11 @@ declare -a SOURCES=( \
     symlinks \
 )
 
+declare SOURCE
 for i in ${SOURCES[@]}; do
-    declare SOURCE=~/.bash-defs/def-${i}.sh
+    SOURCE=~/.bash-defs/def-${i}.sh
     [[ -f $SOURCE ]] && . $SOURCE
 done
 
-unset SOURCES SOURCE
+unset SOURCES
+unset SOURCE

@@ -1,13 +1,25 @@
 [user]
     name = Alex Ruble
+    # email = jaruble@ncsu.edu
     email = alex.ruble@q-free.com
-[core]
-    editor = code --wait
-    excludesfile = ~/.gitignore-global
+
 [credential "https://github.com"]
     username = calamitizer
+
+[core]
+    editor = vim
+    # editor = code --wait
+    excludesfile = ~/.gitignore-global
+
 [remote "origin"]
     prune = true
+
+[color]
+    ui = auto
+
+[web]
+    browser = google-chrome
+
 [alias]
     root = !pwd
     # psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic

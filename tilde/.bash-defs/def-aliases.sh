@@ -5,6 +5,8 @@
 alias brc="vim ~/.bashrc"
 alias bdi="vim ${D_DEFS}/index.sh"
 alias bda="vim ${D_DEFS}/def-aliases.sh"
+alias bde="vim ${D_DEFS}/def-envars.sh"
+alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
 
 # general
@@ -26,10 +28,26 @@ alias tailf="clear && tail -fn +1"
 alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
 
 alias g="git" # more macros defined in ~/.gitconfig
+alias groot='cd $(git rev-parse --show-toplevel)'
+
+alias isup="ping 8.8.8.8"
+
+# navigation shortcuts
+alias cdefs="cd ${D_DEFS}"
+alias ~~="cd ~"
+alias c.="cd ${D_DOT}"
+alias c-="cd - > /dev/null"
+
+# dotfile tools
+alias cpdot="cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}"
+alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
+
+# otms-dev-tool
+alias odev="node ~/git/opentms-dev-tool/index.js"
 
 # maven
 alias smvn="mvn -e -T 1C"
-alias smvn-l="mvn -T 1C -e -l ./$(${DATEF[@]}).log"
+alias smvn-l="mvn -e -T 1C -l ./$(${DATE_FORMAT[@]}).log"
 
 # for chromebooks with chroots
 if false; then
