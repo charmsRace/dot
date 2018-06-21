@@ -1,2 +1,41 @@
 cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}
 cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs
+
+
+--- From π ---
+
+Tasks
+    terminator
+    vs code
+    default browser?
+    keyboard locale
+    powerwash.sh
+
+
+# terminator
+sudo apt-get install terminator
+sudo update-alternatives --set x-terminal-emulator $(which terminator)
+sudo sed -i \
+    's/\(XKBLAYOUT=\)"\w*"/\1"us"/g' \
+    /etc/default/keyboard
+
+T}
+
+
+# VS Code
+sudo -s
+. <( curl https://code.headmelted.com/installers/apt.sh )
+alias code="code-oss"
+
+# Move config
+D_VS="/home/pi/.config/Code - OSS/User"
+cp -r ${D_DOT}/sources/quill/vs/* "${D_VS}"
+
+
+
+
+
+
+
+
+
