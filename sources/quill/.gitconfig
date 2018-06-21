@@ -39,6 +39,7 @@
     cm = commit -m
     ########
     d = diff
+    dfiles = diff-tree --no-commit-id --name-only -r # then commit identifier
     dt = difftool
     dn = diff --name-status
     dnm = diff --name-status master
