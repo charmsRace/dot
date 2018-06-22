@@ -38,11 +38,12 @@
     c = commit
     cm = commit -m
     ########
-    d = diff
+    d = diff -w
     dfiles = diff-tree --no-commit-id --name-only -r # then commit identifier
     dt = difftool
     dn = diff --name-status
     dnm = diff --name-status master
+    dw = diff
     ########
     f = fetch
     ########
@@ -79,3 +80,4 @@
     rmc = rm --cached
     ########
     s = status
+    su = status -u
