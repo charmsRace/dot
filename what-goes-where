@@ -32,7 +32,7 @@ sudo -s
 alias code="code-oss"
 
 # Move config
-D_VS="/home/pi/.config/Code - OSS/User"
+declare D_VS="/home/pi/.config/Code - OSS/User"
 cp -r ${D_DOT}/sources/quill/vs/* "${D_VS}"
 
 less
