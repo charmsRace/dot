@@ -10,7 +10,11 @@ Tasks
     default browser?
     keyboard locale
     powerwash.sh
+    node/npm/nvm/yarn
 
+first thing --
+sudo apt-get update
+sudo apt-get upgrade
 
 # terminator
 sudo apt-get install terminator
@@ -31,7 +35,11 @@ alias code="code-oss"
 D_VS="/home/pi/.config/Code - OSS/User"
 cp -r ${D_DOT}/sources/quill/vs/* "${D_VS}"
 
+less
+cp ~/.lesskey ${D_SOURCE}
 
+cp ${D_SOURCE}/.lesskey ~
+lesskey
 
 
 
