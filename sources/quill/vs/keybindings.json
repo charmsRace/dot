@@ -15,6 +15,16 @@
  * - editor.action.reindentlines
  */
 
+/* home
+ * end
+ * ctrl+home
+ * ctrl+end
+ * pageup
+ * pagedown
+ * ctrl+pageup
+ * ctrl+pagedown
+ */
+
  [
     {
       "key": "ctrl+f5",
