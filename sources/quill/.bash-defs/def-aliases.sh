@@ -47,10 +47,14 @@ alias smvn="mvn -e -T 1C"
 alias smvnc="mvn -e -T 1C clean"
 alias smvni="mvn -e -T 1C -P va-dev install"
 alias smvnci="mvn -e -T 1C clean && mvn -e -T 1C -P va-dev install"
-alias smvnl="mvn -e -T 1C -l ${D_OTMS}/@alex/mvn-$(${DATE_FORMAT[@]}).log"
+alias smvnl="mvn -e -T 1C -l ${D_OTMS}/@alex/mvn-$(${DATE_FORMAT[@]}).log -P va-dev"
+alias smvn-full="mvn -e -T 1C clean && mvn -e -T 1C -l ${D_OTMS}/@alex/mvn-$(${DATE_FORMAT[@]}).log -P va-dev install"
 
 # otms-dev-tool
 alias odev="node ~/git/opentms-dev-tool/index.js"
+
+# start OTMS GWT code server
+alias otmscs="bash ${D_OTMS}/@alex/code-server.sh"
 
 
 # for chromebooks with chroots

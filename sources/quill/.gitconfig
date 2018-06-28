@@ -18,7 +18,7 @@
     ui = auto
 
 [web]
-    browser = google-chrome
+    # browser = google-chrome
 
 [alias]
     root = !pwd
@@ -40,6 +40,8 @@
     ########
     d = diff -w
     dfiles = diff-tree --no-commit-id --name-only -r # then commit identifier
+    di = diff -w --cached
+    dlast = diff -w @~
     dt = difftool
     dn = diff --name-status
     dnm = diff --name-status master

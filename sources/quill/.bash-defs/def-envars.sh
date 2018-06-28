@@ -12,3 +12,5 @@ declare D_VIM=~/.vim
 declare D_VS=~/AppData/Roaming/Code/User
 declare D_DOT=${D_GIT}/dot
 declare D_SOURCE=${D_DOT}/sources/${DOTFILE_HOSTNAME}
+
+declare D_OTMS=${D_GIT}/opentms

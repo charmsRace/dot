@@ -19,18 +19,6 @@
 		"description": "Member assignment boilerplate for constructors"
 	},
 
-	"Q-Free Copyright": {
-		"prefix": "qfc",
-		"body": [
-			"/**",
-			" * @author $1.$2",
-			" * Copyright (c) 2018, Open Roads Consulting, Inc.",
-			" */",
-			"$0"
-		],
-		"description": "Insert a Q-Free copyright"
-	},
-
 	"Parameter Documentation Comment": {
 		"prefix": "pdc",
 		"body": [
