@@ -7,7 +7,23 @@
 
 # Install terminator and set as default
 sudo apt-get install terminator
-sudo update-alternatives --set x-terminal-emulator $(which terminator)
+sudo update-alternatives --set \
+    x-terminal-emulator \
+    $(which terminator)
+sudo update-alternatives --set \
+    x-www-browser \
+    $(which chromium-browser)
+sudo update-alternatives --set \
+    editor \
+    "$(which vim).basic"
+sudo update-alternatives --set \
+    pager \
+    $(which less)
+# x-cursor-theme?
+# x-session-manager?
+# x-window-manager?
+
+
 # Change keyboard locale
 sudo sed -i \
     's/\(XKBLAYOUT=\)"\w*"/\1"us"/g' \
@@ -48,3 +64,6 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" \
   | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update &&
 sudo apt-get install --no-install-recommends yarn
+
+# Install Chromium
+sudo -qqy chromium-browser
