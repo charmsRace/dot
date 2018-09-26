@@ -3,7 +3,26 @@
   // chords - "key": "[^" ]+ [^" ]+"
   // taken alt menu keys: [defghstv]
 
-  /*
+  /**
+   * x
+   * ctrl+x
+   * shift+x
+   * alt+x
+   * ctrl+shift+x
+   * ctrl+alt+x
+   * shift+alt+x
+   * ctrl+shift+alt+x
+   */
+
+   /**
+    * ctrl: ⎈
+    * shift: ⇧
+    * alt: ⎇
+    * meta: ◆
+    */
+
+
+  /**
    * Commands unbound by default
    * (as opposed to rebindings)
    * TODO: fill out
@@ -16,7 +35,8 @@
    * - editor.action.reindentlines
    */
 
-  /* home
+  /**
+   * home
    * end
    * ctrl+home
    * ctrl+end
@@ -25,7 +45,7 @@
    * even widths
    */
 
-  /*
+  /**
    * swap tab navigation behavior
    * ctrl+tab <-> ctrl+pagedown
    * ctrl+shift+tab <-> ctrl+pageup
@@ -158,7 +178,10 @@
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
-
+  {
+    "key": "ctrl+alt+0",
+    "command": "workbench.action.evenEditorWidths"
+  },
   /*
    * shift + alt + ...
    */

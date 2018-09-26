@@ -1,4 +1,8 @@
 {
+	/*
+	 * (?:\([^)]*?\))?[,;]$
+	 */
+
 	"Block Comment": {
 		"prefix": "blk",
 		"body": [

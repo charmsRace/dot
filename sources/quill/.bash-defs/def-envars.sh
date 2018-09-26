@@ -14,3 +14,5 @@ declare D_DOT=${D_GIT}/dot
 declare D_SOURCE=${D_DOT}/sources/${DOTFILE_HOSTNAME}
 
 declare D_OTMS=${D_GIT}/opentms
+declare D_OTMS_TOMCAT=${D_OTMS}/dist/installer/target/dist/runtime/tomcat
+declare D_GUVNOR=~/rules/tomcat

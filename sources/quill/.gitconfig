@@ -12,7 +12,7 @@
     excludesfile = ~/.gitignore-global
 
 [remote "origin"]
-    prune = true
+    prune = false
 
 [color]
     ui = auto
@@ -26,8 +26,11 @@
     ########
     a = add
     aa = add --all
+    # asrc = add *.{java,scss,ts,tsx}
+    asrc = add *.java *.md *.scss *.ts *.tsx
     ########
     b = branch
+    bm = branch -m # rename current branch
     ########
     cf = config --global -e
     ########
@@ -40,11 +43,11 @@
     ########
     d = diff -w
     dfiles = diff-tree --no-commit-id --name-only -r # then commit identifier
-    di = diff -w --cached
-    dlast = diff -w @~
+    di = diff -w --cached # diff index with HEAD
+    dlast = diff -w @~ # diff HEAD with previous commit
     dt = difftool
-    dn = diff --name-status
-    dnm = diff --name-status master
+    dn = diff -w --name-status
+    dnm = diff -w --name-status master
     dw = diff
     ########
     f = fetch
@@ -58,6 +61,7 @@
     ########
     m = merge
     mm = merge master
+    mom = merge origin/master
     ########
     o = checkout
     ########
@@ -80,6 +84,7 @@
     rv = remote -v
     ########
     rmc = rm --cached
+    rmn = rm --dry-run
     ########
     s = status
     su = status -u

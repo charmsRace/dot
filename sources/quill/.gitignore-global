@@ -5,3 +5,7 @@
 
 # Personal ad-hoc folders
 **/@alex/
+
+# OTMS NTCIP sim data
+#opentms/dist/data/src/main/resources/ntcip_sim_data/**/*
+**/ntcip_sim_data/

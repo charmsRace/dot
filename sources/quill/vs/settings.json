@@ -7,7 +7,7 @@
   "editor.autoClosingBrackets": false,
   "editor.cursorBlinking": "phase",
   "editor.dragAndDrop": false,
-  "editor.insertSpaces": true,
+  "editor.insertSpaces": false,
   "editor.minimap.showSlider": "always",
   "editor.minimap.renderCharacters": false,
   "editor.mouseWheelZoom": true,
@@ -41,7 +41,7 @@
   "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
-  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
 
   /*
@@ -287,6 +287,7 @@
 
   "[java]": {
     "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
     "editor.insertSpaces": false
   },
 
@@ -370,6 +371,12 @@
    * Autoscroll
    */
 
-   "autoscrolldown.onlyWhenAtEnd": false
+   "autoscrolldown.onlyWhenAtEnd": false,
+
+  /*
+   * TypeScript Hero
+   */
+
+  "typescriptHero.resolver.resolverMode": "TypeScript",
 
 }

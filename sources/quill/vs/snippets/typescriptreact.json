@@ -10,8 +10,18 @@
     "prefix": "blc",
     "body": [
       "",
-      "/*",
+      "/**",
       "*/",
+    ],
+  },
+  "Module block comment": {
+    "prefix": "mod",
+    "body": [
+      "/**",
+      " * @module $1",
+      " * @category $2",
+      " */",
+      "$0",
     ],
   },
   "Comment out React component": {

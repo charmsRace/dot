@@ -8,6 +8,7 @@ alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
 alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
+alias hfl="vim /c/WINDOWS/System32/drivers/etc/hosts"
 
 # general
 alias _="sudo"
@@ -45,7 +46,6 @@ alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
 # maven
 alias smvn="mvn -e -T 1C"
 alias smvnc="mvn -e -T 1C clean"
-alias smvni="mvn -e -T 1C -P va-dev install"
 alias smvnci="mvn -e -T 1C clean && mvn -e -T 1C -P va-dev install"
 alias smvnl="mvn -e -T 1C -l ${D_OTMS}/@alex/mvn-$(${DATE_FORMAT[@]}).log -P va-dev"
 alias smvn-full="mvn -e -T 1C clean && mvn -e -T 1C -l ${D_OTMS}/@alex/mvn-$(${DATE_FORMAT[@]}).log -P va-dev install"
@@ -55,7 +55,11 @@ alias odev="node ~/git/opentms-dev-tool/index.js"
 
 # start OTMS GWT code server
 alias otmscs="bash ${D_OTMS}/@alex/code-server.sh"
+alias otmswar="cd ${D_OTMS_TOMCAT}/webapps && rm -rf ./opentms*"
 
+# guvnor tomcat instance
+alias guvstart="bash ${D_GUVNOR}/bin/catalina.sh start"
+alias guvstop="bash ${D_GUVNOR}/bin/catalina.sh stop"
 
 # for chromebooks with chroots
 if false; then
