@@ -1,7 +1,6 @@
 [user]
     name = Alex Ruble
-    email = jaruble@ncsu.edu
-    # email = alex.ruble@q-free.com
+    email = jalexruble@gmail.com
 
 [credential "https://github.com"]
     username = calamitizer
@@ -12,7 +11,7 @@
     excludesfile = ~/.gitignore-global
 
 [remote "origin"]
-    prune = true
+    prune = false
 
 [color]
     ui = auto
@@ -22,12 +21,14 @@
 
 [alias]
     root = !pwd
-    # psod = push origin OTMS-20405-DSS-Corridor-Control-Schematic
     ########
+
+
     a = add
     aa = add --all
     ########
     b = branch
+    bm = branch -m # rename current branch
     ########
     cf = config --global -e
     ########
@@ -38,11 +39,13 @@
     c = commit
     cm = commit -m
     ########
-    d = diff
-    dfiles = diff-tree --no-commit-id --name-only -r # then commit identifier
+    d = diff -w
+    dfiles = diff-tree --no-commit-id --name-only -r # then commid id
+    di = diff -w --cached # diff index with HEAD
+    dlast = diff -w @~ # diff HEAD with previous commit
     dt = difftool
-    dn = diff --name-status
-    dnm = diff --name-status master
+    dn = diff -w --name-status
+    dw = diff # with whitespace
     ########
     f = fetch
     ########
@@ -55,6 +58,7 @@
     ########
     m = merge
     mm = merge master
+    mom = merge origin/master
     ########
     o = checkout
     ########
@@ -77,5 +81,7 @@
     rv = remote -v
     ########
     rmc = rm --cached
+    rm-dry = rm --dry-run
     ########
     s = status
+    su = status -u

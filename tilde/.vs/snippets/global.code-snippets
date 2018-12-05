@@ -1,9 +1,11 @@
 {
-	/** Ad-Hoc */
-	"AlgorithmAlertModal": {
-		"prefix": "aam",
+
+	"Print to console": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "log",
 		"body": [
-			"AlgorithmAlertModal",
+			"console.log($1);",
+			"$2",
 		],
 	},
 

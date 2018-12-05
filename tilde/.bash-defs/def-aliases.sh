@@ -8,6 +8,7 @@ alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
 alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
+alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 
 # general
 alias _="sudo"
@@ -41,13 +42,6 @@ alias c-="cd - > /dev/null"
 # dotfile tools
 alias cpdot="cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}"
 alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
-
-# otms-dev-tool
-alias odev="node ~/git/opentms-dev-tool/index.js"
-
-# maven
-alias smvn="mvn -e -T 1C"
-alias smvn-l="mvn -e -T 1C -l ./$(${DATE_FORMAT[@]}).log"
 
 # for chromebooks with chroots
 if false; then

@@ -1,4 +1,8 @@
 {
+	/*
+	 * Instructions: open containing folder (/dot/) in VS Code,
+	 * and search extensions for `@recommended:workspace`.
+	 */
 	"recommendations": [
 		"CoenraadS.bracket-pair-colorizer",
 		"wmaurer.change-case",

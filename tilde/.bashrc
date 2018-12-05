@@ -108,6 +108,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Run external definition files
 # (e.g. aliases, symlinks)
-DEF_INDEX=~/.bash-defs/index.sh
+declare D_DEFS=${HOME}/.bash-defs
+declare DEF_INDEX="${D_DEFS}/index.sh"
 [[ -f $DEF_INDEX ]] && . $DEF_INDEX
 unset DEF_INDEX

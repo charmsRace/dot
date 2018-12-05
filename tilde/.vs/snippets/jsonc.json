@@ -1,17 +1,15 @@
 {
-	// Place your snippets for jsonc here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+	"Comment Header": {
+		"prefix": "hdr",
+		"body": [
+			"/*",
+			" * $1",
+			" */",
+			"",
+			"$0"
+		],
+		"description": "Insert a comment header"
+	},
 	"Associate file to json": {
 		"prefix": "jsfile",
 		"body": [
@@ -33,4 +31,17 @@
 		],
 		"description": "Insert a template for associating a schema",
 	},
+	"VS Code Snippet": {
+		"prefix": "snip",
+		"body": [
+			"\"$1\": {",
+			"\t\"prefix\": \"$2\",",
+			"\t\"body\": [",
+			"\t\t\"$4\"$0",
+			"\t],",
+			"\t\"description\": \"$3\"",
+			"}"
+		],
+		"description": "Define a new VS Code snippet."
+	}
 }
