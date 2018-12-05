@@ -1,21 +1,73 @@
-// all - "key": "[^"]*?"
-// chords - "key": "[^" ]+ [^" ]+"
-// taken alt menu keys: [defghstv]
-
-/*
- * Commands unbound by default
- * (as opposed to rebindings)
- * TODO: fill out
- *
- * Set
- * - editor.action.goToTypeDefinition
- * - editor.action.joinLines
- *
- * Unset
- * - editor.action.reindentlines
- */
-
 [
+  // all - "key": "[^"]*?"
+  // chords - "key": "[^" ]+ [^" ]+"
+  // taken alt menu keys: [defghstv]
+
+  /**
+   * x
+   * ctrl+x
+   * shift+x
+   * alt+x
+   * ctrl+shift+x
+   * ctrl+alt+x
+   * shift+alt+x
+   * ctrl+shift+alt+x
+   */
+
+   /**
+    * ctrl: ⎈
+    * shift: ⇧
+    * alt: ⎇
+    * meta: ◆
+    */
+
+
+  /**
+   * Commands unbound by default
+   * (as opposed to rebindings)
+   * TODO: fill out
+   *
+   * Set
+   * - editor.action.goToTypeDefinition
+   * - editor.action.joinLines
+   *
+   * Unset
+   * - editor.action.reindentlines
+   */
+
+  /**
+   * home
+   * end
+   * ctrl+home
+   * ctrl+end
+   * pageup
+   * pagedown
+   * even widths
+   */
+
+  /**
+   * swap tab navigation behavior
+   * ctrl+tab <-> ctrl+pagedown
+   * ctrl+shift+tab <-> ctrl+pageup
+   */
+
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
+  },
+
   {
     "key": "ctrl+f5",
     "command": "workbench.action.reloadWindow",
@@ -26,9 +78,18 @@
     "command": "explorer.newFile"
   },
   {
+    "key": "ctrl+shift+alt+n",
+    "command": "explorer.newFolder"
+  },
+  {
     "key": "ctrl+k ctrl+m",
     "command": "workbench.action.openGlobalKeybindingsFile"
   },
+  {
+    "key": "ctrl+k ctrl+shift+o",
+    "command": "addRootFolder"
+  },
+
 
   /*
    * alt + ...
@@ -37,82 +98,6 @@
   {
     "key": "alt+`",
     "command": "workbench.action.terminal.kill"
-  },
-
-  /*
-   * ctrl + alt + ...
-   */
-
-  {
-    "key": "ctrl+alt+a",
-    "command": "editor.action.goToDeclaration",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+alt+s",
-    "command": "editor.action.goToImplementation",
-    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+alt+d",
-    "command": "editor.action.goToTypeDefinition",
-    "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+alt+j",
-    "command": "editor.action.joinLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+/",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-
-  /*
-   * shift + alt + ...
-   */
-
-  {
-    "key": "shift+alt+q",
-    "command": "workbench.action.focusFirstEditorGroup"
-  },
-  {
-    "key": "shift+alt+w",
-    "command": "workbench.action.focusSecondEditorGroup"
-  },
-  {
-    "key": "shift+alt+e",
-    "command": "workbench.action.focusThirdEditorGroup"
-  },
-  {
-    "key": "shift+alt+a",
-    "command": "workbench.files.action.focusOpenEditorsView"
-  },
-  {
-    "key": "shift+alt+z",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-  {
-    "key": "shift+alt+x",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "shift+alt+f",
-    "command": "settings.action.search"
-  },
-  {
-    "key": "shift+alt+c",
-    "command": "search.action.focusPreviousSearchResult"
-  },
-  {
-    "key": "shift+alt+v",
-    "command": "search.action.focusNextSearchResult"
-  },
-  {
-    "key": "shift+alt+s",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus && !editorReadonly"
   },
 
   /*
@@ -161,6 +146,85 @@
   {
     "key": "alt+q x",
     "command": "editor.action.trimTrailingWhitespace",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  /*
+   * ctrl + alt + ...
+   */
+
+  {
+    "key": "ctrl+alt+a",
+    "command": "editor.action.goToDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+0",
+    "command": "workbench.action.evenEditorWidths"
+  },
+  /*
+   * shift + alt + ...
+   */
+
+  {
+    "key": "shift+alt+q",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "shift+alt+w",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "shift+alt+e",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "workbench.files.action.focusOpenEditorsView"
+  },
+  {
+    "key": "shift+alt+z",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "shift+alt+x",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "settings.action.search"
+  },
+  {
+    "key": "shift+alt+c",
+    "command": "search.action.focusPreviousSearchResult"
+  },
+  {
+    "key": "shift+alt+v",
+    "command": "search.action.focusNextSearchResult"
+  },
+  {
+    "key": "shift+alt+s",
+    "command": "editor.action.insertSnippet",
     "when": "editorTextFocus && !editorReadonly"
   }
 ]

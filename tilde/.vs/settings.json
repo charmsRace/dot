@@ -6,8 +6,10 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoClosingBrackets": false,
   "editor.cursorBlinking": "phase",
-  "editor.insertSpaces": true,
+  "editor.dragAndDrop": false,
+  "editor.insertSpaces": false,
   "editor.minimap.showSlider": "always",
+  "editor.minimap.renderCharacters": false,
   "editor.mouseWheelZoom": true,
   "editor.parameterHints": false,
   "editor.quickSuggestions": {
@@ -39,13 +41,15 @@
   "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
-  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
 
   /*
    * Window
    */
 
+  "window.menuBarVisibility": "toggle",
+  "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "folders",
   "window.title": "[VS] ${dirty}${activeEditorShort}${separator}${rootName}",
   "window.zoomLevel": 0,
@@ -82,6 +86,12 @@
   "zenMode.fullScreen": false,
 
   /*
+   * File Explorer
+   */
+
+  "explorer.sortOrder": "type",
+
+  /*
    * Search
    */
 
@@ -94,7 +104,10 @@
    * HTML
    */
 
+  "html.experimental.syntaxFolding": true,
   "html.format.indentInnerHtml": true,
+  "html.suggest.angular1": false,
+  "html.suggest.ionic": false,
   "html.trace.server": "off",
 
   /*
@@ -194,7 +207,7 @@
    */
 
   "markdown.previewFrontMatter": "show",
-  "markdown.trace": "verbose",
+  "markdown.trace": "off",
 
   /*
    * CSS
@@ -268,11 +281,13 @@
   },
 
   "[html]": {
+    "editor.autoClosingBrackets": true,
     "editor.tabSize": 2
   },
 
   "[java]": {
     "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
     "editor.insertSpaces": false
   },
 
@@ -298,6 +313,11 @@
     "editor.wordWrapColumn": 80
   },
 
+  "[scss]": {
+    "editor.autoClosingBrackets": true,
+    "editor.tabSize": 2,
+  },
+
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 2
@@ -308,6 +328,11 @@
     "editor.tabSize": 2
   },
 
+  "[xml]": {
+    "editor.autoClosingBrackets": true,
+    "editor.tabSize": 2
+  },
+
   /*
    * Git
    */
@@ -315,12 +340,43 @@
   "git.defaultCloneDirectory": "C:\\Users\\alexb\\git",
   "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
   "git.promptToSaveFilesBeforeCommit": true,
-  "extensions.ignoreRecommendations": false,
 
   /*
    * Emmet
    */
 
   "emmet.showAbbreviationSuggestions": false,
-  "emmet.showExpandedAbbreviation": "never"
+  "emmet.showExpandedAbbreviation": "never",
+
+  /*
+   * BracketPair
+   */
+
+  "bracketPairColorizer.highlightActiveScope": true,
+  "bracketPairColorizer.scopeLineCSS": [
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}; opacity: 1"
+  ],
+  "bracketPairColorizer.showBracketsInGutter": true,
+  "bracketPairColorizer.showBracketsInRuler": true,
+
+  /*
+   * SVG
+   */
+
+  "svg.completion.showAdvanced": true,
+
+  /*
+   * Autoscroll
+   */
+
+   "autoscrolldown.onlyWhenAtEnd": false,
+
+  /*
+   * TypeScript Hero
+   */
+
+  "typescriptHero.resolver.resolverMode": "TypeScript",
+
 }
