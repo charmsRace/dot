@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # init.sh
 
-# To run this script locally, run:
-# $ bash <(curl -s "https://raw.githubusercontent.com/calamitizer/dot/master/init.sh")
+# To run this script locally, run
+# $ curl -o- https://raw.githubusercontent.com/calamitizer/dot/master/init.sh | bash
 # This will run a script to clone this repo locally
 # and copy stuff to relevant places.
 
@@ -11,6 +11,7 @@ mkdir -p ${D_HOME}}
 cd ${D_HOME}
 
 echo 'Install packages...'
+# fails gracefully in git bash, which comes with these"
 sudo apt-get install -qqy curl git vim
 
 echo 'Clone repo...'
