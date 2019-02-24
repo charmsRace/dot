@@ -1,0 +1,42 @@
+# Enforce this .gitignore on all projects by
+# adding the following to your `~/.gitconfig`:
+#
+# [core]
+#     excludesfile = ~/.gitignore-global
+
+# Personal ad-hoc folders. This means I can keep an `@alex`
+# directory anywhere in a repo without version-controlling
+# it or polluting that project's .gitignore.
+**/@alex/
+
+# Past this point, this is just a template, for reference.
+# This is because .gitignores should be version-controlled
+# on a per-project basis. If these were globally ignored,
+# a user could easily forget forget to a line in a project's
+# own .gitignore. For this reason, it's all commented out,
+# meant to be cherry-picked from.
+
+### temp files and OS trash ###
+# *~
+# *.swp
+# *.swo
+# .Trash-*
+
+### npm / yarn ###
+# **/node_modules/
+# .npm
+# yarn-error.log
+### for Heroku
+# npm-debug.log*
+
+### build directories ###
+# client/www/
+# client/dist/
+
+### VS Code ###
+# *.code-workspace
+### (don't ignore the .vs/ directory if you want to set
+### project-wide snippets or recommended extensions)
+
+### envar files ###
+# *.env

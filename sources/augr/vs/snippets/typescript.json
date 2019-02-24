@@ -1,0 +1,9 @@
+{
+  "dtslint Type Assertion": {
+    "prefix": "dts",
+    "body": [
+      "// \\$ExpectType ${1:expectedType}",
+    ],
+    "description": "Insert a dtslint type assertion",
+  },
+}
