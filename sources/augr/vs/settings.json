@@ -29,6 +29,14 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
 
+  // Ligatures
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "vscode_custom_css.imports": [
+    "file:///C:/Users/joruble/AppData/Roaming/Code/User/css/disable-italics.css"
+  ],
+  "vscode_custom_css.policy": true,
+
   /*
    * Source Control
    */
@@ -39,10 +47,9 @@
    * Workbench
    */
 
-  "workbench.colorTheme": "One Dark Pro Bold",
+  "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
-  "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
 
   /*
@@ -282,7 +289,8 @@
   },
 
   "[html]": {
-    "editor.autoClosingBrackets": "always"
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[java]": {
@@ -292,7 +300,8 @@
   },
 
   "[json]": {
-    "editor.autoClosingBrackets": "always"
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[jsonc]": {
@@ -390,5 +399,8 @@
   "todo-tree.statusBar": "total",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.activityBar.visible": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
 }

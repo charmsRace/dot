@@ -84,6 +84,11 @@
     "command": "explorer.newFolder"
   },
   {
+    "key": "ctrl+k t",
+    "command": "workbench.action.tasks.terminate",
+    "args": "terminateAll"
+  },
+  {
     "key": "ctrl+k ctrl+m",
     "command": "workbench.action.openGlobalKeybindingsFile"
   },
@@ -115,7 +120,6 @@
    * -> x - trimTrailingWhitespace
    */
 
-	☐
   {
     "key": "alt+q q",
     "command": "editor.action.indentationToSpaces",

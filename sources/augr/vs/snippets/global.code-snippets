@@ -9,6 +9,15 @@
     ],
   },
 
+  "Basic property accessor": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "pra",
+    "body": [
+      "({ ${1:property} }) => $1$0",
+    ],
+    "description": "Insert a basic property accessor function",
+  },
+
   "Print value to console": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "logv",
@@ -55,10 +64,20 @@
     "prefix": "impr",
     "scope": "javascriptreact, typescriptreact",
     "body": [
-      "import * as React from 'react';",
+      "import React from 'react';",
       "$0",
     ],
     "description": "Insert a React import",
+  },
+
+  "Import classNames": {
+    "prefix": "impcn",
+    "scope": "javascriptreact, typescriptreact",
+    "body": [
+      "import classNames from 'classnames';",
+      "$0",
+    ],
+    "description": "Insert a classNames import",
   },
 
   "Comment out React component": {

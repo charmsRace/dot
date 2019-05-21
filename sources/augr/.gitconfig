@@ -17,7 +17,7 @@
     ui = auto
 
 [web]
-    browser = google-chrome
+    # browser = google-chrome
 
 [alias]
     root = !pwd
@@ -86,3 +86,5 @@
     ########
     s = status
     su = status -u
+    slist = stash list
+    spop = stash pop
