@@ -45,7 +45,12 @@ alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
 alias py2="python"
 alias py3="py"
 
-alias mtm="ssh administrator@mtm"
+alias mtmssh="ssh administrator@mtm"
+mtmapi () { curl --max-time 300 http://localhost:3939/api/v1/$1 "${@:2}"; }
+
+alias sshive="ssh ${HIVE_VM}"
+alias sshive-reset="ssh-keygen -R ${HIVE_VM}"
+alias gcp="gcloud beta compute --project mktg-analytics-proc-0n9f ssh --zone us-central1-a mktg-advanced-analytics-core-vm"
 
 # for chromebooks with chroots
 if false; then

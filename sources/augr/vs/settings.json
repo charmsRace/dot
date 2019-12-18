@@ -29,6 +29,12 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
 
+  /*
+   * Prettier extension
+   */
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+
   // Ligatures
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
@@ -330,6 +336,7 @@
 
   "[typescript]": {
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[typescriptreact]": {
@@ -402,5 +409,15 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "vsicons.projectDetection.disableDetect": true,
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "todo-tree.general.statusBar": "total",
 
 }

@@ -1,9 +1,28 @@
 {
   "dtslint Type Assertion": {
     "prefix": "dts",
+    "description": "Insert a dtslint type assertion",
     "body": [
       "// \\$ExpectType ${1:expectedType}",
     ],
-    "description": "Insert a dtslint type assertion",
+  },
+
+  "Enum Boilerplate": {
+    "prefix": "enum",
+    "description": "Insert a boilerplate enum declaration",
+    "body": [
+      "export enum ${1:name} {",
+      "\t$0",
+      "}",
+      "",
+      "export type ${1}Map<T> = { [${2:lowercase} in ${1}]: T };",
+      "",
+      "const displayStrings: ${1}Map<string> = {",
+      "",
+      "};",
+      "",
+      "export const getDisplayString = (${2}: ${1}) => displayStrings[${2}];",
+      "",
+    ],
   },
 }

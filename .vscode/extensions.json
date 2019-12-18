@@ -6,6 +6,7 @@
   * Idea: Extension to add "copy to clipboard" button
   */
   "recommendations": [
+    "luggage66.awk",
     "CoenraadS.bracket-pair-colorizer",
     "wmaurer.change-case",
     "Compulim.compulim-vscode-closetag",

@@ -290,7 +290,23 @@
     "key": "shift+alt+s",
     "command": "editor.action.insertSnippet",
     "when": "editorTextFocus && !editorReadonly"
-  }
+  },
+
+
+  /*
+   * Remap smart selection because subword navigation
+   * extension uses `shift+alt+{left,right}`
+   */
+  {
+    "key": "ctrl+shift+up",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus",
+  },
 ]
 
 // shift + alt + ...

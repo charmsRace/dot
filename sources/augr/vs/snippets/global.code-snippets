@@ -71,13 +71,13 @@
   },
 
   "Import classNames": {
-    "prefix": "impcn",
+    "prefix": "impcl",
     "scope": "javascriptreact, typescriptreact",
     "body": [
-      "import classNames from 'classnames';",
+      "import clsx from 'clsx';",
       "$0",
     ],
-    "description": "Insert a classNames import",
+    "description": "Insert a clsx import",
   },
 
   "Comment out React component": {
