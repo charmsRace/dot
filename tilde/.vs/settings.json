@@ -4,10 +4,10 @@
    */
 
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.autoClosingBrackets": false,
+  "editor.autoClosingBrackets": "never",
   "editor.cursorBlinking": "phase",
   "editor.dragAndDrop": false,
-  "editor.insertSpaces": false,
+  "editor.insertSpaces": true,
   "editor.minimap.showSlider": "always",
   "editor.minimap.renderCharacters": false,
   "editor.mouseWheelZoom": true,
@@ -25,8 +25,22 @@
   ],
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.wordWrap": "on",
+
+  /*
+   * Prettier extension
+   */
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+
+   // Ligatures
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "vscode_custom_css.imports": [
+    "file:///C:/Users/joruble/AppData/Roaming/Code/User/css/disable-italics.css"
+  ],
+  "vscode_custom_css.policy": true,
 
   /*
    * Source Control
@@ -38,11 +52,13 @@
    * Workbench
    */
 
+  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
-  "workbench.iconTheme": "vscode-icons",
+  // "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
+
 
   /*
    * Window
@@ -89,7 +105,15 @@
    * File Explorer
    */
 
+  "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "type",
+
+  /*
+   * Breadcrumbs
+   */
+
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "last",
 
   /*
    * Search
@@ -281,8 +305,8 @@
   },
 
   "[html]": {
-    "editor.autoClosingBrackets": true,
-    "editor.tabSize": 2
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[java]": {
@@ -291,9 +315,13 @@
     "editor.insertSpaces": false
   },
 
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   "[json]": {
-    "editor.autoClosingBrackets": true,
-    "editor.tabSize": 2
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[jsonc]": {
@@ -308,29 +336,31 @@
   },
 
   "[markdown]": {
-    "editor.tabSize": 2,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
   },
 
   "[scss]": {
-    "editor.autoClosingBrackets": true,
-    "editor.tabSize": 2,
+    "editor.autoClosingBrackets": "always"
+  },
+
+  "[sql]": {
+    "editor.tabSize": 4
   },
 
   "[typescript]": {
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
 
   "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.formatOnSave": true
   },
 
   "[xml]": {
-    "editor.autoClosingBrackets": true,
-    "editor.tabSize": 2
+    "editor.autoClosingBrackets": "always"
   },
 
   /*
@@ -371,12 +401,7 @@
    * Autoscroll
    */
 
-   "autoscrolldown.onlyWhenAtEnd": false,
+  "autoscrolldown.onlyWhenAtEnd": false
 
-  /*
-   * TypeScript Hero
-   */
-
-  "typescriptHero.resolver.resolverMode": "TypeScript",
-
+  // "vsicons.projectDetection.disableDetect": true,
 }

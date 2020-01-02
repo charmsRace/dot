@@ -1,19 +1,119 @@
 {
-  "Prettier-Ignore": {
-    "prefix": "pri",
+  "Redux component - State Props": {
+    "prefix": "rdxs",
     "body": [
-      "// prettier-ignore",
-    ],
-    "description": "Command Prettier to ignore the next syntactic node",
-  },
-  "Block comment": {
-    "prefix": "blc",
-    "body": [
+      "import * as React from 'react';",
+      "import { connect } from 'react-redux';",
       "",
-      "/**",
-      "*/",
+      "interface OwnProps {}",
+      "",
+      "interface StateProps {",
+        "\t//",
+      "}",
+      "",
+      "interface ${1:ComponentName}Props",
+        "\textends React.HTMLProps<HTMLElement>,",
+          "\t\tOwnProps,",
+          "\t\tStateProps {}",
+      "export const $1: React.SFC<$1Props> = () => (",
+        "\t$0",
+      ");",
+      "",
+      "const mapStateToProps = (state: ${2:StateName}): StateProps => ({",
+        "\t//",
+      "});",
+      "",
+      "const wrapped = connect<StateProps, {}, OwnProps, $2>(",
+        "\tmapStateToProps",
+      ")($1);",
+      "",
+      "export default wrapped;",
+      "",
     ],
+    "description": "Boilerplate for a React component with only State props",
   },
+
+  "Redux component - Dispatch Props": {
+    "prefix": "rdxd",
+    "body": [
+      "import * as React from 'react';",
+      "import { connect } from 'react-redux';",
+      "import { Dispatch } from 'redux';",
+      "",
+      "interface OwnProps {}",
+      "",
+      "interface DispatchProps {",
+        "\t//",
+      "}",
+      "",
+      "interface ${1:ComponentName}Props",
+        "\textends React.HTMLProps<HTMLElement>,",
+          "\t\tOwnProps,",
+          "\t\tDispatchProps {}",
+      "export const $1: React.SFC<$1Props> = () => (",
+        "\t$0",
+      ");",
+      "",
+      "const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({",
+        "\t//",
+      "});",
+      "",
+      "const wrapped = connect<{}, DispatchProps, OwnProps>(",
+        "\tnull,",
+        "\tmapDispatchToProps",
+      ")($1);",
+      "",
+      "export default wrapped;",
+      "",
+    ],
+    "description": "Boilerplate for a React component with only Dispatch props",
+  },
+
+  "Redux component - State & Dispatch Props": {
+    "prefix": "rdxsd",
+    "body": [
+      "import * as React from 'react';",
+      "import { connect } from 'react-redux';",
+      "import { Dispatch } from 'redux';",
+      "",
+      "interface OwnProps {}",
+      "",
+      "interface StateProps {",
+        "\t//",
+      "}",
+      "",
+      "interface DispatchProps {",
+        "\t//",
+      "}",
+      "",
+      "interface ${1:ComponentName}Props",
+        "\textends React.HTMLProps<HTMLElement>,",
+          "\t\tOwnProps,",
+          "\t\tStateProps,",
+          "\t\tDispatchProps {}",
+      "export const $1: React.SFC<$1Props> = () => (",
+        "\t$0",
+      ");",
+      "",
+      "const mapStateToProps = (state: ${2:StateName}): StateProps => ({",
+        "\t//",
+      "});",
+      "",
+      "const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({",
+        "\t//",
+      "});",
+      "",
+      "const wrapped = connect<StateProps, DispatchProps, OwnProps, $2>(",
+        "\tmapStateToProps,",
+        "\tmapDispatchToProps",
+      ")($1);",
+      "",
+      "export default wrapped;",
+      "",
+    ],
+    "description": "Boilerplate for a React component with State and Dispatch props",
+  },
+
   "Module block comment": {
     "prefix": "mod",
     "body": [
@@ -23,27 +123,6 @@
       " */",
       "$0",
     ],
-  },
-  "Comment out React component": {
-    "prefix": "cmc",
-    "body": [
-      "",
-      "{/*",
-      "*/}",
-    ],
-    "description": "Comment out a React component (use at the end of the line above, then use alt+down to move the second line below the component)"
-  },
-
-  "Copyright Statement": {
-    "prefix": "copy",
-    "body": "_Copyright (c) 2018, Q-Free Open Roads_",
-    "description": "Q-Free copyright statement"
-  },
-
-  "Arrow Operator": {
-    "prefix": "aro",
-    "body": ["($1) => $0"],
-    "description": "Creates arrow operator"
   },
 
   "Component Class": {
@@ -92,12 +171,6 @@
     "description": "A stateless, functional React Component"
   },
 
-  "import": {
-    "prefix": "imp",
-    "body": ["import { $0 } from '$1';"],
-    "description": "TypeScript Import Statement"
-  },
-
   "Lifecycle Hooks": {
     "prefix": "trl",
     "body": [
@@ -111,47 +184,6 @@
       ""
     ],
     "description": "React Component Lifecycle Hooks"
-  },
-
-  "Redux Container Connect": {
-    "prefix": "trcc",
-    "body": [
-      "import { connect } from 'react-redux';",
-      "import { OtmsStore } from '../../../store';",
-      "",
-      "/**",
-      " * Map Redux store `state` to component `props`",
-      " */",
-      "function mapStateToProps(state: OtmsStore): $1Props {",
-      "  return {",
-      "    ${2:property}: state.$3$0",
-      "  };",
-      "}",
-      "",
-      "/**",
-      " * Map component interactions or `actions` to Redux actions, which",
-      " * dispatch Redux `Reducers` - modifying the store.",
-      " */",
-      "function mapDispatchToProps(dispatch: any) {",
-      "  return {",
-      "    actions: bindActionCreators(actions, dispatch)",
-      "  };",
-      "}",
-      "",
-      "/**",
-      " * Since we are using react-redux connect to bind this component as a redux 'container',",
-      " * we must export the result of the connect call, rather than the component class itself.",
-      " *",
-      " * This also means to use the container we have to `import $1 ...;` without the `{}`",
-      " * to ensure we get the default, connected export.",
-      " */",
-      "export default connect(",
-      "  mapStateToProps,",
-      "  mapDispatchToProps",
-      ")($1);",
-      ""
-    ],
-    "description": "Functions to turn a component into a Redux contaier."
   },
 
   "Click Handler Type": {
@@ -180,44 +212,44 @@
     "description": "Starter for Jest test"
   },
 
-  "Redux Epic Boilerplate": {
-    "prefix": "epic",
-    "body": [
-      "import { $1 } from 'otms-types';",
-      "import { ActionsObservable, combineEpics } from 'redux-observable';",
-      "import { Observable } from 'rxjs';",
-      "import { Action, /** Action Creator Factory */ $2, /** REST API URL Generator */$3 } from 'otms-ui-common';",
-      "import { OtmsAjax } from 'otms-ui-common/rest/OtmsAjax';",
-      "import 'rxjs/add/operator/catch';",
-      "import 'rxjs/add/operator/filter';",
-      "import 'rxjs/add/operator/map';",
-      "import 'rxjs/add/operator/mapTo';",
-      "import 'rxjs/add/operator/mergeMap';",
-      "",
-      "",
-      "// This line waits until an action is dispatched to the store before being kicked off.",
-      "export const $4 = (action$: ActionsObservable<Action>) => action$.ofType(/** Action to trigger*/$2$3)",
-      "  .mergeMap(action => {",
-      "    const url = /** REST API URL Generator */$3(action.payload);",
-      "    return OtmsAjax.getJSON(url)",
-      "      .map(json => {'",
-      "        // dispatching action",
-      "        return /** Action to kick off */$2$3(json as $1); })",
-      "      .catch(error => {",
-      "        // If Error, do this",
-      "        return Observable.of({",
-      "          type: 'LCS_FETCH_ERROR',",
-      "          payload: error.xhr.response,",
-      "          error: true",
-      "        });",
-      "      });",
-      "  });",
-      "export const $5 = combineEpics(",
-      "  $4",
-      ");",
-      "export default $5;"
-    ],
-    "description":
-      "An Epic is a Redux store listener that waits for actions to be kicked off. From this point you can do anything, but this boilerplate assumes that you're going to be doing some REST calls"
-  }
+  // "Redux Epic Boilerplate": {
+  //   "prefix": "epic",
+  //   "body": [
+  //     "import { $1 } from 'otms-types';",
+  //     "import { ActionsObservable, combineEpics } from 'redux-observable';",
+  //     "import { Observable } from 'rxjs';",
+  //     "import { Action, /** Action Creator Factory */ $2, /** REST API URL Generator */$3 } from 'otms-ui-common';",
+  //     "import { OtmsAjax } from 'otms-ui-common/rest/OtmsAjax';",
+  //     "import 'rxjs/add/operator/catch';",
+  //     "import 'rxjs/add/operator/filter';",
+  //     "import 'rxjs/add/operator/map';",
+  //     "import 'rxjs/add/operator/mapTo';",
+  //     "import 'rxjs/add/operator/mergeMap';",
+  //     "",
+  //     "",
+  //     "// This line waits until an action is dispatched to the store before being kicked off.",
+  //     "export const $4 = (action$: ActionsObservable<Action>) => action$.ofType(/** Action to trigger*/$2$3)",
+  //     "  .mergeMap(action => {",
+  //     "    const url = /** REST API URL Generator */$3(action.payload);",
+  //     "    return OtmsAjax.getJSON(url)",
+  //     "      .map(json => {'",
+  //     "        // dispatching action",
+  //     "        return /** Action to kick off */$2$3(json as $1); })",
+  //     "      .catch(error => {",
+  //     "        // If Error, do this",
+  //     "        return Observable.of({",
+  //     "          type: 'LCS_FETCH_ERROR',",
+  //     "          payload: error.xhr.response,",
+  //     "          error: true",
+  //     "        });",
+  //     "      });",
+  //     "  });",
+  //     "export const $5 = combineEpics(",
+  //     "  $4",
+  //     ");",
+  //     "export default $5;"
+  //   ],
+  //   "description":
+  //     "An Epic is a Redux store listener that waits for actions to be kicked off. From this point you can do anything, but this boilerplate assumes that you're going to be doing some REST calls"
+  // }
 }

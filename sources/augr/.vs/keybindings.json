@@ -4,6 +4,8 @@
   // taken alt menu keys: [wertsdfgklcvbm]
 
   /**
+   * Modifier combinations
+   *
    * x
    * ctrl+x
    * shift+x
@@ -98,7 +100,7 @@
   },
 
 
-  /*
+  /**
    * alt + ...
    */
 
@@ -107,17 +109,17 @@
     "command": "workbench.action.terminal.kill"
   },
 
-  /*
-   * whitespace chords
+  /**
+   * Whitespace settings chord system
    * alt + q -> ...
    *
-   * -> q - indentationToSpaces
-   * -> a - indentUsingSpaces
-   * -> w - indentationToTabs
-   * -> s - indentUsingTabs
-   * -> e - detectIndentation
-   * -> r - reindentLines
-   * -> x - trimTrailingWhitespace
+   * q - indentationToSpaces
+   * a - indentUsingSpaces
+   * w - indentationToTabs
+   * s - indentUsingTabs
+   * e - detectIndentation
+   * r - reindentLines
+   * x - trimTrailingWhitespace
    */
 
   {
@@ -156,7 +158,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
-  /*
+  /**
    * ctrl + alt + ...
    */
 
@@ -201,8 +203,8 @@
   },
 
   /**
-   * Layout chords
-   * shift + alt + q ...
+   * Layout management chord system
+   * shift + alt + q -> ...
    *
    * q - workbench.action.editorLayoutSingle
    * w - workbench.action.editorLayoutTwoColumns
@@ -215,7 +217,6 @@
    * s - workbench.action.maximizeEditor
    * r - workbench.action.evenEditorWidths
    */
-
 
   {
     "key": "shift+alt+q q",
@@ -258,33 +259,40 @@
     "command": "workbench.action.evenEditorWidths",
   },
 
-  /*
+  /**
+   * Focus navigation chord system
+   * shift + alt + <key> -> ...
+   *
+   *  - workbench.action.focusSideBar
+   *  - workbench.files.action.focusOpenEditorsView
+   *  - workbench.files.action.focusFilesExplorer
+   *  - workbench.view.search.focus
+   *  - extensions.listView.focus
+   *  - workbench.action.focusPanel
+   *  - workbench.action.problems.focus
+   *  - workbench.action.terminal.focus
+   *  - breadcrumbs.focus
+   *  - notifications.focusToasts
+   *  - workbench.action.focusCommentsPanel
+   *  - workbench.action.focusQuickOpen
+   *
+   * Regex to find all focus commands in `default-keybindings.json`:
+   * `\.[^.]*?focus`
+   */
+
+  /**
    * shift + alt + ...
    */
 
   {
-    "key": "shift+alt+a",
-    "command": "workbench.files.action.focusOpenEditorsView"
+    "key": "shift+alt+d",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult",
   },
   {
-    "key": "shift+alt+z",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-  {
-    "key": "shift+alt+x",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "shift+alt+f",
-    "command": "settings.action.search"
-  },
-  {
-    "key": "shift+alt+c",
-    "command": "search.action.focusPreviousSearchResult"
-  },
-  {
-    "key": "shift+alt+v",
-    "command": "search.action.focusNextSearchResult"
+    "key": "shift+alt+e",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult",
   },
   {
     "key": "shift+alt+s",
@@ -292,8 +300,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
-
-  /*
+  /**
    * Remap smart selection because subword navigation
    * extension uses `shift+alt+{left,right}`
    */
@@ -307,18 +314,26 @@
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus",
   },
+
+  /**
+   * TODO: Set up chord system for opening
+   * VS Code configuration files
+   */
+
+  // {
+  //   "key": "shift+alt+<key> <key>",
+  //   "command": "vscode.open",
+  //   "args": {
+  //     "text": "C:\\Users\\joruble\\git\\dot\\sources\\augr\\.vs\\keybindings.json"
+  //   },
+  // },
+
+  // Test command
+  // {
+  //   "key": "ctrl+shift+alt+x",
+  //   "command": "workbench.action.focusQuickOpen",
+  // },
 ]
 
-// shift + alt + ...
-// q - workbench.action.focusFirstEditorGroup
-// w - workbench.action.focusSecondEditorGroup
-// e - workbench.action.focusThirdEditorGroup
-// a - workbench.files.action.focusOpenEditorsView
-// z - workbench.files.action.focusFilesExplorer
-// x - workbench.action.terminal.focus
-// f - workbench.action.terminal.focusFindWidget
-// c - search.action.focusPreviousSearchResult
-// v - search.action.focusNextSearchResult
-// workbench.action.focusSideBar
-// workbench.action.focusPanel
-// workbench.action.problems.focus
+// TODO: regex to find relevant JSON lines without trailing comma
+// TODO: terminal paning?

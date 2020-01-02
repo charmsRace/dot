@@ -1,14 +1,96 @@
 {
 
 	"Print to console": {
-		"scope": "javascript,javascriptreact,typescript,typescriptreact",
-		"prefix": "log",
-		"body": [
-			"console.log($1);",
-			"$2",
-		],
+	  "scope": "javascript, javascriptreact, typescript, typescriptreact",
+	  "prefix": "log",
+	  "body": [
+		"console.log($1);",
+		"$0",
+	  ],
 	},
-
+  
+	"Basic property accessor": {
+	  "scope": "javascript, javascriptreact, typescript, typescriptreact",
+	  "prefix": "pra",
+	  "body": [
+		"({ ${1:property} }) => $1$0",
+	  ],
+	  "description": "Insert a basic property accessor function",
+	},
+  
+	"Print value to console": {
+	  "scope": "javascript, javascriptreact, typescript, typescriptreact",
+	  "prefix": "logv",
+	  "body": [
+		"console.log(`${1:name} = ${$1}`);",
+		"$0",
+	  ],
+	  "description": "Log the name of a variable and its value",
+	},
+  
+	"Prettier-Ignore": {
+	  "prefix": "pri",
+	  "scope": "javascript, javascriptreact, typescript, typescriptreact",
+	  "body": [
+		"// prettier-ignore",
+	  ],
+	  "description": "Tell Prettier to ignore the next syntactic node",
+	},
+  
+	"TSLint Allow Console Pragma": {
+	  "prefix": "tslc",
+	  "scope": "typescript, typescriptreact",
+	  "body": [
+		"// tslint:disable-next-line:no-console",
+		"console.log($1);",
+		"$0",
+	  ],
+	  "description": "Tell TSLint to allow console calls on the next line",
+	},
+  
+	"Block comment": {
+	  "prefix": "blc",
+	  "scope": "java, javascript, javascriptreact, jsonc, typescript, typescriptreact",
+	  "body": [
+		"",
+		"/**",
+		" * $0",
+		" */",
+	  ],
+	  "description": "Insert a block-style comment",
+	},
+  
+	"Import React": {
+	  "prefix": "impr",
+	  "scope": "javascriptreact, typescriptreact",
+	  "body": [
+		"import React from 'react';",
+		"$0",
+	  ],
+	  "description": "Insert a React import",
+	},
+  
+	"Import classNames": {
+	  "prefix": "impcl",
+	  "scope": "javascriptreact, typescriptreact",
+	  "body": [
+		"import clsx from 'clsx';",
+		"$0",
+	  ],
+	  "description": "Insert a clsx import",
+	},
+  
+	"Comment out React component": {
+	  "prefix": "cmc",
+	  "scope": "javascriptreact, typescriptreact",
+	  "body": [
+		"",
+		"{/*",
+		"*/}",
+	  ],
+	  "description": "Comment out a React component (use at the end of the line above, then use alt+down to move the second line below the component)"
+	},
+  
 	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
 	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
@@ -25,4 +107,5 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-}
+  }
+  

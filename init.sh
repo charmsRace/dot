@@ -11,7 +11,7 @@ mkdir -p ${D_HOME}}
 cd ${D_HOME}
 
 echo 'Install packages...'
-# fails gracefully in git bash, which comes with these"
+# fails gracefully in git bash, which comes with these
 sudo apt-get install -qqy curl git vim
 
 echo 'Clone repo...'
@@ -34,8 +34,9 @@ mkdir -p ${D_VIM}/{bundle,colors}
 declare -r URL_BADWOLF="https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim"
 cd ${D_VIM}/colors; curl -s ${URL_BADWOLF} -O; cd - > /dev/null
 
+declare -r D_GIT=${D_GIT}/git
 declare -r URL_VUNDLE="https://github.com/VundleVim/Vundle.vim.git"
-cd ${D_VIM}/bundle; git clone -q ${URL_VUNDLE}; cd - > /dev/null
+git clone -q ${URL_VUNDLE} ${D_VIM}/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 echo 'Set up Node/npm with nvm'

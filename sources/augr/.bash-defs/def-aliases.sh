@@ -40,7 +40,7 @@ alias c-="cd - > /dev/null"
 
 # dotfile tools
 alias cpdot="cp -r ~/.{vimrc,git{config,ignore-global},bash{rc,-defs,_profile}} ${D_SOURCE}"
-alias cpvs="cp -r ${D_VS}/{snippets,{keybindings,settings}.json} ${D_SOURCE}/vs"
+alias cpvs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 alias py2="python"
 alias py3="py"

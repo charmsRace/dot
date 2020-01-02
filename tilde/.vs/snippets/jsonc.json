@@ -10,6 +10,7 @@
 		],
 		"description": "Insert a comment header"
 	},
+
 	"Associate file to json": {
 		"prefix": "jsfile",
 		"body": [
@@ -18,6 +19,7 @@
 		],
 		"description": "Insert a template for interpreting a filename as json",
 	},
+
 	"Associate json to schema": {
 		"prefix": "jschema",
 		"body": [
@@ -31,6 +33,7 @@
 		],
 		"description": "Insert a template for associating a schema",
 	},
+
 	"VS Code Snippet": {
 		"prefix": "snip",
 		"body": [
@@ -42,6 +45,18 @@
 			"\t\"description\": \"$3\"",
 			"}"
 		],
-		"description": "Define a new VS Code snippet."
-	}
+		"description": "Define a new VS Code snippet"
+	},
+
+	"VS Code Keybinding": {
+		"prefix": "key",
+		"body": [
+			"{",
+				"\t\"key\": \"${1:key}\",",
+				"\t\"when\": \"${2:condition}\",",
+				"\t\"command\": \"${3:action}\",",
+			"},",
+		],
+		"description": "Define a new VS Code keybinding",
+	},
 }

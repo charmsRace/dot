@@ -1,13 +1,4 @@
 {
-	"Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	},
-
 	"Ava test expectation": {
 		"prefix": "testex",
 		"body": [
@@ -18,6 +9,20 @@
 					"\t\t$4",
 				"\t},",
 			"},"
-		]
-	}
+		],
+	},
+
+	"Immediately Invoked Function Expression": {
+		"prefix": "iife",
+		"body": [
+			"(() => {",
+				"\t'use strict';",
+				"",
+				"\t$0",
+				"",
+				"\tmodule.exports = $1;",
+			"})();",
+		],
+		"description": "Insert the boilerplate for a CommonJS-style IIFE module",
+	},
 }
