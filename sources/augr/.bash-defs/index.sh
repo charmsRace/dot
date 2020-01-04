@@ -6,6 +6,7 @@ declare -a SOURCES=( \
     aliases \
     path \
     prompt \
+    scripts \
     symlinks \
 )
 
