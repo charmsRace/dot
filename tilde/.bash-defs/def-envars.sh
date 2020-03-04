@@ -6,10 +6,6 @@ declare DOTFILE_HOSTNAME= # contingent
 declare -a DATE_FORMAT=(date +%m%d%y-%H%M)
 declare LAST_EPOCH_MS=253402300799999
 
-if true; then
-    declare HIVE_VM=hdprd1-edge-lb01
-fi
-
 ### Directories ###
 # declare D_DEFS=~/.bash-defs # already in ~/.bashrc
 declare D_AHK=~/.ahk

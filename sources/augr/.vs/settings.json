@@ -445,4 +445,13 @@
    */
 
   "vsicons.projectDetection.disableDetect": true,
+  "explorer.confirmDelete": false,
+  "workbench.iconTheme": "vscode-icons",
+
+  "macros": {
+    "insertLinesAround": [
+      "editor.action.insertLineAfter",
+      "editor.action.insertLineBefore",
+    ],
+  },
 }

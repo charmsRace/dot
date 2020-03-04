@@ -59,4 +59,19 @@
 		],
 		"description": "Define a new VS Code keybinding",
 	},
+
+	"VS Code Workspace": {
+		"prefix": "cow",
+		"body": [
+			"{",
+				"\t\"folders\": [",
+					"\t\t{",
+						"\t\t\t\"name\": \"${1:name}\",",
+						"\t\t\t\"path\": \"../\",",
+					"\t\t},",
+				"\t],",
+				"\t\"settings\": {},",
+			"}",
+		],
+	},
 }

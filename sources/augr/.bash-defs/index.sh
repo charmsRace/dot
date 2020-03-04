@@ -5,6 +5,7 @@ declare -a SOURCES=( \
     envars \ # ensure this comes first
     aliases \
     path \
+    private \
     prompt \
     scripts \
     symlinks \

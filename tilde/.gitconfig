@@ -53,6 +53,8 @@
     ########
     l = log
     lom = log origin/master..master
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit
     ########
     ls = ls-files
     ########

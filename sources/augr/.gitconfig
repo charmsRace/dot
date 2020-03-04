@@ -36,7 +36,7 @@
     ########
     c = commit
     cm = commit -m
-    count = rev-list HEAD --count # count total commits
+    ccount = rev-list HEAD --count # count total commits
     ########
     d = diff -w
     dfiles = diff-tree --no-commit-id --name-only -r # then commit id
@@ -53,6 +53,8 @@
     ########
     l = log
     lom = log origin/master..master
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ########
     ls = ls-files
     ########
@@ -85,5 +87,6 @@
     ########
     s = status
     su = status -u
+    ########
     slist = stash list
     spop = stash pop

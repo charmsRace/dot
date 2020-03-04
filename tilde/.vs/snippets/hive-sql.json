@@ -1,0 +1,17 @@
+{
+	"Insert map entries": {
+		"prefix": "ins",
+		"body": [
+			"CLASSIFY('${1:contentType}'),",
+			"CAST(COUNT(DISTINCT",
+				"\ta.session_id,",
+				"\ta.url,",
+				"\ta.content_name,",
+				"\tCOUNT_TYPE(a.content_type, '$1')",
+			") AS INT),",
+			"",
+			"$0",
+		],
+		"description": "Insert map entries for counting content type (ad hoc)",
+	},
+}
