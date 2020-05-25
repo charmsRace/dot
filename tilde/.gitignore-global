@@ -4,15 +4,15 @@
 # [core]
 #     excludesfile = ~/.gitignore-global
 
-# Personal ad-hoc folders. This means I can keep an `@alex`
+# Personal ad-hoc folders. This means I can keep an `@clarity`
 # directory anywhere in a repo without version-controlling
 # it or polluting that project's .gitignore.
-**/@alex/
+**/@clarity/
 
 # Past this point, this is just a template, for reference.
 # This is because .gitignores should be version-controlled
 # on a per-project basis. If these were globally ignored,
-# a user could easily forget forget to a line in a project's
+# a user could easily forget forget a line in a project's
 # own .gitignore. For this reason, it's all commented out,
 # meant to be cherry-picked from.
 
@@ -32,11 +32,6 @@
 ### build directories ###
 # client/www/
 # client/dist/
-
-### VS Code ###
-# *.code-workspace
-### (don't ignore the .vs/ directory if you want to set
-### project-wide snippets or recommended extensions)
 
 ### envar files ###
 # *.env

@@ -89,4 +89,5 @@
     su = status -u
     ########
     slist = stash list
+    stall = stash --include-untracked
     spop = stash pop

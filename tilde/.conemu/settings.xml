@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2020-01-31 10:38:00" build="191012">
+		<key name=".Vanilla" modified="2020-05-25 14:01:17" build="191012">
 			<value name="Language" type="string" data="en"/>
-			<value name="StartType" type="hex" data="02"/>
+			<value name="StartType" type="hex" data="00"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
 			<value name="StartTasksName" type="string" data="{Group5}"/>
@@ -104,8 +104,8 @@
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
 			<value name="KeyboardHooks" type="hex" data="01"/>
-			<value name="FontName" type="string" data="Consolas"/>
-			<value name="FontName2" type="string" data=""/>
+			<value name="FontName" type="string" data="Fira Code Light"/>
+			<value name="FontName2" type="string" data="Consolas"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
 			<value name="FontSize" type="ulong" data="14"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
@@ -135,12 +135,12 @@
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd X" type="long" data="-1345"/>
-			<value name="ConWnd Y" type="long" data="0"/>
-			<value name="LastMonitor" type="string" data="-1920,0,0,1040"/>
-			<value name="ConWnd Width" type="dword" data="00000075"/>
-			<value name="ConWnd Height" type="dword" data="00000037"/>
+			<value name="WindowMode" type="dword" data="0000051f"/>
+			<value name="ConWnd X" type="long" data="-2011"/>
+			<value name="ConWnd Y" type="long" data="290"/>
+			<value name="LastMonitor" type="string" data="-1600,156,0,1016"/>
+			<value name="ConWnd Width" type="dword" data="000000bf"/>
+			<value name="ConWnd Height" type="dword" data="0000002d"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
@@ -599,11 +599,11 @@
 				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
-			<key name="Tasks" modified="2020-01-31 10:38:00" build="191012">
-				<value name="Count" type="long" data="5"/>
-				<key name="Task1" modified="2020-01-31 10:38:00" build="191012">
+			<key name="Tasks" modified="2020-05-25 14:01:17" build="191012">
+				<value name="Count" type="long" data="6"/>
+				<key name="Task1" modified="2020-05-25 14:01:17" build="191012">
 					<value name="Name" type="string" data="{Shells::cmd}"/>
-					<value name="Flags" type="dword" data="00000002"/>
+					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
@@ -619,9 +619,9 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="powershell.exe"/>
 				</key>
-				<key name="Task3" modified="2020-01-31 10:38:00" build="191012">
+				<key name="Task3" modified="2020-05-25 14:01:17" build="191012">
 					<value name="Name" type="string" data="{Bash::Git bash}"/>
-					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Flags" type="dword" data="00000006"/>
 					<value name="Hotkey" type="dword" data="00001154"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
@@ -648,6 +648,13 @@
 					<value name="Cmd2" type="string" data='&gt; -cur_console:nps1T50H -cur_console:d:C:\Users\joruble\git\mtm set "PATH=%ConEmuDir%\..\Git\usr\bin;%PATH%" &amp; %ConEmuDir%\..\Git\git-cmd.exe --no-cd --command=%ConEmuBaseDirShort%\conemu-msys2-64.exe /usr/bin/bash.exe -l -i'/>
 					<value name="Cmd3" type="string" data='-cur_console:nps3T50V -cur_console:d:C:\Users\joruble\git\mtm set "PATH=%ConEmuDir%\..\Git\usr\bin;%PATH%" &amp; %ConEmuDir%\..\Git\git-cmd.exe --no-cd --command=%ConEmuBaseDirShort%\conemu-msys2-64.exe /usr/bin/bash.exe -l -i'/>
 				</key>
+				<key name="Task6" modified="2020-05-25 14:01:17" build="191012">
+					<value name="Name" type="string" data="{Group6}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Count" type="long" data="0"/>
+				</key>
 			</key>
 			<key name="Apps" modified="2020-01-31 10:38:00" build="191012">
 				<value name="Count" type="long" data="0"/>
@@ -655,6 +662,10 @@
 			<key name="Colors" modified="2020-01-31 10:38:00" build="191012">
 				<value name="Count" type="long" data="0"/>
 			</key>
+			<value name="CmdLineHistory" type="multi">
+				<line data="far"/>
+				<line data="{Bash::Git bash}"/>
+			</value>
 		</key>
 	</key>
 </key>

@@ -54,7 +54,7 @@
     l = log
     lom = log origin/master..master
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ########
     ls = ls-files
     ########
@@ -89,4 +89,5 @@
     su = status -u
     ########
     slist = stash list
+    stall = stash --include-untracked
     spop = stash pop

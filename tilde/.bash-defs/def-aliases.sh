@@ -43,6 +43,8 @@ alias cpdot="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},
 alias cpvs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 alias python2="winpty /c/Python27/python.exe"
+alias py2=python2
+alias py3=python3
 
 # for chromebooks with chroots
 if false; then

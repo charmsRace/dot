@@ -8,6 +8,7 @@ declare LAST_EPOCH_MS=253402300799999
 
 ### Directories ###
 # declare D_DEFS=~/.bash-defs # already in ~/.bashrc
+declare D_SSH=~/.ssh
 declare D_AHK=~/.ahk
 declare D_GIT=~/git
 declare D_VIM=~/.vim

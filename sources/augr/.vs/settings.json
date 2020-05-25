@@ -9,6 +9,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.dragAndDrop": false,
   "editor.insertSpaces": true,
+  "editor.minimap.enabled": true,
   "editor.minimap.showSlider": "always",
   "editor.minimap.renderCharacters": false,
   "editor.mouseWheelZoom": true,
@@ -93,6 +94,7 @@
     ".gitignore": "gitignore",
     ".gitignore-global": "gitignore",
     "*.ne": "nearley",
+    "*.job": "ini"
   },
   "files.exclude": {
     "**/.git": true,
@@ -346,6 +348,7 @@
   },
 
   "[markdown]": {
+    "editor.minimap.enabled": false,
     "editor.tabSize": 2,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
@@ -415,9 +418,9 @@
   "git.promptToSaveFilesBeforeCommit": true,
 
 
-/**
- * markdownlint
- */
+  /**
+   * markdownlint
+   */
 
   // TODO: look at this
   "markdownlint.customRules": [],
@@ -448,10 +451,23 @@
   "explorer.confirmDelete": false,
   "workbench.iconTheme": "vscode-icons",
 
+  /**
+   * macros
+   * `geddski.macros` @ 1.2.1
+   */
   "macros": {
     "insertLinesAround": [
       "editor.action.insertLineAfter",
       "editor.action.insertLineBefore",
     ],
   },
+
+  "markdown-preview-enhanced.scrollSync": false,
+
+  /**
+   * Remote - SSH
+   * `ms-vscode-remote.remote-ssh` @ 0.51.0
+   */
+
+  // "remote.SSH.configFile": "",
 }
