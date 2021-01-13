@@ -6,6 +6,7 @@ alias brc="vim ~/.bashrc"
 alias bdi="vim ${D_DEFS}/index.sh"
 alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
+alias bdp="vim ${D_DEFS}/def-private.sh"
 alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
 alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
@@ -14,6 +15,8 @@ alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 alias _="sudo"
 alias sagi="sudo apt-get install"
 alias .rl=". ~/.bashrc"
+
+# alias thisdir='echo $(dirname "$(readlink -f "${BASH_SOURCE[0]}")")'
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -34,9 +37,9 @@ alias isup="ping 8.8.8.8"
 
 # navigation shortcuts
 alias cdefs="cd ${D_DEFS}"
-alias ~~="cd ~"
-alias c.="cd ${D_DOT}"
 alias c-="cd - > /dev/null"
+alias c.="cd ${D_DOT}"
+alias cahk="cd ${D_AHK}"
 
 # dotfile tools
 alias cpdot="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"

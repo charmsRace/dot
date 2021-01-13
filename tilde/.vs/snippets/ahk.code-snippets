@@ -1,0 +1,10 @@
+{
+  // "Unicode hotstring": {
+  //   "prefix": "uni",
+  //   "body": [
+  //     ":*:@@${1:name}::${2:symbol} ; U+${3:code}",
+  //     "${0}",
+  //   ],
+  //   "description": "AHK hotstring definition for unicode",
+  // },
+}
