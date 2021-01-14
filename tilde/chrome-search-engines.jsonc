@@ -1,0 +1,71 @@
+{
+  "uri": "chrome://settings/searchEngines",
+  "searchEngines": [
+    // Template // TODO: make snippet
+    // {
+      // "name": "",
+      // "keyword": "",
+      // "urlTemplate": ""
+    // },
+    {
+      "name": "Example Jira issues",
+      "keyword": "exa",
+      "urlTemplate": "https://atlassian.net/browse/EXA-%s",
+    },
+    {
+      "name": "Emoji Finder",
+      "keyword": "emoji",
+      "urlTemplate": "https://emojifinder.com/%s",
+    },
+    {
+      "name": "GitHub",
+      "keyword": "ghs",
+      "urlTemplate": "https://github.com/search?q=%s",
+    },
+    {
+      "name": "GitHub (Calamitizer)",
+      "keyword": "ghc",
+      "urlTemplate": "https://github.com/calamitizer/%s",
+    },
+    {
+      "name": "GitHub (exact URL)",
+      "keyword": "ghe",
+      "urlTemplate": "https://github.com/search?q=%s",
+    },
+    {
+      "name": "Google Image Search",
+      "keyword": "i",
+      "urlTemplate": "https://google.com/search?tbm=isch&q=%s",
+    },
+    {
+      "name": "NPM",
+      "keyword": "npm",
+      "urlTemplate": "https://npmjs.com/package/%s",
+    },
+    {
+      "name": "Unicode",
+      "keyword": "uni",
+      "urlTemplate": "https://compart.com/en/unicode/U+%s",
+    },
+    {
+      "name": "Wikipedia",
+      "keyword": "w",
+      "urlTemplate": "https://en.wikipedia.org/wiki/%s",
+    },
+    {
+      "name": "Wiktionary",
+      "keyword": "wy",
+      "urlTemplate": "https://en.wiktionary.org/wiki/%s",
+    },
+    {
+      "name": "WolframAlpha",
+      "keyword": "wa",
+      "urlTemplate": "https://wolframalpha.com/input/?i=%s",
+    },
+    {
+      "name": "YouTube",
+      "keyword": "yt",
+      "urlTemplate": "https://youtube.com/results?search_query=%s",
+    },
+  ],
+}

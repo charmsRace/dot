@@ -1,4 +1,7 @@
 [
+
+  // TODO: regex to find relevant JSON lines without trailing comma (extension?)
+
   // all - "key": "[^"]*?"
   // chords - "key": "[^" ]+ [^" ]+"
   // taken alt menu keys: [wertsdfgklcvbm]
@@ -59,10 +62,6 @@
     "args": "terminateAll",
   },
   {
-    "key": "ctrl+k ctrl+m",
-    "command": "workbench.action.openGlobalKeybindingsFile",
-  },
-  {
     "key": "ctrl+k ctrl+shift+o",
     "command": "addRootFolder",
   },
@@ -89,6 +88,31 @@
    * r - reindentLines
    * x - trimTrailingWhitespace
    */
+
+  /**
+   * Explorer chord system
+   * shift + alt + e -> ...
+   *   - q - focus open editors
+   *   - a - focus folders
+   *   - z - focus outline
+   *
+   */
+
+  {
+    "key": "shift+alt+e q",
+    "command": "workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active",
+  },
+  {
+    "key": "shift+alt+e a",
+    "command": "workbench.explorer.fileView.focus",
+    // "when": "",
+  },
+  {
+    "key": "shift+alt+e z",
+    "command": "outline.focus",
+    // "when": "",
+  },
 
   {
     "key": "alt+q q",
@@ -127,6 +151,7 @@
   },
 
   /**
+   * TODO: make chords?
    * ctrl + alt + ...
    */
 
@@ -144,6 +169,10 @@
     "key": "ctrl+alt+d",
     "command": "editor.action.goToTypeDefinition",
     "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor",
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "search.action.openNewEditor",
   },
   {
     "key": "ctrl+alt+j",
@@ -171,6 +200,29 @@
   },
 
   /**
+   * Folding chords
+   * (cf. https://code.visualstudio.com/docs/editor/codebasics#_folding)
+   *
+   * fold
+   * foldAll
+   * foldAllBlockComments
+   * foldLevelN [1-7]
+   * foldRecursively
+   *
+   * toggleFold
+   *
+   * unfold
+   * unfoldAll
+   * unfoldRecursively
+   */
+
+  // {
+    // "key": "",
+    // "command": "editor.",
+    // "when": "editorTextFocus && foldingEnabled",
+  // },
+
+  /**
    * Layout management chord system
    * shift + alt + q -> ...
    *
@@ -184,6 +236,12 @@
    * c - workbench.action.editorLayoutTwoByTwoGrid
    * s - workbench.action.maximizeEditor
    * r - workbench.action.evenEditorWidths
+   * TODO: ? - center layout
+   *
+   * ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
+   * enter - workbench.action.{un,}pinEditor
+   * tab - workbench.action.firstEditorInGroup
+   * TODO: can we detect when first editor is active, so tab can switch back?
    */
 
   {
@@ -226,23 +284,68 @@
     "key": "shift+alt+q r",
     "command": "workbench.action.evenEditorWidths",
   },
+  {
+    "key": "shift+alt+q left",
+    "command": "workbench.action.moveActiveEditorGroupLeft",
+  },
+  {
+    "key": "shift+alt+q up",
+    "command": "workbench.action.moveActiveEditorGroupUp",
+  },
+  {
+    "key": "shift+alt+q right",
+    "command": "workbench.action.moveActiveEditorGroupRight",
+  },
+  {
+    "key": "shift+alt+q down",
+    "command": "workbench.action.moveActiveEditorGroupDown",
+  },
+  {
+    "key": "shift+alt+q enter",
+    "command": "workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "shift+alt+q enter",
+    "command": "workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
+  },
+  {
+    "key": "shift+alt+q tab",
+    "command": "workbench.action.firstEditorInGroup",
+  },
+  // {
+  //   "key": "shift+alt+q tab",
+  //   "command": "workbench.action.openPreviousRecentlyUsedEditor",
+  //   "when": "editorPinned",
+  // },
+
+  /**
+   * Tree navigation?
+   *
+   * {
+   *   "key": "ctrl+left",
+   *   "command": "list.collapseAll",
+   *   "when": "listFocus && !inputFocus"
+   * },
+   */
 
   /**
    * Focus navigation chord system
    * shift + alt + <key> -> ...
-   *
-   *  - workbench.action.focusSideBar
-   *  - workbench.files.action.focusOpenEditorsView
-   *  - workbench.files.action.focusFilesExplorer
-   *  - workbench.view.search.focus
-   *  - extensions.listView.focus
-   *  - workbench.action.focusPanel
-   *  - workbench.action.problems.focus
-   *  - workbench.action.terminal.focus
-   *  - breadcrumbs.focus
-   *  - notifications.focusToasts
-   *  - workbench.action.focusCommentsPanel
-   *  - workbench.action.focusQuickOpen
+   *   - workbench.action.focusSideBar
+   *   - workbench.files.action.focusOpenEditorsView
+   *   - workbench.files.action.focusFilesExplorer
+   *   - workbench.view.search.focus
+   *   - extensions.listView.focus
+   *   - workbench.action.focusPanel
+   *   - workbench.action.problems.focus
+   *   - workbench.action.terminal.focus
+   *   - breadcrumbs.focus
+   *   - outline.focus
+   *   - notifications.focusToasts
+   *   - workbench.action.focusCommentsPanel
+   *   - workbench.action.focusQuickOpen
    *
    * Regex to find all focus commands in `default-keybindings.json`:
    * `\.[^.]*?focus`
@@ -258,7 +361,7 @@
     "when": "hasSearchResult",
   },
   {
-    "key": "shift+alt+e",
+    "key": "shift+alt+w",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult",
   },
@@ -287,16 +390,57 @@
     "key": "ctrl+shift+alt+enter",
     "command": "macros.insertLinesAround",
   },
-  {
-    "key": "ctrl+shift+enter",
-    "command": "-markdown-preview-enhanced.runAllCodeChunks",
-    "when": "editorLangId == 'markdown'",
-  },
+
+  // {
+  //   "key": "ctrl+shift+enter",
+  //   "command": "-markdown-preview-enhanced.runAllCodeChunks",
+  //   "when": "editorLangId == 'markdown'",
+  // },
 
   /**
    * TODO: Set up chord system for opening
    * VS Code configuration files
    */
+
+  // Settings
+  {
+    "key": "ctrl+k ctrl+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "ctrl+k ctrl+shift+,",
+    "command": "workbench.action.openRawDefaultSettings",
+  },
+  {
+    "key": "ctrl+k ctrl+alt+,",
+    "command": "workbench.action.openSettings"
+  },
+
+  // Keybindings
+  {
+    "key": "ctrl+k ctrl+.",
+    "command": "workbench.action.openGlobalKeybindingsFile",
+  },
+  {
+    "key": "ctrl+k ctrl+shift+.",
+    "command": "workbench.action.openDefaultKeybindingsFile",
+  },
+  {
+    "key": "ctrl+k ctrl+alt+.",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+
+  // Configure snippets
+  {
+    "key": "ctrl+k ctrl+s",
+    "command": "workbench.action.openSnippets",
+  },
+
+// - keybindings.editor.copyCommandKeybindingEntry
+// - keybindings.editor.resetKeybinding
+// - keybindings.editor.showConflicts
+// - keybindings.editor.showDefaultKeybindings
+// - keybindings.editor.showUserKeybindings
 
   // {
   //   "key": "shift+alt+<key> <key>",
@@ -311,7 +455,14 @@
   //   "key": "ctrl+shift+alt+x",
   //   "command": "workbench.action.focusQuickOpen",
   // },
-]
 
-// TODO: regex to find relevant JSON lines without trailing comma
-// TODO: terminal paning?
+  /**
+   * TODO: Unsorted changes
+   */
+
+  {
+    "key": "ctrl+shift+c",
+    "command": "extension.copyProjectPath",
+    // "when": "editorFocus",
+  },
+]
