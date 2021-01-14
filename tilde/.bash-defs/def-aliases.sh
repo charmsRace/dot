@@ -49,26 +49,4 @@ alias python2="winpty /c/Python27/python.exe"
 alias py2=python2
 alias py3=python3
 
-# for chromebooks with chroots
-if false; then
-    alias crouton="sudo sh ~/Downloads/crouton"
-    alias edit-chroot="sudo edit-chroot"
-    alias enter-chroot="sudo enter-chroot"
-    alias mount-chroot="sudo mount-chroot"
-    alias unmount-chroot="sudo unmount-chroot"
-
-    alias x="xiwi"
-    alias xt="xiwi -T"
-    alias xf="xiwi -F"
-    alias vsc="xiwi code-oss"
-
-    alias akasha="sudo startxfce4 -n akasha -X xorg"
-    alias akasha@cli="sudo enter-chroot -n akasha"
-    alias akasha@win="sudo startxfce4 -n akasha -X xiwi"
-    alias akasha@tab="sudo startxfce4 -n akasha -X xiwi-tab"
-
-    alias attendum="sudo startcli -n attendum"
-
-    alias code="code-oss"
-    alias c.="code-oss ."
-fi
+alias protocol="code ${D_GIT}/protocol_1/protocol.txt"

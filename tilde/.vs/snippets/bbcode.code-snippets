@@ -1,0 +1,42 @@
+{
+  "Em dash": {
+    "prefix": "em",
+    "body": [
+      "—",
+    ],
+    "description": "Insert an em dash",
+  },
+
+  "Tag": {
+    "prefix": "tg",
+    "body": [
+      "[${1:tag}]$0[/$1]",
+    ],
+    "description": "Insert a BBCode tag",
+  },
+
+  "Attribute tag": {
+    "prefix": "tg=",
+    "body": [
+      "[${1:tag}=${2:attribute}]${0:content}[/$1]",
+    ],
+    "description": "Insert a BBCode tag with an attribute",
+  },
+
+  "Book template": {
+    "prefix": "book",
+    "body": [
+      "[center][i]${1:title}[/i]",
+      "by ${2:author}[/center]",
+      "",
+      "[center][...][/center]",
+      "",
+      "$0",
+      "",
+      "[hr]",
+      "",
+      "",
+    ],
+    "description": "Insert a book title block",
+  },
+}

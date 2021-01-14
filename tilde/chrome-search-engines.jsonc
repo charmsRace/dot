@@ -8,6 +8,11 @@
       // "urlTemplate": ""
     // },
     {
+      "name": "NPM @types",
+      "keyword": "@types",
+      "urlTemplate": "https://www.npmjs.com/package/@types/%s",
+    },
+    {
       "name": "Example Jira issues",
       "keyword": "exa",
       "urlTemplate": "https://atlassian.net/browse/EXA-%s",
