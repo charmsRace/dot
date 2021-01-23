@@ -12,6 +12,24 @@
 
   "overrides": [
     {
+      "files": [
+        ".prettierrc",
+        "*.json"
+      ],
+      "options": {
+        "parser": "json",
+        "printWidth": 0
+      }
+    },
+    {
+      "files": [
+        "*.component.html"
+      ],
+      "options": {
+        "parser": "angular"
+      }
+    },
+    {
       "files": "*.sql",
       "options": {
         "tabWidth": 4
