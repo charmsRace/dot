@@ -7,6 +7,7 @@ alias bdi="vim ${D_DEFS}/index.sh"
 alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
 alias bdp="vim ${D_DEFS}/def-private.sh"
+
 alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
 alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"

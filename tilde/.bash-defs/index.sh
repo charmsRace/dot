@@ -14,7 +14,7 @@ declare -a SOURCES=( \
 declare SOURCE
 for i in ${SOURCES[@]}; do
     SOURCE=~/.bash-defs/def-${i}.sh
-    [[ -f $SOURCE ]] && . ${SOURCE}
+    [[ -f ${SOURCE} ]] && . ${SOURCE}
 done
 
 unset SOURCES
