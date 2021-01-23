@@ -2,4 +2,5 @@
 # echo "def-scripts.sh entered"
 
 # Run AutoHotkey scripts
-. ${D_AHK}/run.sh
+AHK_SOURCE=${D_AHK}/run.sh
+[[ -f ${AHK_SOURCE} ]] && . ${AHK_SOURCE}

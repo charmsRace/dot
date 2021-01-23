@@ -18,9 +18,6 @@ alias .rl=". ~/.bashrc"
 
 # alias thisdir='echo $(dirname "$(readlink -f "${BASH_SOURCE[0]}")")'
 
-alias ..="cd .."
-alias ...="cd ../.."
-
 alias lsd="ls -aghpr --group-directories-first"
 alias lst="ls -aghpt"
 alias ..l="cd ..; ls -agGhp"
@@ -35,6 +32,9 @@ alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias isup="ping 8.8.8.8"
 
+# Java keytool
+alias keytool='/c/Program\ Files/Java/jdk-15.0.1/bin/keytool.exe'
+
 # navigation shortcuts
 alias cdefs="cd ${D_DEFS}"
 alias c-="cd - > /dev/null"
@@ -42,11 +42,15 @@ alias c.="cd ${D_DOT}"
 alias cahk="cd ${D_AHK}"
 
 # dotfile tools
-alias cpdot="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
-alias cpvs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
+alias .cd.="cd ${D_DOT}"
+alias .cd-defs="cd ${D_DEFS}"
+alias .cd-ahk="cd ${D_AHK}"
+alias .cd-vs="cd ${D_VS}"
 
-alias python2="winpty /c/Python27/python.exe"
-alias py2=python2
-alias py3=python3
+alias .code.="code ${D_DOT}/.vscode/dot.code-workspace"
+alias .code-defs="code ${D_DEFS}"
+alias .code-ahk="code ${D_AHK}"
+alias .code-vs="code ${D_VS}"
 
-alias protocol="code ${D_GIT}/protocol_1/protocol.txt"
+alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
+alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
