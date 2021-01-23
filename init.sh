@@ -34,7 +34,6 @@ mkdir -p ${D_VIM}/{bundle,colors}
 declare -r URL_BADWOLF="https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim"
 cd ${D_VIM}/colors; curl -s ${URL_BADWOLF} -O; cd - > /dev/null
 
-declare -r D_GIT=${D_GIT}/git
 declare -r URL_VUNDLE="https://github.com/VundleVim/Vundle.vim.git"
 git clone -q ${URL_VUNDLE} ${D_VIM}/bundle/Vundle.vim
 vim +PluginInstall +qall

@@ -4,7 +4,7 @@
 
 - `HEAD`
 - `68b6f0f`
-- `rev
+- `rev...` (?)
 
 ## Diagram
 
