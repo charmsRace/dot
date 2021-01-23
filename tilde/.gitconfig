@@ -26,16 +26,19 @@
     aa = add --all
     ########
     b = branch
+    bl = branch --list
     bm = branch -m # rename current branch
     ########
     cf = config --global -e
     ########
     ch = checkout
     chb = checkout -b
+    chd = checkout development
     chm = checkout master
     ########
     c = commit
-    cm = commit -m
+    cm = commit --message
+    cam = commit --all --message
     ccount = rev-list HEAD --count # count total commits
     ########
     d = diff -w
@@ -48,6 +51,7 @@
     dw = diff # with whitespace
     ########
     f = fetch
+    fu = fetch upstream
     ########
     h = help
     ########
@@ -61,6 +65,7 @@
     m = merge
     mm = merge master
     mom = merge origin/master
+    mud = merge upstream/development
     ########
     o = checkout
     ########
@@ -70,6 +75,7 @@
     pso = push origin
     psom = push origin master
     psuo = push -u origin
+    pushup = push -u origin HEAD
     ########
     pl = pull
     plo = pull origin
@@ -84,6 +90,10 @@
     ########
     rmc = rm --cached
     rm-dry = rm --dry-run
+    ########
+    rs = reset HEAD^
+    rs-soft = reset --soft HEAD^
+    rs-hard = reset --hard HEAD^
     ########
     s = status
     su = status -u

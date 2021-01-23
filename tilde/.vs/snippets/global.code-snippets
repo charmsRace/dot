@@ -1,11 +1,49 @@
 {
+  "Implementation placeholder": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "todo",
+    "body": [
+      "// TODO: implement$0",
+    ],
+  },
+
   "Print to console": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "log",
     "body": [
-      "console.log($1);",
+      "console.log(${1:message});",
       "$0",
     ],
+  },
+
+  "Print expression to console": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "lge",
+    "body": [
+      "console.log(`${1:name} = ${$1}`);",
+      "$0",
+    ],
+    "description": "Log the name and value of an expression",
+  },
+
+  "Print type of expression to console": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "lgt",
+    "body": [
+      "console.log(`typeof ${1:name} = ${typeof $1}`);",
+      "$0",
+    ],
+    "description": "Log the type of an expression",
+  },
+
+  "Print value to console": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "lgv",
+    "body": [
+      "console.log(`${1:name} = ${${2:value}}`);",
+      "$0",
+    ],
+    "description": "Log a name & a value",
   },
 
   "Basic property accessor": {
@@ -15,16 +53,6 @@
       "({ ${1:property} }) => $1$0",
     ],
     "description": "Insert a basic property accessor function",
-  },
-
-  "Print value to console": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
-    "prefix": "logv",
-    "body": [
-      "console.log(`${1:name} = ${$1}`);",
-      "$0",
-    ],
-    "description": "Log the name of a variable and its value",
   },
 
   "Prettier-Ignore": {

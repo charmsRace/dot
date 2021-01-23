@@ -6,6 +6,7 @@ alias brc="vim ~/.bashrc"
 alias bdi="vim ${D_DEFS}/index.sh"
 alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
+alias bdp="vim ${D_DEFS}/def-private.sh"
 alias gcf="vim ~/.gitconfig"
 alias vrc="vim ~/.vimrc"
 alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
@@ -14,6 +15,8 @@ alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 alias _="sudo"
 alias sagi="sudo apt-get install"
 alias .rl=". ~/.bashrc"
+
+# alias thisdir='echo $(dirname "$(readlink -f "${BASH_SOURCE[0]}")")'
 
 alias lsd="ls -aghpr --group-directories-first"
 alias lst="ls -aghpt"
@@ -33,9 +36,16 @@ alias isup="ping 8.8.8.8"
 alias keytool='/c/Program\ Files/Java/jdk-15.0.1/bin/keytool.exe'
 
 # navigation shortcuts
+<<<<<<< HEAD
 alias c-="cd - > /dev/null"
 alias c.="cd .."
 alias cg="cd !$:t:r"
+=======
+alias cdefs="cd ${D_DEFS}"
+alias c-="cd - > /dev/null"
+alias c.="cd ${D_DOT}"
+alias cahk="cd ${D_AHK}"
+>>>>>>> 125cfbdde44a8cdf63a85604d60afe185a48759e
 
 # dotfile tools
 alias .cd.="cd ${D_DOT}"
