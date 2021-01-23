@@ -7,6 +7,7 @@
   "editor.autoClosingBrackets": "never",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.dragAndDrop": false,
   "editor.insertSpaces": true,
   "editor.minimap.enabled": true,
@@ -34,8 +35,7 @@
    * Prettier extension
    */
   // "prettier.configPath": "", // never use this
-  // "prettier.requireConfig": false,
-  // "prettier.useEditorConfig": true,
+  "prettier.requireConfig": true,
   "prettier.singleQuote": true,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "es5",
@@ -321,7 +321,7 @@
 
   "[html]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   // "[java]": {
@@ -331,21 +331,21 @@
   // },
 
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[json]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[jsonc]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
   },
 
@@ -356,7 +356,7 @@
   },
 
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.detectIndentation": false,
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
@@ -383,12 +383,12 @@
 
   "[typescript]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[typescriptreact]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[xml]": {

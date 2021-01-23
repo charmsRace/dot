@@ -1,9 +1,12 @@
 {
-	"folders": [
-		{
-			"name": "dot",
-			"path": "..",
-		},
-	],
-	"settings": {},
+  "folders": [
+    {
+      "name": "dot",
+      "path": "..",
+    },
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "prettier.configPath": "../tilde/.prettierrc"
+  },
 }
