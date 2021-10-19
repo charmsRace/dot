@@ -2,9 +2,11 @@
   /**
    * Editor
    */
-
+  "editor.find.seedSearchStringFromSelection": false,
+  // "editor.formatOnSave": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -29,6 +31,7 @@
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
+  "editor.unfoldOnClickAfterEndOfLine": true,
   "editor.wordWrap": "on",
 
   /**
@@ -52,13 +55,11 @@
   /**
    * Source Control
    */
-
   "scm.alwaysShowProviders": true,
 
   /**
    * Workbench
    */
-
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
@@ -68,14 +69,12 @@
   /**
    * Breadcrumbs
    */
-
   "breadcrumbs.enabled": true,
   "breadcrumbs.filePath": "last",
 
   /**
    * Window
    */
-
   "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "toggle",
   "window.newWindowDimensions": "inherit",
@@ -86,7 +85,6 @@
   /**
    * Files
    */
-
   "files.associations": {
     ".babelrc": "json",
     ".eslintignore": "gitignore",
@@ -104,7 +102,7 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true,
+    "**/.DS_Store": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -112,20 +110,17 @@
   /**
    * Zen Mode
    */
-
   "zenMode.fullScreen": false,
 
   /**
    * File Explorer
    */
-
   "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "type",
 
   /**
    * Search
    */
-
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true
@@ -134,7 +129,6 @@
   /**
    * HTML
    */
-
   "html.experimental.syntaxFolding": true,
   "html.format.indentInnerHtml": true,
   "html.suggest.angular1": false,
@@ -144,91 +138,98 @@
   /**
    * JSON
    */
-
   "json.schemas": [
     {
       "fileMatch": [
-        "./.angular-cli.json",
+        "*.jsonc"
       ],
-      "url": "./.json-schemata/.angular-cli.json.schema",
+      "schema": {
+        "allowTrailingCommas": true
+      }
     },
     {
       "fileMatch": [
-        "*.api.json",
+        "./.angular-cli.json"
       ],
-      "url": "./.json-schemata/api.json.schema",
+      "url": "./.json-schemata/.angular-cli.json.schema"
     },
     {
       "fileMatch": [
-        "./.babelrc",
+        "*.api.json"
       ],
-      "url": "./.json-schemata/.babelrc.schema",
+      "url": "./.json-schemata/api.json.schema"
     },
     {
       "fileMatch": [
-        "./composer.json",
+        "./.babelrc"
       ],
-      "url": "./.json-schemata/composer.json.schema",
+      "url": "./.json-schemata/.babelrc.schema"
     },
     {
       "fileMatch": [
-        "./.eslintrc",
+        "./composer.json"
       ],
-      "url": "./.json-schemata/.eslintrc.schema",
+      "url": "./.json-schemata/composer.json.schema"
     },
     {
       "fileMatch": [
-        "*.geojson",
+        "./.eslintrc"
       ],
-      "url": "./.json-schemata/geojson.schema",
+      "url": "./.json-schemata/.eslintrc.schema"
     },
     {
       "fileMatch": [
-        "./jsconfig.json",
+        "*.geojson"
       ],
-      "url": "./.json-schemata/jsconfig.json.schema",
+      "url": "./.json-schemata/geojson.schema"
     },
     {
       "fileMatch": [
-        "./manifest.json",
+        "./jsconfig.json"
       ],
-      "url": "./.json-schemata/manifest.json.schema",
+      "url": "./.json-schemata/jsconfig.json.schema"
     },
     {
       "fileMatch": [
-        "./package.json",
+        "./manifest.json"
       ],
-      "url": "./.json-schemata/package.json.schema",
+      "url": "./.json-schemata/manifest.json.schema"
     },
     {
       "fileMatch": [
-        "*.mime.json",
+        "./package.json"
       ],
-      "url": "./.json-schemata/mime.json.schema",
+      "url": "./.json-schemata/package.json.schema"
     },
     {
       "fileMatch": [
-        "*.schema",
+        "*.mime.json"
       ],
-      "url": "./.json-schemata/schema-6.schema",
+      "url": "./.json-schemata/mime.json.schema"
     },
     {
       "fileMatch": [
-        "./tsconfig.json",
+        "*.schema"
       ],
-      "url": "./.json-schemata/tsconfig.json.schema",
+      "url": "./.json-schemata/schema-6.schema"
     },
     {
       "fileMatch": [
-        "./typings.json",
+        "./tsconfig.json"
       ],
-      "url": "./.json-schetama/typings.json.schema",
+      "url": "./.json-schemata/tsconfig.json.schema"
     },
     {
       "fileMatch": [
-        "*.vsext",
+        "./typings.json"
       ],
-      "url": "./.json-schemata/vsext.schema",
+      "url": "./.json-schetama/typings.json.schema"
+    },
+    {
+      "fileMatch": [
+        "*.vsext"
+      ],
+      "url": "./.json-schemata/vsext.schema"
     }
   ],
   "json.trace.server": "off",
@@ -236,14 +237,12 @@
   /**
    * Markdown
    */
-
   "markdown.previewFrontMatter": "show",
   "markdown.trace": "off",
 
   /**
    * CSS
    */
-
   "css.lint.boxModel": "warning",
   "css.lint.compatibleVendorPrefixes": "warning",
   "css.lint.duplicateProperties": "warning",
@@ -261,7 +260,6 @@
   /**
    * Less
    */
-
   "less.lint.boxModel": "warning",
   "less.lint.compatibleVendorPrefixes": "warning",
   "less.lint.duplicateProperties": "warning",
@@ -278,7 +276,6 @@
   /**
    * External Terminal
    */
-
   "terminal.explorerKind": "integrated",
   "terminal.external.linuxExec": "terminator",
   "terminal.external.osxExec": "",
@@ -287,7 +284,6 @@
   /**
    * Integrated Terminal
    */
-
   "terminal.integrated.confirmOnExit": false,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
@@ -297,7 +293,7 @@
   "terminal.integrated.shell.linux": "/bin/bash",
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "terminal.integrated.shellArgs.windows": [
-    "-l",
+    "-l"
   ],
 
   "terminal.integrated.profiles.linux": {
@@ -334,11 +330,11 @@
    */
 
   "[bbcode]": {
-    "files.insertFinalNewline": false,
+    "files.insertFinalNewline": false
   },
 
   "[csv]": {
-    "files.insertFinalNewline": false,
+    "files.insertFinalNewline": false
   },
 
   "[git-commit]": {
@@ -349,13 +345,13 @@
   },
 
   "[html]": {
-    "editor.autoClosingBrackets": "always",
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.autoClosingBrackets": "always",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  // "[java]": {
-  //   "editor.detectIndentation": false,
-  //   "editor.insertSpaces": false,
+  "[java]": {
+    // "editor.detectIndentation": false,
+    // "editor.insertSpaces": false,
   // },
 
   "[javascript]": {
@@ -367,19 +363,20 @@
   },
 
   "[json]": {
-    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingBrackets": "always"
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[jsonc]": {
     "editor.autoClosingBrackets": "always",
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "vscode.json-language-features"
   },
 
   "[log]": {
     "editor.rulers": [],
     "editor.wordWrap": "on",
-    "editor.wrappingIndent": "indent",
+    "editor.wrappingIndent": "indent"
   },
 
   "[markdown]": {
@@ -391,12 +388,8 @@
     "editor.wordWrapColumn": 80
   },
 
-  "[search-result]": {
-    "editor.lineNumbers": "off"
-  },
-
   "[scss]": {
-    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingBrackets": "always"
   },
 
   "[sql]": {
@@ -405,7 +398,7 @@
 
   "[tsv]": {
     "editor.insertSpaces": false,
-    "files.insertFinalNewline": false,
+    "files.insertFinalNewline": false
   },
 
   "[typescript]": {
@@ -413,12 +406,11 @@
   },
 
   "[typescriptreact]": {
-    "editor.formatOnSave": true,
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[xml]": {
-    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingBrackets": "always"
   },
 
   /** Extensions */
@@ -426,32 +418,35 @@
   /**
    * Autoscroll
    */
-
   "autoscrolldown.onlyWhenAtEnd": false,
 
   /**
    * BracketPair
    */
-
-  "bracketPairColorizer.highlightActiveScope":true,
-  "bracketPairColorizer.scopeLineCSS": [
-    "borderStyle : solid",
-    "borderWidth : 1px",
-    "borderColor : {color}; opacity: 1",
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "bracket-pair-colorizer-2.scopeLineCSS": [
+    "borderStyle: solid",
+    "borderWidth: 1px",
+    "borderColor: {color}; opacity: 1"
   ],
-  "bracketPairColorizer.showBracketsInGutter":true,
-  "bracketPairColorizer.showBracketsInRuler":true,
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  "bracket-pair-colorizer-2.showBracketsInRuler": true,
+  "bracket-pair-colorizer-2.excludedLanguages": [
+    "diff"
+  ],
 
   /**
    * Emmet
    */
-
   "emmet.showAbbreviationSuggestions": false,
   "emmet.showExpandedAbbreviation": "never",
 
   /**
    * Git
    */
+  // "git.defaultCloneDirectory": "",
+  // "git.path": "",
+  // "git.promptToSaveFilesBeforeCommit": true,
 
   // "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
   // "git.promptToSaveFilesBeforeCommit": true,
@@ -466,25 +461,21 @@
   /**
    * Sort lines
    */
-
   "sortLines.sortEntireFile": true,
 
   /**
    * SVG
    */
-
   "svg.completion.showAdvanced": true,
 
   /**
    * TypeScript
    */
-
   "typescript.updateImportsOnFileMove.enabled": "always",
 
   /**
    * VS Code Icons
    */
-
   "vsicons.projectDetection.disableDetect": true,
   "explorer.confirmDelete": false,
   "workbench.iconTheme": "vscode-icons",
@@ -501,8 +492,6 @@
   },
 
   // TODO: move below here
-  "editor.find.seedSearchStringFromSelection": "never",
-  "editor.unfoldOnClickAfterEndOfLine": true,
 
   "indentRainbow.ignoreErrorLanguages": [
     "search-result",

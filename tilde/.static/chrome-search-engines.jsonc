@@ -43,6 +43,7 @@
       "urlTemplate": "https://httpstatuses.com/%s",
     },
     {
+      // Revise this — Google's API changed
       "name": "Google Image Search",
       "keyword": "i",
       "urlTemplate": "https://google.com/search?tbm=isch&q=%s",

@@ -63,7 +63,6 @@
     "command": "addRootFolder",
   },
 
-
   /**
    * alt + ...
    */
@@ -154,12 +153,12 @@
 
   {
     "key": "ctrl+alt+a",
-    "command": "editor.action.goToDeclaration",
+    "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor",
   },
   {
     "key": "ctrl+alt+s",
-    "command": "editor.action.goToImplementation",
+    "command": "references-view.findReferences",
     "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor",
   },
   {
@@ -254,16 +253,16 @@
     "command": "workbench.action.editorLayoutThreeColumns",
   },
   {
-    "key": "shift+alt+q d",
-    "command": "workbench.action.editorLayoutTwoRowsRight",
-  },
-  {
     "key": "shift+alt+q a",
     "command": "workbench.action.editorLayoutTwoRows",
   },
   {
     "key": "shift+alt+q z",
     "command": "workbench.action.editorLayoutThreeRows",
+  },
+  {
+    "key": "shift+alt+q d",
+    "command": "workbench.action.editorLayoutTwoRowsRight",
   },
   {
     "key": "shift+alt+q x",
@@ -303,6 +302,7 @@
     "when": "config.workbench.editor.showTabs && !editorSticky"
   },
   {
+    // doesn't work
     "key": "shift+alt+q enter",
     "command": "workbench.action.unpinEditor",
     "when": "config.workbench.editor.showTabs && editorSticky"
@@ -311,11 +311,19 @@
     "key": "shift+alt+q tab",
     "command": "workbench.action.firstEditorInGroup",
   },
-  // {
-  //   "key": "shift+alt+q tab",
-  //   "command": "workbench.action.openPreviousRecentlyUsedEditor",
-  //   "when": "editorPinned",
-  // },
+  {
+    "key": "shift+alt+q down",
+    "command": "workbench.action.closeOtherEditors",
+  },
+  {
+    "key": "shift+alt+q left",
+    "command": "workbench.action.closeEditorsToTheLeft",
+  },
+  {
+    "key": "shift+alt+q right",
+    "command": "workbench.action.closeEditorsToTheRight",
+  },
+
 
   /**
    * Tree navigation?
@@ -355,13 +363,23 @@
   {
     "key": "shift+alt+d",
     "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult",
+    "when": "hasSearchResult || inSearchEditor",
   },
   {
     "key": "shift+alt+e",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult",
+    "when": "hasSearchResult || inSearchEditor",
   },
+  // {
+  //   "key": "shift+alt+d",
+  //   "command": "references-view.next",
+  //   "when": "reference-list.hasResult && references-view.canNavigate",
+  // },
+  // {
+  //   "key": "shift+alt+e",
+  //   "command": "references-view.prev",
+  //   "when": "reference-list.hasResult && references-view.canNavigate",
+  // },
   {
     "key": "shift+alt+s",
     "command": "editor.action.insertSnippet",

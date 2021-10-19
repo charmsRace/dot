@@ -37,10 +37,8 @@ alias groot='cd $(git rev-parse --show-toplevel)'
 alias isup="ping 8.8.8.8"
 
 # navigation shortcuts
-alias cdefs="cd ${D_DEFS}"
 alias c-="cd - > /dev/null"
-alias c.="cd ${D_DOT}"
-alias cahk="cd ${D_AHK}"
+alias cg="cd !$:t:r"
 
 # dotfile tools
 alias .cd.="cd ${D_DOT}"
@@ -52,6 +50,9 @@ alias .code.="code ${D_DOT}/.vscode/dot.code-workspace"
 alias .code-defs="code ${D_DEFS}"
 alias .code-ahk="code ${D_AHK}"
 alias .code-vs="code ${D_VS}"
+.code() {
+  code "$(ls ./.vscode/*.code-workspace | head -1)"
+}
 
 alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
 alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"

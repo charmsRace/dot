@@ -9,12 +9,10 @@
 # it or polluting that project's .gitignore.
 **/@clarity/
 
-# Past this point, this is just a template, for reference.
-# This is because .gitignores should be version-controlled
-# on a per-project basis. If these were globally ignored,
-# a user could easily forget forget a line in a project's
-# own .gitignore. For this reason, it's all commented out,
-# meant to be cherry-picked from.
+# patch files (from `git diff`)
+*.patch
+
+### Template / reference ###
 
 ### temp files and OS trash ###
 # *~
@@ -26,12 +24,6 @@
 # **/node_modules/
 # .npm
 # yarn-error.log
-### for Heroku
-# npm-debug.log*
-
-### build directories ###
-# client/www/
-# client/dist/
 
 ### envar files ###
 # *.env

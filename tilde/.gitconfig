@@ -8,10 +8,14 @@
 [credential "https://github.com"]
     username = charmsRace
 
+[init]
+    defaultBranch = main
+
 [core]
     editor = vim
     # editor = code --wait
     excludesfile = ~/.gitignore-global
+    filemode = false
 
 [remote "origin"]
     prune = false
@@ -23,6 +27,14 @@
     # browser = google-chrome
 
 [alias]
+    ########
+    # TODO:
+    # - print git root
+    # - https://stackoverflow.com/q/4327708
+    ########
+    recommit = commit --amend -m
+    uncommit = reset @~
+    ########
     root = !pwd
     ########
     a = add
@@ -38,12 +50,18 @@
     chb = checkout -b
     chm = checkout master
     ########
+    # cherry = cherry-pick
+    ########
     c = commit
     cm = commit -m
     cam = commit --all --message
-    ccount = rev-list HEAD --count # count total commits
+    ########
+    ccount = rev-list @ --count # count total commits
+    ########
+    cl = clone -c core.longpaths=true
     ########
     d = diff -w
+    dbranch = diff -w master...@
     dfiles = diff-tree --no-commit-id --name-only -r # then commit id
     di = diff -w --cached # diff index with HEAD
     dlast = diff -w @~ # diff HEAD with previous commit
@@ -77,6 +95,7 @@
     psom = push origin master
     psuo = push -u origin
     pushup = push -u origin HEAD
+    ps-tags = push -f --tags
     ########
     pl = pull
     plo = pull origin
@@ -92,9 +111,9 @@
     rmc = rm --cached
     rm-dry = rm --dry-run
     ########
-    rs = reset HEAD^
-    rs-soft = reset --soft HEAD^
-    rs-hard = reset --hard HEAD^
+    rs = reset @^
+    rs-soft = reset --soft @^
+    rs-hard = reset --hard @^
     ########
     s = status
     su = status -u
