@@ -12,11 +12,11 @@
       "keyword": "@types",
       "urlTemplate": "https://www.npmjs.com/package/@types/%s",
     },
-    {
-      "name": "Example Jira issues",
-      "keyword": "exa",
-      "urlTemplate": "https://atlassian.net/browse/EXA-%s",
-    },
+    // {
+    //   "name": "Example Jira issues",
+    //   "keyword": "exa",
+    //   "urlTemplate": "https://atlassian.net/browse/EXA-%s",
+    // },
     {
       "name": "Emoji Finder",
       "keyword": "emoji",
@@ -28,9 +28,9 @@
       "urlTemplate": "https://github.com/search?q=%s",
     },
     {
-      "name": "GitHub (Calamitizer)",
+      "name": "GitHub (charmsRace)",
       "keyword": "ghc",
-      "urlTemplate": "https://github.com/calamitizer/%s",
+      "urlTemplate": "https://github.com/charmsRace/%s",
     },
     {
       "name": "GitHub (exact URL)",
@@ -38,9 +38,19 @@
       "urlTemplate": "https://github.com/search?q=%s",
     },
     {
+      "name": "HTTP Statuses",
+      "keyword": "http",
+      "urlTemplate": "https://httpstatuses.com/%s",
+    },
+    {
       "name": "Google Image Search",
       "keyword": "i",
       "urlTemplate": "https://google.com/search?tbm=isch&q=%s",
+    },
+    {
+      "name": "SS64",
+      "keyword": "man",
+      "urlTemplate": "https://ss64.com/bash/%s.html",
     },
     {
       "name": "NPM",
@@ -71,6 +81,23 @@
       "name": "YouTube",
       "keyword": "yt",
       "urlTemplate": "https://youtube.com/results?search_query=%s",
+    },
+
+    //
+    {
+      "name": "Thesaurus",
+      "keyword": "th",
+      "urlTemplate": "https://www.thesaurus.com/browse/%s?s=t",
+    },
+    {
+      "name": "Rhymes",
+      "keyword": "rhyme",
+      "urlTemplate": "http://www.rhymezone.com/r/rhyme.cgi?Word=%s&typeofrhyme=perfect",
+    },
+    {
+      "name": "words that end in",
+      "keyword": "end",
+      "urlTemplate": "https://www.thefreedictionary.com/words-that-end-in-%s",
     },
   ],
 }

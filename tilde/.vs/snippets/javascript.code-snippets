@@ -1,0 +1,15 @@
+{
+  "Immediately Invoked Function Expression": {
+    "prefix": "iife",
+    "body": [
+      "(() => {",
+        "\t'use strict';",
+        "",
+        "\t$0",
+        "",
+        "\tmodule.exports = $1;",
+      "})();",
+    ],
+    "description": "Insert the boilerplate for a CommonJS-style IIFE module",
+  },
+}

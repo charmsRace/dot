@@ -13,7 +13,7 @@ declare -a SOURCES=( \
 
 declare SOURCE
 for i in ${SOURCES[@]}; do
-    SOURCE=~/.bash-defs/def-${i}.sh
+    SOURCE=${D_HOME}/.bash-defs/def-${i}.sh
     [[ -f ${SOURCE} ]] && . ${SOURCE}
 done
 

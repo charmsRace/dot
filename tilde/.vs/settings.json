@@ -32,7 +32,7 @@
   "editor.wordWrap": "on",
 
   /**
-   * Prettier extension
+   * Prettier
    */
   // "prettier.configPath": "", // never use this
   "prettier.requireConfig": true,
@@ -45,7 +45,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "vscode_custom_css.imports": [
-    // "file:///C:/Users/aruble/AppData/Roaming/Code/User/css/disable-italics.css",
+    // "file:///C:/Users/clarity/AppData/Roaming/Code/User/css/disable-italics.css",
   ],
   "vscode_custom_css.policy": true,
 
@@ -81,7 +81,7 @@
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "folders",
   "window.title": "[VS] ${dirty}${activeEditorShort}${separator}${rootName}",
-  "window.zoomLevel": 1,
+  // "window.zoomLevel": 1,
 
   /**
    * Files
@@ -300,6 +300,35 @@
     "-l",
   ],
 
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash",
+      "icon": "terminal-bash",
+    },
+    // "pwsh": {
+    //   "path": "pwsh",
+    //   "icon": "terminal-powershell"
+    // }
+  },
+
+  "terminal.integrated.profiles.windows": {
+    // "PowerShell": {
+    //   "source": "PowerShell",
+    //   "icon": "terminal-powershell"
+    // },
+    // "Command Prompt": {
+    //   "path": [
+    //     "${env:windir}\\Sysnative\\cmd.exe",
+    //     "${env:windir}\\System32\\cmd.exe"
+    //   ],
+    //   "args": [],
+    //   "icon": "terminal-cmd"
+    // },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+    },
+  },
+
   /**
    * Language-Specific Overrides
    */
@@ -326,7 +355,6 @@
 
   // "[java]": {
   //   "editor.detectIndentation": false,
-  //   "editor.formatOnSave": true,
   //   "editor.insertSpaces": false,
   // },
 
@@ -346,7 +374,6 @@
   "[jsonc]": {
     "editor.autoClosingBrackets": "always",
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false,
   },
 
   "[log]": {
@@ -382,7 +409,6 @@
   },
 
   "[typescript]": {
-    "editor.formatOnSave": true,
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
@@ -427,10 +453,8 @@
    * Git
    */
 
-  // "git.defaultCloneDirectory": "C:\\Users\\alexb\\git",
   // "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
-  "git.promptToSaveFilesBeforeCommit": true,
-
+  // "git.promptToSaveFilesBeforeCommit": true,
 
 /**
  * markdownlint
@@ -477,10 +501,15 @@
   },
 
   // TODO: move below here
+  "editor.find.seedSearchStringFromSelection": "never",
   "editor.unfoldOnClickAfterEndOfLine": true,
+
   "indentRainbow.ignoreErrorLanguages": [
     "search-result",
     "markdown"
   ],
-  "editor.find.seedSearchStringFromSelection": false,
+
+  "workbench.editorAssociations": {
+    "*.png": "luna.editor",
+  },
 }

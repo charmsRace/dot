@@ -1,9 +1,12 @@
 [user]
-    name = Alex Ruble
-    email = jalexruble@gmail.com
+    name = Clarity Amaranthine
+    email = clarity.amaranthine@gmail.com
+
+[credential]
+	helper = store
 
 [credential "https://github.com"]
-    username = calamitizer
+    username = charmsRace
 
 [core]
     editor = vim
@@ -33,11 +36,10 @@
     ########
     ch = checkout
     chb = checkout -b
-    chd = checkout development
     chm = checkout master
     ########
     c = commit
-    cm = commit --message
+    cm = commit -m
     cam = commit --all --message
     ccount = rev-list HEAD --count # count total commits
     ########
@@ -51,7 +53,7 @@
     dw = diff # with whitespace
     ########
     f = fetch
-    fu = fetch upstream
+    # fu = fetch upstream
     ########
     h = help
     ########
@@ -65,7 +67,6 @@
     m = merge
     mm = merge master
     mom = merge origin/master
-    mud = merge upstream/development
     ########
     o = checkout
     ########

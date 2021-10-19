@@ -2,22 +2,25 @@
 # echo "def-aliases.sh entered"
 
 # shortcuts to quickly edit configuration files
-alias brc="vim ~/.bashrc"
+alias brc="vim ${D_HOME}/.bashrc"
 alias bdi="vim ${D_DEFS}/index.sh"
 alias bda="vim ${D_DEFS}/def-aliases.sh"
 alias bde="vim ${D_DEFS}/def-envars.sh"
 alias bdp="vim ${D_DEFS}/def-private.sh"
 
-alias gcf="vim ~/.gitconfig"
-alias vrc="vim ~/.vimrc"
+alias gcf="vim ${D_HOME}/.gitconfig"
+alias vrc="vim ${D_HOME}/.vimrc"
 alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 
 # general
 alias _="sudo"
 alias sagi="sudo apt-get install"
-alias .rl=". ~/.bashrc"
+alias .rl=". ${D_HOME}/.bashrc"
 
 # alias thisdir='echo $(dirname "$(readlink -f "${BASH_SOURCE[0]}")")'
+
+alias ..="cd .."
+alias ...="cd ../.."
 
 alias lsd="ls -aghpr --group-directories-first"
 alias lst="ls -aghpt"
@@ -28,13 +31,10 @@ alias treeg="tree -aI \.git"
 alias tailf="clear && tail -fn +1"
 alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
 
-alias g="git" # more macros defined in ~/.gitconfig
+alias g="git" # more macros defined in ${D_HOME}/.gitconfig
 alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias isup="ping 8.8.8.8"
-
-# Java keytool
-alias keytool='/c/Program\ Files/Java/jdk-15.0.1/bin/keytool.exe'
 
 # navigation shortcuts
 alias cdefs="cd ${D_DEFS}"
@@ -55,3 +55,16 @@ alias .code-vs="code ${D_VS}"
 
 alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
 alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
+
+# JS tools
+alias rnm="npx remove-node-modules"
+
+# NPM tools
+alias npm-list-global="npm list g --depth 0"
+
+# Python tools
+alias python2="winpty /c/Python27/python.exe"
+alias py2=python2
+alias py3=python3
+
+alias protocol="code ${D_GIT}/protocol_1/protocol.txt"

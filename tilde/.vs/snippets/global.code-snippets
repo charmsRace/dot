@@ -7,6 +7,15 @@
     ],
   },
 
+  "Basic property accessor": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "pra",
+    "body": [
+      "({ ${1:property} }) => $1$0",
+    ],
+    "description": "Insert a basic property accessor function",
+  },
+
   "Print to console": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "log",
@@ -44,15 +53,6 @@
       "$0",
     ],
     "description": "Log a name & a value",
-  },
-
-  "Basic property accessor": {
-    "scope": "javascript, javascriptreact, typescript, typescriptreact",
-    "prefix": "pra",
-    "body": [
-      "({ ${1:property} }) => $1$0",
-    ],
-    "description": "Insert a basic property accessor function",
   },
 
   "Prettier-Ignore": {

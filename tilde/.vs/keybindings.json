@@ -1,7 +1,4 @@
 [
-
-  // TODO: regex to find relevant JSON lines without trailing comma (extension?)
-
   // all - "key": "[^"]*?"
   // chords - "key": "[^" ]+ [^" ]+"
   // taken alt menu keys: [wertsdfgklcvbm]
@@ -361,7 +358,7 @@
     "when": "hasSearchResult",
   },
   {
-    "key": "shift+alt+w",
+    "key": "shift+alt+e",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult",
   },
@@ -466,3 +463,6 @@
     // "when": "editorFocus",
   },
 ]
+
+// TODO: regex to find relevant JSON lines without trailing comma
+// TODO: terminal paning?

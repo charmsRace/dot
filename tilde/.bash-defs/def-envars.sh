@@ -10,11 +10,12 @@ declare LAST_EPOCH_MS=253402300799999
 declare VOID=/dev/null
 
 ### Directories ###
-# declare D_DEFS=~/.bash-defs # already in ~/.bashrc
-declare D_SSH=~/.ssh
-declare D_GIT=~/git
-declare D_VIM=~/.vim
-declare D_VS=~/AppData/Roaming/Code/User
+# declare D_DEFS=${D_HOME}/.bash-defs # already in ~/.bashrc
+declare D_SSH=${D_HOME}/.ssh
+declare D_AHK=${D_HOME}/.ahk
+declare D_GIT=${D_HOME}/git
+declare D_VIM=${D_HOME}/.vim
+declare D_VS=${D_HOME}/AppData/Roaming/Code/User
 declare D_DOT=${D_GIT}/dot
 declare D_AHK=${D_GIT}/.ahk
 declare D_SOURCE=${D_DOT}/sources/${DOTFILE_HOSTNAME}
