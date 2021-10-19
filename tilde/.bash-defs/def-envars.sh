@@ -17,6 +17,5 @@ declare D_GIT=${D_HOME}/git
 declare D_VIM=${D_HOME}/.vim
 declare D_VS=${D_HOME}/AppData/Roaming/Code/User
 declare D_DOT=${D_GIT}/dot
-declare D_AHK=${D_GIT}/.ahk
 declare D_SOURCE=${D_DOT}/sources/${DOTFILE_HOSTNAME}
 declare D_TILDE=${D_DOT}/tilde
