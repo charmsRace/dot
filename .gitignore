@@ -5,3 +5,6 @@
 !example.env
 
 def-private.sh
+
+tilde/.bin/*
+!tilde/.bin/index.md

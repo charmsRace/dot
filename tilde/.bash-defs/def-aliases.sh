@@ -32,7 +32,7 @@ alias tailf="clear && tail -fn +1"
 alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
 
 alias g="git" # more macros defined in ${D_HOME}/.gitconfig
-alias groot='cd $(git rev-parse --show-toplevel)'
+# alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias isup="ping 8.8.8.8"
 
@@ -59,6 +59,7 @@ alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURC
 
 # JS tools
 alias rnm="npx remove-node-modules"
+alias yarn-link-list="ls -la node_modules | grep ^l"
 
 # NPM tools
 alias npm-list-global="npm list g --depth 0"

@@ -12,7 +12,7 @@ ssh-keygen \
 eval $(ssh-agent -s)
 
 # Add key to `ssh-agent`
-ssh-add ${D_SSH}
+ssh-add ${SSH_EXAMPLE}
 
 # Copy public key to clipboard
 clip < ${SSH_EXAMPLE}.pub
