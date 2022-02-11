@@ -26,13 +26,17 @@ alias lsd="ls -aghpr --group-directories-first"
 alias lst="ls -aghpt"
 alias ..l="cd ..; ls -agGhp"
 
-alias treeg="tree -aI \.git"
+alias tree-raw="npx @structure-codes/cli"
+alias tree="tree-raw | sed -E 's/│  /│ /g' -"
+_treews() {
+  tree-raw | sed -E 's/│  /│ /g; s/[(└─)(─ )(├─)(│ )]/  /g; s/ {4}/  /g; s/^ {4}//g'
+}
+alias tree-ws="_treews" # '-' disallowed in function names
 
 alias tailf="clear && tail -fn +1"
 alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
 
 alias g="git" # more macros defined in ${D_HOME}/.gitconfig
-# alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias isup="ping 8.8.8.8"
 
@@ -58,11 +62,12 @@ alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},s
 alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 # JS tools
+alias ts-node="npx ts-node"
 alias rnm="npx remove-node-modules"
-alias yarn-link-list="ls -la node_modules | grep ^l"
 
 # NPM tools
 alias npm-list-global="npm list g --depth 0"
+alias yarn-link-list="ls -la node_modules | grep ^l"
 
 # Python tools
 alias python2="winpty /c/Python27/python.exe"
