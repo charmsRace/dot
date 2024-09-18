@@ -6,6 +6,7 @@
   * Idea: Extension to add "copy to clipboard" button
   */
   "recommendations": [
+    "mike-lischke.vscode-antlr4",
     "slevesque.vscode-autohotkey",
     "luggage66.awk",
     "coenraads.bracket-pair-colorizer-2",
@@ -18,6 +19,7 @@
     "igochkov.vscode-ebnf",
     "sidneys1.gitconfig",
     "tommasov.hosts",
+    // "tht13.html-preview-vscode",
     "oderwat.indent-rainbow",
     "sirtori.indenticator",
     "brunnerh.insert-unicode",

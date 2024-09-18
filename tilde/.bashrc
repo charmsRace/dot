@@ -113,3 +113,7 @@ declare D_DEFS=${HOME}/.bash-defs
 declare DEF_INDEX="${D_DEFS}/index.sh"
 [[ -f $DEF_INDEX ]] && . $DEF_INDEX
 unset DEF_INDEX
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

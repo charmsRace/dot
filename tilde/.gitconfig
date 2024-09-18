@@ -33,9 +33,10 @@
     # - https://stackoverflow.com/q/4327708
     ########
     recommit = commit --amend -m
-    uncommit = reset @~
+    uncommit = reset --soft @~
     ########
     root = !pwd
+    dcode = !git d | code - &>/dev/null &
     ########
     a = add
     aa = add --all

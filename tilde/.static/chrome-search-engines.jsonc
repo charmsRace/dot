@@ -100,5 +100,17 @@
       "keyword": "end",
       "urlTemplate": "https://www.thefreedictionary.com/words-that-end-in-%s",
     },
+
+    // MDN
+    {
+      "name": "MDN Elements",
+      "keyword": "mdn-e",
+      "urlTemplate": "https://developer.mozilla.org/en-US/docs/Web/SVG/Element/%s",
+    },
+    {
+      "name": "MDN Attribute",
+      "keyword": "mdn-a",
+      "urlTemplate": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/%s",
+    },
   ],
 }
