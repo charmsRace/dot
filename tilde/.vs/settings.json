@@ -1,44 +1,96 @@
 {
+  // switch settings/keybinds
+
+  // Debugging
+  "typescript.tsserver.log": "off",
+
+  // pre-`leodevbro.blockman`
+  // "editor.inlayHints.enabled": true,
+  // "editor.guides.indentation": true,
+  // "editor.wordWrap": "on",
+  // "diffEditor.wordWrap": "inherit",
+
   /**
    * Editor
    */
-  "editor.find.seedSearchStringFromSelection": false,
-  // "editor.formatOnSave": false,
+  "editor.find.seedSearchStringFromSelection": "never",
+  "editor.formatOnSave": true, // TODO: recommended
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingQuotes": "never",
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // TODO: recommended
   "editor.dragAndDrop": false,
-  "editor.insertSpaces": true,
+  "editor.insertSpaces": true, // TODO: recommended
   "editor.minimap.enabled": true,
   "editor.minimap.showSlider": "always",
   "editor.minimap.renderCharacters": false,
   "editor.mouseWheelZoom": true,
-  "editor.parameterHints": false,
+  // "editor.parameterHints": false,
   "editor.quickSuggestions": {
     "other": true,
     "comments": true,
     "strings": true
   },
   "editor.quickSuggestionsDelay": 100,
-  "editor.renderWhitespace": "boundary",
+  "editor.renderWhitespace": "boundary", // TODO: recommended
   "editor.rulers": [
     80,
-    81
-  ],
+    81,
+    100,
+    101
+  ], // TODO: recommended
   "editor.showFoldingControls": "always",
   "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "window.experimental.windowControlsOverlay.enabled": true,
   "editor.tabSize": 2,
   "editor.unfoldOnClickAfterEndOfLine": true,
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
+
+  // Bracket pair & indentation highlighting/colorization settings
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.indentation": true,
+  "editor.matchBrackets": "never",
+
+  /**
+   * Bracket Pair Colorizer 2
+   * `coenraads.bracket-pair-colorizer-2`
+   */
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "bracket-pair-colorizer-2.rulerPosition": "Full",
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  "bracket-pair-colorizer-2.showBracketsInRuler": true,
+  "bracket-pair-colorizer-2.scopeLineCSS": [
+    "borderStyle: solid",
+    "borderWidth: 1px",
+    "borderColor: {color}; opacity: 1"
+  ],
+  "bracket-pair-colorizer-2.excludedLanguages": [
+    "diff"
+  ],
+
+  /**
+   * indent-rainbow
+   * `oderwat.indent-rainbow`
+   */
+  "indentRainbow.ignoreErrorLanguages": [
+    "diff",
+    "markdown",
+    "search-result"
+  ],
 
   /**
    * Prettier
+   * `esbenp.prettier-vscode@9.2.0`
    */
   // "prettier.configPath": "", // never use this
-  "prettier.requireConfig": true,
+  "prettier.requireConfig": true, // TODO: recommended
   "prettier.singleQuote": true,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "es5",
@@ -56,15 +108,9 @@
    * Source Control
    */
   "scm.alwaysShowProviders": true,
-
-  /**
-   * Workbench
-   */
-  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
-  "workbench.sideBar.location": "left",
 
   /**
    * Breadcrumbs
@@ -76,10 +122,10 @@
    * Window
    */
   "window.enableMenuBarMnemonics": false,
-  "window.menuBarVisibility": "toggle",
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "folders",
   "window.title": "[VS] ${dirty}${activeEditorShort}${separator}${rootName}",
+  // "window.title": "[VS] ${dirty}${activeEditorShort}${separator}${rootName}",
   // "window.zoomLevel": 1,
 
   /**
@@ -95,7 +141,8 @@
     ".gitignore": "gitignore",
     ".gitignore-global": "gitignore",
     "*.ne": "nearley",
-    "*.job": "ini"
+    "*.job": "ini",
+    "code-stdin-*": "diff" // TODO: recommended
   },
   "files.exclude": {
     "**/.git": true,
@@ -104,7 +151,7 @@
     "**/CVS": true,
     "**/.DS_Store": true
   },
-  "files.insertFinalNewline": true,
+  "files.insertFinalNewline": true, // TODO: recommended
   "files.trimTrailingWhitespace": true,
 
   /**
@@ -299,8 +346,8 @@
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "/bin/bash",
-      "icon": "terminal-bash",
-    },
+      "icon": "terminal-bash"
+    }
     // "pwsh": {
     //   "path": "pwsh",
     //   "icon": "terminal-powershell"
@@ -321,8 +368,8 @@
     //   "icon": "terminal-cmd"
     // },
     "Git Bash": {
-      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
-    },
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
   },
 
   /**
@@ -345,14 +392,14 @@
   },
 
   "[html]": {
-    // "editor.autoClosingBrackets": "always",
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
     // "editor.detectIndentation": false,
     // "editor.insertSpaces": false,
-  // },
+  },
 
   "[javascript]": {
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -368,7 +415,7 @@
   },
 
   "[jsonc]": {
-    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingBrackets": "always"
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
     // "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -381,6 +428,7 @@
 
   "[markdown]": {
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
     "editor.detectIndentation": false,
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
@@ -421,21 +469,6 @@
   "autoscrolldown.onlyWhenAtEnd": false,
 
   /**
-   * BracketPair
-   */
-  "bracket-pair-colorizer-2.highlightActiveScope": true,
-  "bracket-pair-colorizer-2.scopeLineCSS": [
-    "borderStyle: solid",
-    "borderWidth: 1px",
-    "borderColor: {color}; opacity: 1"
-  ],
-  "bracket-pair-colorizer-2.showBracketsInGutter": true,
-  "bracket-pair-colorizer-2.showBracketsInRuler": true,
-  "bracket-pair-colorizer-2.excludedLanguages": [
-    "diff"
-  ],
-
-  /**
    * Emmet
    */
   "emmet.showAbbreviationSuggestions": false,
@@ -451,9 +484,9 @@
   // "git.path": "C:\\Program Files\\Git\\cmd\\git.exe",
   // "git.promptToSaveFilesBeforeCommit": true,
 
-/**
- * markdownlint
- */
+  /**
+   * markdownlint
+   */
 
   // TODO: look at this
   "markdownlint.customRules": [],
@@ -478,27 +511,67 @@
    */
   "vsicons.projectDetection.disableDetect": true,
   "explorer.confirmDelete": false,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
 
   /**
    * macros
-   * `geddski.macros` @ 1.2.1
+   * `geddski.macros@1.2.1`
    */
   "macros": {
     "insertLinesAround": [
       "editor.action.insertLineAfter",
-      "editor.action.insertLineBefore",
-    ],
+      "editor.action.insertLineBefore"
+    ]
   },
+
+  /**
+   * markdownlint
+   * `davidanson.vscode-markdownlint@0.46.0`
+   * https://github.com/DavidAnson/vscode-markdownlint#configure
+   * https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+   */
+  "markdownlint.config": {
+    // Inline HTML (`no-inline-html`)
+    "MD033": {
+      "allowed_elements": [
+        "kbd"
+      ]
+    },
+    // Spaces inside code span elements (`no-space-in-code`)
+    "MD038": false
+  },
+
+  /**
+   * antlr4
+   * `mike-lischke.vscode-antlr4@2.2.4`
+   */
+  "antlr4.generation": {
+    "mode": "external",
+    "language": "JavaScript",
+    "outputDir": "./.antlr-output/",
+    "listeners": true,
+    "visitors": true
+  },
+
+  /**
+   * Git Blame
+   * waderyan.gitblame
+   */
+  "gitblame.inlineMessageEnabled": true,
+  "gitblame.inlineMessageFormat": "(${time.ago})",
 
   // TODO: move below here
 
-  "indentRainbow.ignoreErrorLanguages": [
-    "search-result",
-    "markdown"
-  ],
-
   "workbench.editorAssociations": {
-    "*.png": "luna.editor",
+    "*.png": "luna.editor"
   },
+
+  // New
+  "git.mergeEditor": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "scm.experimental.showHistoryGraph": true
 }
