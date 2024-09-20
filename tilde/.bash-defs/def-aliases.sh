@@ -15,7 +15,7 @@ alias hfl="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 # general
 alias _="sudo"
 alias sagi="sudo apt-get install"
-alias .rl=". ${D_HOME}/.bashrc"
+alias .relog=". ${D_HOME}/.bashrc"
 
 # alias thisdir='echo $(dirname "$(readlink -f "${BASH_SOURCE[0]}")")'
 
@@ -49,17 +49,26 @@ alias .cd.="cd ${D_DOT}"
 alias .cd-defs="cd ${D_DEFS}"
 alias .cd-ahk="cd ${D_AHK}"
 alias .cd-vs="cd ${D_VS}"
+alias .cd-snippets="cd ${D_VS_SNIPPETS}"
 
 alias .code.="code ${D_DOT}/.vscode/dot.code-workspace"
 alias .code-defs="code ${D_DEFS}"
 alias .code-ahk="code ${D_AHK}"
 alias .code-vs="code ${D_VS}"
+alias .code-snippets="code ${D_VS}/snippets-meta/snippets.code-workspace"
+
 .code() {
   code "$(ls ./.vscode/*.code-workspace | head -1)"
 }
 
 alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
 alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
+
+alias .ssh="eval \"$(ssh-agent -s)\""
+alias .ssh-github=".ssh; ssh-add ${D_SSH}/github"
+
+# PGP tools
+alias decrypt-clipboard="cat /dev/clipboard | gpg --decrypt"
 
 # JS tools
 alias ts-node="npx ts-node"

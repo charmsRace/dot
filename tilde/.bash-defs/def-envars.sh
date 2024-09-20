@@ -13,6 +13,7 @@ declare VOID=/dev/null
 # declare D_DEFS=${D_HOME}/.bash-defs # already in ~/.bashrc
 declare D_SSH=${D_HOME}/.ssh
 declare D_BIN=${D_HOME}/.bin
+declare D_I2PD=${D_HOME}/.i2pd
 declare D_GIT=${D_HOME}/git
 declare D_VIM=${D_HOME}/.vim
 declare D_DOT=${D_GIT}/dot

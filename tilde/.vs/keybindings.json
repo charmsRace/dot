@@ -504,10 +504,10 @@
    * `\.[^.]*?focus`
    */
 
-  // {
-  //   "key": "ctrl+shift+alt+enter",
-  //   "command": "macros.insertLinesAround",
-  // },
+  {
+    "key": "ctrl+shift+alt+enter",
+    "command": "macros.insertLinesAround"
+  },
 
   // {
   //   "key": "ctrl+shift+enter",
