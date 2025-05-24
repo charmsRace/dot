@@ -16,7 +16,7 @@ alias .edit-hosts="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 # general
 alias _="sudo"
 alias sagi="sudo apt-get install"
-alias .rl=". ${D_HOME}/.bashrc"
+alias .relog=". ${D_HOME}/.bashrc"
 
 # alias thisdir='echo $(dirname "$(readlink -f "${BASH_SOURCE[0]}")")'
 
@@ -54,13 +54,18 @@ alias .cd.="cd ${D_DOT}"
 alias .cd-defs="cd ${D_DEFS}"
 alias .cd-ahk="cd ${D_AHK}"
 alias .cd-vs="cd ${D_VS}"
-alias .cd-ks="cd ${D_KS}"
+alias .cd-snippets="cd ${D_VS_SNIPPETS}"
+alias .cd-revelator="cd ${D_REVELATOR}"
 
 alias .code.="code ${D_DOT}/.vscode/dot.code-workspace"
 alias .code-defs="code ${D_DEFS}"
 alias .code-ahk="code ${D_AHK}/.vscode/ahk.code-workspace"
 alias .code-vs="code ${D_VS}"
-alias .code-ks="code ${D_KS}/.vscode/knowledge-sharing.code-workspace"
+alias .code-snippets="code ${D_VS}/snippets-meta/snippets.code-workspace"
+alias .code-akasha="code ${AKASHA}"
+alias .code-aseprite="code ${AK_ASEPRITE}"
+alias .code-revelator="code ${D_REVELATOR}"
+
 .code() {
   code "$(ls ./.vscode/*.code-workspace | head -1)"
 }
@@ -69,6 +74,11 @@ alias .dc="git dcode"
 
 alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
 alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
+
+alias .ssh-start="eval \"$(ssh-agent -s)\""
+
+# Akasha
+alias @K="cd ${AKASHA}"
 
 # JS tools
 alias ts-node="npx ts-node"

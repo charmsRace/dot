@@ -650,5 +650,17 @@
 	}
 ]
 
+// all - "key": "[^"]*?"
+// chords - "key": "[^" ]+ [^" ]+x"
+// any modifiers - ctrl\+(\w+\+),
+// taken alt menu keys: [wertsdfgklcvbm]
+
+/**
+ * ctrl: ⎈
+ * shift: ⇧
+ * alt: ⎇
+ * meta: ◆
+ */
+
 // TODO: regex to find relevant JSON lines without trailing comma
 // TODO: terminal paning?
