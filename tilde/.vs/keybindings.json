@@ -1,609 +1,653 @@
 [
-  /**
-   * Use ctrl+tab / ctrl+shift+tab to navigate tabs like Chrome
-   */
-  {
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.previousEditor"
-  },
+	/**
+	 * Use ctrl+tab / ctrl+shift+tab to navigate tabs like Chrome
+	 */
+	{
+		"key": "ctrl+tab",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.previousEditor"
+	},
 
-  /**
-   * Layout management chord system
-   *
-   * shift + alt + q -> ...
-   *
-   * ... q :: workbench.action.editorLayoutSingle
-   * ... w :: workbench.action.editorLayoutTwoColumns
-   * ... e :: workbench.action.editorLayoutThreeColumns
-   * ... a :: workbench.action.editorLayoutTwoRows
-   * ... z :: workbench.action.editorLayoutThreeRows
-   * ... d :: workbench.action.editorLayoutTwoRowsRight
-   * ... x :: workbench.action.editorLayoutTwoColumnsBottom
-   * ... c :: workbench.action.editorLayoutTwoByTwoGrid
-   * ... s :: workbench.action.maximizeEditor
-   * ... r :: workbench.action.evenEditorWidths
-   * ... ↓ :: workbench.action.closeOtherEditors
-   */
-  {
-    "key": "shift+alt+q q",
-    "command": "workbench.action.editorLayoutSingle"
-  },
-  {
-    "key": "shift+alt+q w",
-    "command": "workbench.action.editorLayoutTwoColumns"
-  },
-  {
-    "key": "shift+alt+q e",
-    "command": "workbench.action.editorLayoutThreeColumns"
-  },
-  {
-    "key": "shift+alt+q a",
-    "command": "workbench.action.editorLayoutTwoRows"
-  },
-  {
-    "key": "shift+alt+q z",
-    "command": "workbench.action.editorLayoutThreeRows"
-  },
-  {
-    "key": "shift+alt+q d",
-    "command": "workbench.action.editorLayoutTwoRowsRight"
-  },
-  {
-    "key": "shift+alt+q x",
-    "command": "workbench.action.editorLayoutTwoColumnsBottom"
-  },
-  {
-    "key": "shift+alt+q c",
-    "command": "workbench.action.editorLayoutTwoByTwoGrid"
-  },
-  {
-    "key": "shift+alt+q s",
-    "command": "workbench.action.minimizeOtherEditors"
-  },
-  {
-    "key": "shift+alt+q r",
-    "command": "workbench.action.evenEditorWidths"
-  },
-  {
-    "key": "shift+alt+q down",
-    "command": "workbench.action.closeOtherEditors"
-  },
+	/**
+	 * Layout management chord system
+	 *
+	 * shift + alt + q -> ...
+	 *
+	 * ... q :: workbench.action.editorLayoutSingle
+	 * ... w :: workbench.action.editorLayoutTwoColumns
+	 * ... e :: workbench.action.editorLayoutThreeColumns
+	 * ... a :: workbench.action.editorLayoutTwoRows
+	 * ... z :: workbench.action.editorLayoutThreeRows
+	 * ... d :: workbench.action.editorLayoutTwoRowsRight
+	 * ... x :: workbench.action.editorLayoutTwoColumnsBottom
+	 * ... c :: workbench.action.editorLayoutTwoByTwoGrid
+	 * ... s :: workbench.action.maximizeEditor
+	 * ... r :: workbench.action.evenEditorWidths
+	 * ... ↓ :: workbench.action.closeOtherEditors
+	 *
+	 * TODO: unite 2 sections
+	 * 2
+	 * f
+	 * v
+	 * ⇧⎇↑
+	 * ⇧⎇↓
+	 * ⇧⎇←
+	 * ⇧⎇→
+	 * ⭾
+	 * ←
+	 * →
+	 */
+	{
+		"key": "shift+alt+q q",
+		"command": "workbench.action.editorLayoutSingle"
+	},
+	{
+		"key": "shift+alt+q w",
+		"command": "workbench.action.editorLayoutTwoColumns"
+	},
+	{
+		"key": "shift+alt+q e",
+		"command": "workbench.action.editorLayoutThreeColumns"
+	},
+	{
+		"key": "shift+alt+q a",
+		"command": "workbench.action.editorLayoutTwoRows"
+	},
+	{
+		"key": "shift+alt+q z",
+		"command": "workbench.action.editorLayoutThreeRows"
+	},
+	{
+		"key": "shift+alt+q d",
+		"command": "workbench.action.editorLayoutTwoRowsRight"
+	},
+	{
+		"key": "shift+alt+q x",
+		"command": "workbench.action.editorLayoutTwoColumnsBottom"
+	},
+	{
+		"key": "shift+alt+q c",
+		"command": "workbench.action.editorLayoutTwoByTwoGrid"
+	},
+	{
+		"key": "shift+alt+q s",
+		"command": "workbench.action.minimizeOtherEditors"
+	},
+	{
+		"key": "shift+alt+q r",
+		"command": "workbench.action.evenEditorWidths"
+	},
+	{
+		"key": "shift+alt+q down",
+		"command": "workbench.action.closeOtherEditors"
+	},
 
-  /**
-   * VS Code configuration file chord system
-   *
-   * ctrl+k -> ...
-   *
-   * ... ctrl +               {,.} :: open user's JSON config
-   * ... ctrl + shift +       {,.} :: open default JSON config (read-only)
-   * ... ctrl + shift + alt + {,.} :: open rich editor
-   *
-   * , == settings
-   * . == keybindings
-   */
-  {
-    "key": "ctrl+k ctrl+,",
-    "command": "workbench.action.openSettingsJson"
-  },
-  {
-    "key": "ctrl+k ctrl+shift+,",
-    "command": "workbench.action.openRawDefaultSettings"
-  },
-  {
-    "key": "ctrl+k ctrl+alt+,",
-    "command": "workbench.action.openSettings"
-  },
-  {
-    "key": "ctrl+k ctrl+.",
-    "command": "workbench.action.openGlobalKeybindingsFile"
-  },
-  {
-    "key": "ctrl+k ctrl+shift+.",
-    "command": "workbench.action.openDefaultKeybindingsFile"
-  },
-  {
-    "key": "ctrl+k ctrl+alt+.",
-    "command": "workbench.action.openGlobalKeybindings"
-  },
+	/**
+	 * VS Code configuration file chord system
+	 *
+	 * ctrl+k -> ...
+	 *
+	 * ... ctrl +               {,.} :: open user's JSON config
+	 * ... ctrl + shift +       {,.} :: open default JSON config (read-only)
+	 * ... ctrl + shift + alt + {,.} :: open rich editor
+	 *
+	 * , == settings
+	 * . == keybindings
+	 */
+	{
+		"key": "ctrl+k ctrl+,",
+		"command": "workbench.action.openSettingsJson"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+,",
+		"command": "workbench.action.openRawDefaultSettings"
+	},
+	{
+		"key": "ctrl+k ctrl+alt+,",
+		"command": "workbench.action.openSettings"
+	},
+	{
+		"key": "ctrl+k ctrl+.",
+		"command": "workbench.action.openGlobalKeybindingsFile"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+.",
+		"command": "workbench.action.openDefaultKeybindingsFile"
+	},
+	{
+		"key": "ctrl+k ctrl+alt+.",
+		"command": "workbench.action.openGlobalKeybindings"
+	},
 
-  // Snippets
-  {
-    "key": "ctrl+k ctrl+s",
-    "command": "workbench.action.openSnippets"
-  },
-  {
-    "key": "shift+alt+s",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus && !editorReadonly"
-  },
+	// Snippets
+	{
+		"key": "ctrl+k ctrl+s",
+		"command": "workbench.action.openSnippets"
+	},
+	{
+		"key": "shift+alt+s",
+		"command": "editor.action.insertSnippet",
+		"when": "editorTextFocus && !editorReadonly"
+	},
 
-  /**
-   * IntelliSense navigation
-   *
-   * ctrl + alt + ...
-   *
-   * ... a :: go to definition
-   * ... s :: go to references
-   * ... d :: go to type definition
-   * ... f :: open search editor
-   *
-   * ctrl + f5 :: reload window (first-line when IntelliSense fails)
-   */
-  {
-    "key": "ctrl+alt+a",
-    "command": "editor.action.definition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+alt+s",
-    "command": "references-view.findReferences",
-    "when": "editorHasReferenceProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+alt+d",
-    "command": "editor.action.goToTypeDefinition",
-    "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+alt+f",
-    "command": "search.action.openNewEditor"
-  },
-  {
-    "key": "ctrl+f5",
-    "command": "workbench.action.reloadWindow",
-    "when": "editorTextFocus"
-  },
+	/**
+	 * IntelliSense navigation
+	 *
+	 * ctrl + alt + ...
+	 *
+	 * ... a :: go to definition
+	 * ... s :: go to references
+	 * ... d :: go to type definition
+	 * ... f :: open search editor
+	 *
+	 * ctrl + f5 :: reload window (first-line when IntelliSense fails)
+	 */
+	{
+		"key": "ctrl+alt+a",
+		"command": "editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+alt+s",
+		"command": "references-view.findReferences",
+		"when": "editorHasReferenceProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+alt+d",
+		"command": "editor.action.goToTypeDefinition",
+		"when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+alt+f",
+		"command": "search.action.openNewEditor"
+	},
+	{
+		"key": "ctrl+f5",
+		"command": "workbench.action.reloadWindow",
+		"when": "editorTextFocus"
+	},
 
-  /** Explorer view (file tree pane)
-   *
-   * ctrl + shift +       e :: focus explorer (default)
-   * ctrl +         alt + n :: new file
-   * ctrl + shift + alt + n :: new folder
-   */
-  {
-    "key": "ctrl+shift+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "ctrl+alt+n",
-    "command": "explorer.newFile"
-  },
-  {
-    "key": "ctrl+shift+alt+n",
-    "command": "explorer.newFolder"
-  },
+	/** Explorer view (file tree pane)
+	 *
+	 * ctrl + shift +       e :: focus explorer (default)
+	 * ctrl +         alt + n :: new file
+	 * ctrl + shift + alt + n :: new folder
+	 */
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "ctrl+shift+alt+n",
+		"command": "explorer.newFolder"
+	},
 
-  /**
-   * Navigate search results quickly
-   *
-   * shift + alt + {e,d} :: previous/next search result
-   */
-  {
-    "key": "shift+alt+d",
-    "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
-  },
-  {
-    "key": "shift+alt+e",
-    "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult || inSearchEditor"
-  },
+	/**
+	 * Navigate search results quickly
+	 *
+	 * shift + alt + {e,d} :: previous/next search result
+	 */
+	{
+		"key": "shift+alt+d",
+		"command": "search.action.focusNextSearchResult",
+		"when": "hasSearchResult || inSearchEditor"
+	},
+	{
+		"key": "shift+alt+e",
+		"command": "search.action.focusPreviousSearchResult",
+		"when": "hasSearchResult || inSearchEditor"
+	},
 
-  /**
-   * "Smart select" -- select up/down by syntax node in parse tree
-   *
-   * ctrl + shift + {↑,↓}
-   */
-  {
-    "key": "ctrl+shift+up",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+down",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
+	/**
+	 * "Smart select" -- select up/down by syntax node in parse tree
+	 *
+	 * ctrl + shift + {↑,↓}
+	 */
+	{
+		"key": "ctrl+shift+up",
+		"command": "editor.action.smartSelect.shrink",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "editor.action.smartSelect.expand",
+		"when": "editorTextFocus"
+	},
 
-  // Text manipulation
-  {
-    "key": "ctrl+alt+j",
-    "command": "editor.action.joinLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+/",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+u",
-    "command": "insert-unicode.insertText",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+i",
-    "command": "insert-unicode.fromHexCode",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+0",
-    "command": "workbench.action.evenEditorWidths"
-  },
+	// Text manipulation
+	{
+		"key": "ctrl+alt+j",
+		"command": "editor.action.joinLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+/",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+u",
+		"command": "insert-unicode.insertText",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+0",
+		"command": "workbench.action.evenEditorWidths"
+	},
 
-  /**
-   * Rebind IntelliSense suggestion navigation more centrally
-   */
-  {
-    "key": "ctrl+shift+]",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
-    "key": "ctrl+]",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
+	/**
+	 * Rebind IntelliSense suggestion navigation more centrally
+	 */
+	{
+		"key": "ctrl+shift+]",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "ctrl+]",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
 
-  // {
-  // "key": "ctrl+shift+alt+e",
-  // "command": "workbench.files.action.explore"
-  // },
+	// {
+	// "key": "ctrl+shift+alt+e",
+	// "command": "workbench.files.action.explore"
+	// },
 
-  /**
-   * alt + ...
-   */
+	/**
+	 * alt + ...
+	 */
 
-  {
-    "key": "alt+`",
-    "command": "workbench.action.terminal.kill"
-  },
+	{
+		"key": "alt+`",
+		"command": "workbench.action.terminal.kill"
+	},
 
-  /**
-   * Whitespace settings chord system
-   * alt + q -> ...
-   *
-   * q - indentationToSpaces
-   * a - indentUsingSpaces
-   * w - indentationToTabs
-   * s - indentUsingTabs
-   * e - detectIndentation
-   * r - reindentLines
-   * x - trimTrailingWhitespace
-   */
+	/**
+	 * Whitespace settings chord system
+	 * alt + q -> ...
+	 *
+	 * q - indentationToSpaces
+	 * a - indentUsingSpaces
+	 * w - indentationToTabs
+	 * s - indentUsingTabs
+	 * e - detectIndentation
+	 * r - reindentLines
+	 * x - trimTrailingWhitespace
+	 */
 
-  /**
-   * Explorer chord system
-   * shift + alt + e -> ...
-   *   - q - focus open editors
-   *   - a - focus folders
-   *   - z - focus outline
-   *
-   */
+	/**
+	 * Explorer chord system
+	 * shift + alt + e -> ...
+	 *   - q - focus open editors
+	 *   - a - focus folders
+	 *   - z - focus outline
+	 *
+	 */
 
-  // {
-  //   "key": "shift+alt+e q",
-  //   "command": "workbench.files.action.focusOpenEditorsView",
-  //   "when": "workbench.explorer.openEditorsView.active"
-  // },
-  // {
-  //   "key": "shift+alt+e a",
-  //   "command": "workbench.explorer.fileView.focus"
-  //   // "when": "",
-  // },
-  // {
-  //   "key": "shift+alt+e z",
-  //   "command": "outline.focus"
-  //   // "when": "",
-  // },
+	// {
+	//   "key": "shift+alt+e q",
+	//   "command": "workbench.files.action.focusOpenEditorsView",
+	//   "when": "workbench.explorer.openEditorsView.active"
+	// },
+	// {
+	//   "key": "shift+alt+e a",
+	//   "command": "workbench.explorer.fileView.focus"
+	//   // "when": "",
+	// },
+	// {
+	//   "key": "shift+alt+e z",
+	//   "command": "outline.focus"
+	//   // "when": "",
+	// },
 
-  // {
-  //   "key": "alt+x q",
-  //   "command": "editor.action.indentationToSpaces",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+x a",
-  //   "command": "editor.action.indentUsingSpaces",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+x w",
-  //   "command": "editor.action.indentationToTabs",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+x s",
-  //   "command": "editor.action.indentUsingTabs",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+x e",
-  //   "command": "editor.action.detectIndentation",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+x r",
-  //   "command": "editor.action.reindentlines",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "alt+x x",
-  //   "command": "editor.action.trimTrailingWhitespace",
-  //   "when": "editorTextFocus && !editorReadonly"
-  // },
+	// {
+	//   "key": "alt+x q",
+	//   "command": "editor.action.indentationToSpaces",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
+	// {
+	//   "key": "alt+x a",
+	//   "command": "editor.action.indentUsingSpaces",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
+	// {
+	//   "key": "alt+x w",
+	//   "command": "editor.action.indentationToTabs",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
+	// {
+	//   "key": "alt+x s",
+	//   "command": "editor.action.indentUsingTabs",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
+	// {
+	//   "key": "alt+x e",
+	//   "command": "editor.action.detectIndentation",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
+	// {
+	//   "key": "alt+x r",
+	//   "command": "editor.action.reindentlines",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
+	// {
+	//   "key": "alt+x x",
+	//   "command": "editor.action.trimTrailingWhitespace",
+	//   "when": "editorTextFocus && !editorReadonly"
+	// },
 
-  /**
-   * Folding chords
-   * (cf. https://code.visualstudio.com/docs/editor/codebasics#_folding)
-   *
-   * fold
-   * foldAll
-   * foldAllBlockComments
-   * foldLevelN [1-7]
-   * foldRecursively
-   *
-   * toggleFold
-   *
-   * unfold
-   * unfoldAll
-   * unfoldRecursively
-   */
+	/**
+	 * Folding chords
+	 * (cf. https://code.visualstudio.com/docs/editor/codebasics#_folding)
+	 *
+	 * fold
+	 * foldAll
+	 * foldAllBlockComments
+	 * foldLevelN [1-7]
+	 * foldRecursively
+	 *
+	 * toggleFold
+	 *
+	 * unfold
+	 * unfoldAll
+	 * unfoldRecursively
+	 */
 
-  // {
-  // "key": "",
-  // "command": "editor.",
-  // "when": "editorTextFocus && foldingEnabled",
-  // },
+	// {
+	// "key": "",
+	// "command": "editor.",
+	// "when": "editorTextFocus && foldingEnabled",
+	// },
 
-  /**
-   * More layout stuff
-   * 2 - workbench.action.toggleSplitEditorInGroup
-   * f - workbench.action.toggleZenMode
-   * v - workbench.action.toggleMaximizePanel (?)
-   *
-   * tab - workbench.action.firstEditorInGroup
-   * ↓ - workbench.action.closeOtherEditors
-   * ← - workbench.action.closeEditorsToTheLeft
-   * → - workbench.action.closeEditorsToTheRight
-   * [⇧⎇] ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
-   * enter - workbench.action.{un,}pinEditor
-   */
-  {
-    "key": "shift+alt+q 2",
-    "command": "workbench.action.toggleSplitEditorInGroup"
-  },
-  {
-    "key": "shift+alt+q f",
-    "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "key": "shift+alt+q v",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
-    "key": "shift+alt+q shift+alt+left",
-    "command": "workbench.action.moveActiveEditorGroupLeft"
-  },
-  {
-    "key": "shift+alt+q shift+alt+up",
-    "command": "workbench.action.moveActiveEditorGroupUp"
-  },
-  {
-    "key": "shift+alt+q shift+alt+right",
-    "command": "workbench.action.moveActiveEditorGroupRight"
-  },
-  {
-    "key": "shift+alt+q shift+alt+down",
-    "command": "workbench.action.moveActiveEditorGroupDown"
-  },
-  // {
-  // doesn't work
-  //   "key": "shift+alt+q enter",
-  //   "command": "workbench.action.unpinEditor",
-  //   "when": "config.workbench.editor.showTabs && editorSticky"
-  // },
-  {
-    "key": "shift+alt+q tab",
-    "command": "workbench.action.firstEditorInGroup"
-  },
-  {
-    "key": "shift+alt+q left",
-    "command": "workbench.action.closeEditorsToTheLeft"
-  },
-  {
-    "key": "shift+alt+q right",
-    "command": "workbench.action.closeEditorsToTheRight"
-  },
+	/**
+	 * More layout stuff
+	 * 2 - workbench.action.toggleSplitEditorInGroup
+	 * f - workbench.action.toggleZenMode
+	 * v - workbench.action.toggleMaximizePanel (?)
+	 *
+	 * tab - workbench.action.firstEditorInGroup
+	 * ↓ - workbench.action.closeOtherEditors
+	 * ← - workbench.action.closeEditorsToTheLeft
+	 * → - workbench.action.closeEditorsToTheRight
+	 * [⇧⎇] ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
+	 * enter - workbench.action.{un,}pinEditor
+	 */
+	{
+		"key": "shift+alt+q 2",
+		"command": "workbench.action.toggleSplitEditorInGroup"
+	},
+	{
+		"key": "shift+alt+q f",
+		"command": "workbench.action.toggleZenMode"
+	},
+	{
+		"key": "shift+alt+q v",
+		"command": "workbench.action.toggleMaximizedPanel"
+	},
+	{
+		"key": "shift+alt+q shift+alt+up",
+		"command": "workbench.action.moveActiveEditorGroupUp"
+	},
+	{
+		"key": "shift+alt+q shift+alt+down",
+		"command": "workbench.action.moveActiveEditorGroupDown"
+	},
+	{
+		"key": "shift+alt+q shift+alt+left",
+		"command": "workbench.action.moveActiveEditorGroupLeft"
+	},
+	{
+		"key": "shift+alt+q shift+alt+right",
+		"command": "workbench.action.moveActiveEditorGroupRight"
+	},
+	{
+		"key": "shift+alt+q shift+q",
+		"command": "workbench.action.pinEditor"
+	},
+	{
+		"key": "shift+alt+q shift+w",
+		"command": "workbench.action.unpinEditor"
+	},
+	{
+		"key": "shift+alt+q tab",
+		"command": "workbench.action.firstEditorInGroup"
+	},
+	{
+		"key": "shift+alt+q left",
+		"command": "workbench.action.closeEditorsToTheLeft"
+	},
+	{
+		"key": "shift+alt+q right",
+		"command": "workbench.action.closeEditorsToTheRight"
+	},
 
-  // More IntelliSense
-  {
-    "key": "ctrl+shift+alt+a",
-    "command": "editor.action.revealDefinitionAside",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+shift+alt+s",
-    "command": "editor.action.goToReferences",
-    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+shift+alt+d",
-    "command": "editor.action.peekTypeDefinition",
-    "when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-  },
+	// More IntelliSense
+	{
+		"key": "ctrl+shift+alt+a",
+		"command": "editor.action.revealDefinitionAside",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+shift+alt+s",
+		"command": "editor.action.goToReferences",
+		"when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+shift+alt+d",
+		"command": "editor.action.peekTypeDefinition",
+		"when": "editorHasTypeDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
 
-  {
-    "key": "alt+q",
-    "command": "workbench.action.quickOpenView"
-  },
-  {
-    "key": "alt+q",
-    "command": "workbench.action.quickOpenNavigateNextInViewPicker",
-    "when": "inQuickOpen && inViewsPicker"
-  },
-  {
-    "key": "shift+alt+q",
-    "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
-    "when": "inQuickOpen && inViewsPicker"
-  },
+	{
+		"key": "alt+q",
+		"command": "workbench.action.quickOpenView"
+	},
+	{
+		"key": "alt+q",
+		"command": "workbench.action.quickOpenNavigateNextInViewPicker",
+		"when": "inQuickOpen && inViewsPicker"
+	},
+	{
+		"key": "shift+alt+q",
+		"command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
+		"when": "inQuickOpen && inViewsPicker"
+	},
 
-  /**
-   * Editor sizing
-   */
-  {
-    "key": "ctrl+shift+alt+h",
-    "command": "workbench.action.decreaseViewWidth"
-  },
-  {
-    "key": "ctrl+shift+alt+j",
-    "command": "workbench.action.increaseViewHeight"
-  },
-  {
-    "key": "ctrl+shift+alt+k",
-    "command": "workbench.action.decreaseViewHeight"
-  },
-  {
-    "key": "ctrl+shift+alt+l",
-    "command": "workbench.action.increaseViewWidth"
-  },
+	/**
+	 * Editor sizing
+	 */
+	{
+		"key": "ctrl+shift+alt+h",
+		"command": "workbench.action.decreaseViewWidth"
+	},
+	{
+		"key": "ctrl+shift+alt+j",
+		"command": "workbench.action.increaseViewHeight"
+	},
+	{
+		"key": "ctrl+shift+alt+k",
+		"command": "workbench.action.decreaseViewHeight"
+	},
+	{
+		"key": "ctrl+shift+alt+l",
+		"command": "workbench.action.increaseViewWidth"
+	},
 
-  /**
-   * Tree navigation?
-   *
-   * {
-   *   "key": "ctrl+left",
-   *   "command": "list.collapseAll",
-   *   "when": "listFocus && !inputFocus"
-   * },
-   */
+	/**
+	 * Tree navigation?
+	 *
+	 * {
+	 *   "key": "ctrl+left",
+	 *   "command": "list.collapseAll",
+	 *   "when": "listFocus && !inputFocus"
+	 * },
+	 */
 
-  /**
-   * Focus navigation chord system
-   * shift + alt + <key> -> ...
-   *   - workbench.action.focusSideBar
-   *   - workbench.files.action.focusOpenEditorsView
-   *   - workbench.files.action.focusFilesExplorer
-   *   - workbench.view.search.focus
-   *   - extensions.listView.focus
-   *   - workbench.action.focusPanel
-   *   - workbench.action.problems.focus
-   *   - workbench.action.terminal.focus
-   *   - breadcrumbs.focus
-   *   - outline.focus
-   *   - notifications.focusToasts
-   *   - workbench.action.focusCommentsPanel
-   *   - workbench.action.focusQuickOpen
-   *
-   * Regex to find all focus commands in `default-keybindings.json`:
-   * `\.[^.]*?focus`
-   */
+	/**
+	 * Focus navigation chord system
+	 * shift + alt + <key> -> ...
+	 *   - workbench.action.focusSideBar
+	 *   - workbench.files.action.focusOpenEditorsView
+	 *   - workbench.files.action.focusFilesExplorer
+	 *   - workbench.view.search.focus
+	 *   - extensions.listView.focus
+	 *   - workbench.action.focusPanel
+	 *   - workbench.action.problems.focus
+	 *   - workbench.action.terminal.focus
+	 *   - breadcrumbs.focus
+	 *   - outline.focus
+	 *   - notifications.focusToasts
+	 *   - workbench.action.focusCommentsPanel
+	 *   - workbench.action.focusQuickOpen
+	 *
+	 * Regex to find all focus commands in `default-keybindings.json`:
+	 * `\.[^.]*?focus`
+	 */
 
-  // {
-  //   "key": "ctrl+shift+alt+enter",
-  //   "command": "macros.insertLinesAround",
-  // },
+	// {
+	//   "key": "ctrl+shift+alt+enter",
+	//   "command": "macros.insertLinesAround",
+	// },
 
-  // {
-  //   "key": "ctrl+shift+enter",
-  //   "command": "-markdown-preview-enhanced.runAllCodeChunks",
-  //   "when": "editorLangId == 'markdown'",
-  // },
+	// {
+	//   "key": "ctrl+shift+enter",
+	//   "command": "-markdown-preview-enhanced.runAllCodeChunks",
+	//   "when": "editorLangId == 'markdown'",
+	// },
 
-  // - keybindings.editor.copyCommandKeybindingEntry
-  // - keybindings.editor.resetKeybinding
-  // - keybindings.editor.showConflicts
-  // - keybindings.editor.showDefaultKeybindings
-  // - keybindings.editor.showUserKeybindings
+	// - keybindings.editor.copyCommandKeybindingEntry
+	// - keybindings.editor.resetKeybinding
+	// - keybindings.editor.showConflicts
+	// - keybindings.editor.showDefaultKeybindings
+	// - keybindings.editor.showUserKeybindings
 
-  // {
-  //   "key": "shift+alt+<key> <key>",
-  //   "command": "vscode.open",
-  //   "args": {
-  //     "text": "C:\\Users\\joruble\\git\\dot\\sources\\augr\\.vs\\keybindings.json"
-  //   },
-  // },
+	// {
+	//   "key": "shift+alt+<key> <key>",
+	//   "command": "vscode.open",
+	//   "args": {
+	//     "text": "C:\\Users\\joruble\\git\\dot\\sources\\augr\\.vs\\keybindings.json"
+	//   },
+	// },
 
-  // Test command
-  // {
-  //   "key": "ctrl+shift+alt+x",
-  //   "command": "workbench.action.focusQuickOpen",
-  // },
+	// Test command
+	// {
+	//   "key": "ctrl+shift+alt+x",
+	//   "command": "workbench.action.focusQuickOpen",
+	// },
 
-  /**
-   * TODO: Unsorted changes
-   */
+	/**
+	 * TODO: Unsorted changes
+	 */
 
-  {
-    "key": "ctrl+shift+c",
-    "command": "extension.copyProjectPath"
-    // "when": "editorFocus",
-  },
+	{
+		"key": "ctrl+shift+c",
+		"command": "extension.copyProjectPath"
+		// "when": "editorFocus",
+	},
 
-  // Error navigation
-  {
-    "key": "ctrl+shift+alt+e",
-    "command": "editor.action.marker.prev",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+d",
-    "command": "editor.action.marker.next",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+r",
-    "command": "editor.action.marker.prevInFiles",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+f",
-    "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus"
-  },
+	// Error navigation
+	{
+		"key": "ctrl+shift+alt+e",
+		"command": "editor.action.marker.prev",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+d",
+		"command": "editor.action.marker.next",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+r",
+		"command": "editor.action.marker.prevInFiles",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+f",
+		"command": "editor.action.marker.nextInFiles",
+		"when": "editorFocus"
+	},
 
-  {
-    "key": "pagedown",
-    "command": "scrollPageDown",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "pageup",
-    "command": "scrollPageUp",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+alt+/",
-    "command": "toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+c",
-    "command": "-toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+enter",
-    "command": "-markdown-preview-enhanced.runAllCodeChunks",
-    "when": "editorLangId == 'markdown'"
-  }
+	{
+		"key": "pagedown",
+		"command": "scrollPageDown",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "pageup",
+		"command": "scrollPageUp",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+alt+/",
+		"command": "toggle",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+c",
+		"command": "-toggle",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+enter",
+		"command": "-markdown-preview-enhanced.runAllCodeChunks",
+		"when": "editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+[",
+		"command": "editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+0",
+		"command": "-editor.foldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+]",
+		"command": "editor.unfoldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+j",
+		"command": "-editor.unfoldAll",
+		"when": "editorTextFocus && foldingEnabled"
+	},
 
-  // all - "key": "[^"]*?"
-  // chords - "key": "[^" ]+ [^" ]+x"
-  // any modifiers - ctrl\+(\w+\+),
-  // taken alt menu keys: [wertsdfgklcvbm]
-
-  /**
-   * ctrl: ⎈
-   * shift: ⇧
-   * alt: ⎇
-   * meta: ◆
-   */
+	// Comment stuff
+	{
+		"key": "shift+alt+z",
+		"command": "-rest-client.generate-codesnippet",
+		"when": "editorTextFocus && editorLangId == 'http'"
+	},
+	{
+		"key": "shift+alt+z",
+		"command": "-rest-client.generate-codesnippet",
+		"when": "editorTextFocus && editorLangId == 'plaintext'"
+	},
+	{
+		"key": "shift+alt+z",
+		"command": "editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+	}
 ]
 
 // TODO: regex to find relevant JSON lines without trailing comma
