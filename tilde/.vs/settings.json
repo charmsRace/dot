@@ -573,7 +573,6 @@
     "*.png": "luna.editor"
   },
 
-  // New
   "git.mergeEditor": true,
   "[python]": {
     "editor.formatOnType": true
@@ -583,5 +582,36 @@
   "scm.experimental.showHistoryGraph": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.foldingHighlight": false,
-  "diffEditor.renderSideBySide": true
+  "diffEditor.renderSideBySide": true,
+
+	// New
+	// "Lua.diagnostics.globals": [
+	//   "app",
+	//   "Brush",
+	//   "BrushType",
+	//   "Color",
+	//   "Dialog",
+	//   "Point",
+	//   "Rectangle",
+	//   "SelectionMode",
+	//   "Sprite",
+	// ],
+
+	// "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
+
+	// // New
+	// "csharp.inlayHints.enableInlayHintsForTypes": true,
+	// "dotnet.codeLens.enableReferencesCodeLens": false,
+	// "[csharp]": {
+	//   "editor.defaultFormatter": "ms-dotnettools.csharp"
+	// },
+	// "terminal.integrated.defaultProfile.windows": "Git Bash",
+	// "godotTools.editorPath.godot4": "\"C:\\Users\\clarity\\godot\\Godot_v4.3-stable_win64.exe\"",
+	// "[gdscript]": {
+	//   "editor.defaultFormatter": "geequlim.godot-tools"
+	// },
+	// "[svg]": {
+	//   "editor.defaultFormatter": "jock.svg"
+	// },
+	// "editor.wordBasedSuggestions": "off"
 }
