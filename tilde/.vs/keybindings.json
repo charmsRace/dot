@@ -12,21 +12,36 @@
   },
 
   /**
-   * Layout management chord system
+   * # Layout Chord System
    *
-   * shift + alt + q -> ...
+   * ## Keybindings
    *
-   * ... q :: workbench.action.editorLayoutSingle
-   * ... w :: workbench.action.editorLayoutTwoColumns
-   * ... e :: workbench.action.editorLayoutThreeColumns
-   * ... a :: workbench.action.editorLayoutTwoRows
-   * ... z :: workbench.action.editorLayoutThreeRows
-   * ... d :: workbench.action.editorLayoutTwoRowsRight
-   * ... x :: workbench.action.editorLayoutTwoColumnsBottom
-   * ... c :: workbench.action.editorLayoutTwoByTwoGrid
-   * ... s :: workbench.action.maximizeEditor
-   * ... r :: workbench.action.evenEditorWidths
-   * ... ↓ :: workbench.action.closeOtherEditors
+   * > [ ⇧⎇] q → ...
+   *
+   * ...    q :: editorLayoutSingle
+   * ...    w :: editorLayoutTwoColumns
+   * ...    e :: editorLayoutThreeColumns
+   * ...    a :: editorLayoutTwoRows
+   * ...    z :: editorLayoutThreeRows
+   * ...    d :: editorLayoutTwoRowsRight
+   * ...    x :: editorLayoutTwoColumnsBottom
+   * ...    c :: editorLayoutTwoByTwoGrid
+   * ...    s :: maximizeEditor
+   * ...    r :: evenEditorWidths
+   * ...    ↓ :: closeOtherEditors
+   * ...    ← :: closeEditorsToTheLeft
+   * ...    → :: closeEditorsToTheRight
+   * ...    ⭾ :: firstEditorInGroup
+   * ...    2 :: toggleSplitEditorInGroup
+   * ... ⇧  2 :: toggleSplitEditorInGroupLayout
+   * ...    f :: toggleZenMode
+   * ... ⇧⎇ s :: toggleCenteredLayout
+   * ... ⇧  q :: pinEditor
+   * ... ⇧  w :: unpinEditor
+   * ... ⇧⎇ ↑ :: moveActiveEditorGroupUp
+   * ... ⇧⎇ ↓ :: moveActiveEditorGroupDown
+   * ... ⇧⎇ ← :: moveActiveEditorGroupLeft
+   * ... ⇧⎇ → :: moveActiveEditorGroupRight
    */
   {
     "key": "shift+alt+q q",
@@ -72,18 +87,91 @@
     "key": "shift+alt+q down",
     "command": "workbench.action.closeOtherEditors"
   },
+  {
+    "key": "shift+alt+q left",
+    "command": "workbench.action.closeEditorsToTheLeft"
+  },
+  {
+    "key": "shift+alt+q right",
+    "command": "workbench.action.closeEditorsToTheRight"
+  },
+  {
+    "key": "shift+alt+q tab",
+    "command": "workbench.action.firstEditorInGroup"
+  },
+  {
+    "key": "shift+alt+q 2",
+    "command": "workbench.action.toggleSplitEditorInGroup"
+  },
+  {
+    "key": "shift+alt+q shift+2",
+    "command": "workbench.action.toggleSplitEditorInGroupLayout"
+  },
+  {
+    "key": "shift+alt+q f",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "shift+alt+q shift+q",
+    "command": "workbench.action.pinEditor"
+  },
+  {
+    "key": "shift+alt+q shift+alt+s", // NEW
+    "command": "workbench.action.toggleCenteredLayout",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "shift+alt+q shift+w",
+    "command": "workbench.action.unpinEditor"
+  },
+  {
+    "key": "shift+alt+q shift+alt+up",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "shift+alt+q shift+alt+down",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "shift+alt+q shift+alt+left",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "shift+alt+q shift+alt+right",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
 
   /**
-   * VS Code configuration file chord system
+   * More layout stuff
+   * 2 - workbench.action.toggleSplitEditorInGroup
+   * f - workbench.action.toggleZenMode
+   * v - workbench.action.toggleMaximizePanel (?)
    *
-   * ctrl+k -> ...
+   * tab - workbench.action.firstEditorInGroup
+   * ↓ - workbench.action.closeOtherEditors
+   * ← - workbench.action.closeEditorsToTheLeft
+   * → - workbench.action.closeEditorsToTheRight
+   * [⇧⎇] ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
+   * enter - workbench.action.{un,}pinEditor
+   */
+  // {
+  //   "key": "shift+alt+q v",
+  //   "command": "workbench.action.toggleMaximizedPanel"
+  // },
+
+  /**
+   * # VS Code Config Chord System
    *
-   * ... ctrl +               {,.} :: open user's JSON config
-   * ... ctrl + shift +       {,.} :: open default JSON config (read-only)
-   * ... ctrl + shift + alt + {,.} :: open rich editor
+   * ## Keybindings
    *
-   * , == settings
-   * . == keybindings
+   * > [⎈--] k → ...
+   *
+   * ... [⎈--] {, .} :: open config (JSON)
+   * ... [⎈⇧-] {, .} :: open default config (JSON)
+   * ... [⎈-⎇] {, .} :: open config (rich editor)
+   *
+   * {,} ↦ settings
+   * {.} ↦ keybindings
    */
   {
     "key": "ctrl+k ctrl+,",
@@ -135,7 +223,7 @@
    */
   {
     "key": "ctrl+alt+a",
-    "command": "editor.action.definition",
+    "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
@@ -224,11 +312,6 @@
   {
     "key": "ctrl+alt+u",
     "command": "insert-unicode.insertText",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+i",
-    "command": "insert-unicode.fromHexCode",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
@@ -361,66 +444,6 @@
   // "when": "editorTextFocus && foldingEnabled",
   // },
 
-  /**
-   * More layout stuff
-   * 2 - workbench.action.toggleSplitEditorInGroup
-   * f - workbench.action.toggleZenMode
-   * v - workbench.action.toggleMaximizePanel (?)
-   *
-   * tab - workbench.action.firstEditorInGroup
-   * ↓ - workbench.action.closeOtherEditors
-   * ← - workbench.action.closeEditorsToTheLeft
-   * → - workbench.action.closeEditorsToTheRight
-   * [⇧⎇] ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
-   * enter - workbench.action.{un,}pinEditor
-   */
-  {
-    "key": "shift+alt+q 2",
-    "command": "workbench.action.toggleSplitEditorInGroup"
-  },
-  {
-    "key": "shift+alt+q f",
-    "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "key": "shift+alt+q v",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
-    "key": "shift+alt+q shift+alt+left",
-    "command": "workbench.action.moveActiveEditorGroupLeft"
-  },
-  {
-    "key": "shift+alt+q shift+alt+up",
-    "command": "workbench.action.moveActiveEditorGroupUp"
-  },
-  {
-    "key": "shift+alt+q shift+alt+right",
-    "command": "workbench.action.moveActiveEditorGroupRight"
-  },
-  {
-    "key": "shift+alt+q shift+alt+down",
-    "command": "workbench.action.moveActiveEditorGroupDown"
-  },
-  // {
-  // doesn't work
-  //   "key": "shift+alt+q enter",
-  //   "command": "workbench.action.unpinEditor",
-  //   "when": "config.workbench.editor.showTabs && editorSticky"
-  // },
-  {
-    "key": "shift+alt+q tab",
-    "command": "workbench.action.firstEditorInGroup"
-  },
-  {
-    "key": "shift+alt+q left",
-    "command": "workbench.action.closeEditorsToTheLeft"
-  },
-  {
-    "key": "shift+alt+q right",
-    "command": "workbench.action.closeEditorsToTheRight"
-  },
-
   // More IntelliSense
   {
     "key": "ctrl+shift+alt+a",
@@ -504,10 +527,10 @@
    * `\.[^.]*?focus`
    */
 
-  {
-    "key": "ctrl+shift+alt+enter",
-    "command": "macros.insertLinesAround"
-  },
+  // {
+  //   "key": "ctrl+shift+alt+enter",
+  //   "command": "macros.insertLinesAround"
+  // },
 
   // {
   //   "key": "ctrl+shift+enter",
@@ -546,26 +569,26 @@
   },
 
   // Error navigation
-  {
-    "key": "ctrl+shift+alt+e",
-    "command": "editor.action.marker.prev",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+d",
-    "command": "editor.action.marker.next",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+r",
-    "command": "editor.action.marker.prevInFiles",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+f",
-    "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus"
-  },
+  // {
+  //   "key": "ctrl+shift+alt+e",
+  //   "command": "editor.action.marker.prev",
+  //   "when": "editorFocus"
+  // },
+  // {
+  //   "key": "ctrl+shift+alt+d",
+  //   "command": "editor.action.marker.next",
+  //   "when": "editorFocus"
+  // },
+  // {
+  //   "key": "ctrl+shift+alt+r",
+  //   "command": "editor.action.marker.prevInFiles",
+  //   "when": "editorFocus"
+  // },
+  // {
+  //   "key": "ctrl+alt+numpad0",
+  //   "command": "editor.action.marker.nextInFiles",
+  //   "when": "editorFocus"
+  // },
 
   {
     "key": "pagedown",
@@ -591,20 +614,209 @@
     "key": "ctrl+shift+enter",
     "command": "-markdown-preview-enhanced.runAllCodeChunks",
     "when": "editorLangId == 'markdown'"
-  }
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+  },
+  {
+    "key": "ctrl+k ctrl+shift+[",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+shift+]",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
 
-  // all - "key": "[^"]*?"
-  // chords - "key": "[^" ]+ [^" ]+x"
-  // any modifiers - ctrl\+(\w+\+),
-  // taken alt menu keys: [wertsdfgklcvbm]
+  // Comment stuff
+  {
+    "key": "shift+alt+z",
+    "command": "-rest-client.generate-codesnippet",
+    "when": "editorTextFocus && editorLangId == 'http'"
+  },
+  {
+    "key": "shift+alt+z",
+    "command": "-rest-client.generate-codesnippet",
+    "when": "editorTextFocus && editorLangId == 'plaintext'"
+  },
+  {
+    "key": "shift+alt+z",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+  },
+
+  // remove default un/folding bindings
+
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
 
   /**
-   * ctrl: ⎈
-   * shift: ⇧
-   * alt: ⎇
-   * meta: ◆
+   * # Folding Chord System
+   *
+   * ## Keybindings
+   *
+   * > [⎈-⎇] numpad0 → ...
+   *
+   * ### Symmetric Fold/Unfold
+   *
+   * ... [⎈-⎇] {← →} :: un/fold at cursor
+   * ... [⎈⇧⎇] {← →} :: un/fold recursively
+   * ... [⎈--] {← →} :: un/fold all
+   * ... [⎈⇧-] {← →} :: un/fold all except
+   *
+   * {←} ↦ fold
+   * {→} ↦ unfold
+   *
+   * ### Other
+   *
+   * ... [⎈-⎇] ↓         :: toggle un/fold
+   * ... [⎈⇧⎇] ↓         :: toggle un/fold recursively
+   * ... [⎈-⎇] z         :: fold all block comments
+   * ... [⎈-⎇] numpad{N} :: fold level N (N ∈ [7])
+   *
+   * ## Notes
+   *
+   * - ??? `editor.un/foldAllMarkerRegions`
+   * - ??? `editor.createFoldingRangeFromSelection`
    */
+
+  /* Un/fold at cursor */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+left",
+    "command": "editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+right",
+    "command": "editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  /* Un/fold recursively */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+shift+alt+left",
+    "command": "editor.foldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+shift+alt+right",
+    "command": "editor.unfoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  /* Un/fold all */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+left",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+right",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  /* Un/fold all except */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+shift+left",
+    "command": "editor.foldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+shift+right",
+    "command": "editor.unfoldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  /* Toggle un/fold */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+down",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+shift+alt+down",
+    "command": "editor.toggleFoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  /* Fold all block comments */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+z",
+    "command": "editor.foldAllBlockComments",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  /* Fold level N */
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad1",
+    "command": "editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad2",
+    "command": "editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad3",
+    "command": "editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad4",
+    "command": "editor.foldLevel4",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad5",
+    "command": "editor.foldLevel5",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad6",
+    "command": "editor.foldLevel6",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+alt+numpad0 ctrl+alt+numpad7",
+    "command": "editor.foldLevel7",
+    "when": "editorTextFocus && foldingEnabled"
+  }
 ]
+
+/**
+ * # CHANGELOG
+ *
+ * - un/folding chords
+ * - [⎈⇧⎇] {← →} format
+ */
 
 // TODO: regex to find relevant JSON lines without trailing comma
 // TODO: terminal paning?

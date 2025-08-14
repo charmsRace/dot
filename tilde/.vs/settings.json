@@ -29,8 +29,8 @@
   "editor.mouseWheelZoom": true,
   // "editor.parameterHints": false,
   "editor.quickSuggestions": {
-    "other": true,
-    "comments": true,
+    "other": true, // "inline"?
+    "comments": true, // "inline"?
     "strings": true
   },
   "editor.quickSuggestionsDelay": 100,
@@ -48,15 +48,11 @@
   "editor.tabSize": 2,
   "editor.unfoldOnClickAfterEndOfLine": true,
   "editor.wordWrap": "off",
-
-  // Bracket pair & indentation highlighting/colorization settings
-  "editor.bracketPairColorization.enabled": false,
   "editor.guides.bracketPairs": false,
   "editor.guides.bracketPairsHorizontal": false,
   "editor.guides.highlightActiveBracketPair": false,
   "editor.guides.highlightActiveIndentation": true,
   "editor.guides.indentation": true,
-  "editor.matchBrackets": "never",
 
   /**
    * Bracket Pair Colorizer 2
@@ -410,7 +406,7 @@
   },
 
   "[json]": {
-    "editor.autoClosingBrackets": "always"
+    // "editor.autoClosingBrackets": "always"
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
@@ -427,11 +423,11 @@
   },
 
   "[markdown]": {
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": null, // so annoying
     "editor.formatOnSave": false,
     "editor.detectIndentation": false,
     "editor.minimap.enabled": false,
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
   },
@@ -485,13 +481,6 @@
   // "git.promptToSaveFilesBeforeCommit": true,
 
   /**
-   * markdownlint
-   */
-
-  // TODO: look at this
-  "markdownlint.customRules": [],
-
-  /**
    * Sort lines
    */
   "sortLines.sortEntireFile": true,
@@ -527,18 +516,38 @@
   /**
    * markdownlint
    * `davidanson.vscode-markdownlint@0.46.0`
-   * https://github.com/DavidAnson/vscode-markdownlint#configure
-   * https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+   *
+   * [Configuration Doc](https://github.com/DavidAnson/vscode-markdownlint#configure)
+   * [Rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md)
    */
+  "markdownlint.customRules": [],
+
   "markdownlint.config": {
+    // Unordered list style (`ul-style`)
+    "MD004": {
+      "style": "dash"
+    },
+
+    // Unordered list indentation (`ul-indent`)
+    "MD007": {
+      "indent": 4
+    },
+
     // Inline HTML (`no-inline-html`)
     "MD033": {
       "allowed_elements": [
         "kbd"
       ]
     },
+
+    // Trailing punctuation in heading (`no-trailing-punctuation`)
+    // "MD026": {},
+
     // Spaces inside code span elements (`no-space-in-code`)
-    "MD038": false
+    "MD038": false,
+
+    // Allow link text like 'link' (`descriptive-link-text`)
+    "MD059": false
   },
 
   /**
@@ -566,12 +575,45 @@
     "*.png": "luna.editor"
   },
 
-  // New
   "git.mergeEditor": true,
   "[python]": {
     "editor.formatOnType": true
   },
   "bracket-pair-colorizer-2.depreciation-notice": false,
   "workbench.editor.pinnedTabsOnSeparateRow": true,
-  "scm.experimental.showHistoryGraph": true
+  "scm.experimental.showHistoryGraph": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.foldingHighlight": false,
+  "diffEditor.renderSideBySide": true,
+
+  // New
+  "Lua.diagnostics.globals": [
+    "app",
+    "Brush",
+    "BrushType",
+    "Color",
+    "Dialog",
+    "Point",
+    "Rectangle",
+    "SelectionMode",
+    "Sprite"
+  ]
+
+  // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
+
+  // // New
+  // "csharp.inlayHints.enableInlayHintsForTypes": true,
+  // "dotnet.codeLens.enableReferencesCodeLens": false,
+  // "[csharp]": {
+  //   "editor.defaultFormatter": "ms-dotnettools.csharp"
+  // },
+  // "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // "godotTools.editorPath.godot4": "\"C:\\Users\\clarity\\godot\\Godot_v4.3-stable_win64.exe\"",
+  // "[gdscript]": {
+  //   "editor.defaultFormatter": "geequlim.godot-tools"
+  // },
+  // "[svg]": {
+  //   "editor.defaultFormatter": "jock.svg"
+  // },
+  // "editor.wordBasedSuggestions": "off"
 }

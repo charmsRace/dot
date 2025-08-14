@@ -3,7 +3,7 @@
     email = clarity.amaranthine@gmail.com
 
 [credential]
-	helper = store
+    helper = store
 
 [credential "https://github.com"]
     username = charmsRace
@@ -12,9 +12,11 @@
     defaultBranch = main
 
 [core]
+    autocrlf = false
+    eol = lf
     editor = vim
     # editor = code --wait
-    excludesfile = ~/.gitignore-global
+    excludesfile = ~/.global.gitignore
     filemode = false
 
 [remote "origin"]
@@ -31,12 +33,39 @@
     # TODO:
     # - print git root
     # - https://stackoverflow.com/q/4327708
+
+    ########
+    # Run from directory
+    # aaa = !git -C ${D_STADIUM}
+
+    ########
+    # Branch-specific stuff
+    ########
+    chy = checkout yall-SD-5275
+    dy = diff -w yall-SD-5275..
+    my = merge yall-SD-5275
+    chrb = checkout RB_1_1_10_0
+    mrb = merge RB_1_1_10_0
+    chrc = checkout RB_1_1_0_0
+    mrc = merge RB_1_1_0_0
     ########
     recommit = commit --amend -m
     uncommit = reset --soft @~
+    patch-last = format-patch -n @^
     ########
     root = !pwd
-    dcode = !git d | code - &>/dev/null &
+    dcode = !git d | code - &>/dev/null
+
+    ##### Stash stuff #####
+    pop = stash pop
+    st = stash -u
+    st-ls = stash list
+    st-s = stash show -u
+    st-d = stash show -p
+    st-apply = stash apply
+    # st-copy = !git stash store -m "intermediate results: $1" $(git stash create) #
+    st-save = "!git stash -um \"wow\" && git stash apply"
+
     ########
     a = add
     aa = add --all
@@ -63,6 +92,7 @@
     ########
     d = diff -w
     dbranch = diff -w master...@
+    dmin = diff --compact-summary
     dfiles = diff-tree --no-commit-id --name-only -r # then commit id
     di = diff -w --cached # diff index with HEAD
     dlast = diff -w @~ # diff HEAD with previous commit
@@ -78,7 +108,8 @@
     ########
     l = log
     lom = log origin/master..master
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lol = log --oneline
+    lolg = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ########
     ls = ls-files
@@ -88,8 +119,6 @@
     mom = merge origin/master
     ########
     o = checkout
-    ########
-    pop = stash pop
     ########
     ps = push
     pso = push origin
@@ -118,7 +147,5 @@
     ########
     s = status
     su = status -u
-    ########
-    slist = stash list
-    stall = stash --include-untracked
-    spop = stash pop
+    #######
+    unstage = reset --soft @
