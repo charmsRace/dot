@@ -9,8 +9,7 @@ alias .edit-bash-envars="vim ${D_DEFS}/def-envars.sh"
 alias .edit-bash-private="vim ${D_DEFS}/def-private.sh"
 
 alias .edit-gitconfig="vim ${D_HOME}/.gitconfig"
-alias .edit-gitignore="vim ${D_HOME}/.gitignore-global" # TODO: rename
-# alias .edit-gitignore="vim ${D_HOME}/global.gitignore"
+alias .edit-gitignore="vim ${D_HOME}/.global.gitignore"
 alias .edit-vimrc="vim ${D_HOME}/.vimrc"
 alias .edit-hosts="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
 # alias .edit-hosts="code /c/WINDOWS/System32/drivers/etc/hosts"

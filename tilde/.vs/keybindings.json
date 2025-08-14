@@ -529,7 +529,7 @@
 
   // {
   //   "key": "ctrl+shift+alt+enter",
-  //   "command": "macros.insertLinesAround"
+  //   "command": "macros.insertLinesAround",
   // },
 
   // {
