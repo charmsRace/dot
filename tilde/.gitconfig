@@ -3,7 +3,7 @@
     email = clarity.amaranthine@gmail.com
 
 [credential]
-	helper = store
+    helper = store
 
 [credential "https://github.com"]
     username = charmsRace
@@ -16,7 +16,7 @@
     eol = lf
     editor = vim
     # editor = code --wait
-    excludesfile = ~/.gitignore-global
+    excludesfile = ~/.global.gitignore
     filemode = false
 
 [remote "origin"]

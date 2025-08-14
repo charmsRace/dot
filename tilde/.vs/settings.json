@@ -29,8 +29,8 @@
   "editor.mouseWheelZoom": true,
   // "editor.parameterHints": false,
   "editor.quickSuggestions": {
-    "other": true,
-    "comments": true,
+    "other": true, // "inline"?
+    "comments": true, // "inline"?
     "strings": true
   },
   "editor.quickSuggestionsDelay": 100,
@@ -520,6 +520,8 @@
    * [Configuration Doc](https://github.com/DavidAnson/vscode-markdownlint#configure)
    * [Rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md)
    */
+  "markdownlint.customRules": [],
+
   "markdownlint.config": {
     // Unordered list style (`ul-style`)
     "MD004": {
@@ -582,20 +584,20 @@
   "scm.experimental.showHistoryGraph": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.foldingHighlight": false,
-  "diffEditor.renderSideBySide": true
+  "diffEditor.renderSideBySide": true,
 
   // New
-  // "Lua.diagnostics.globals": [
-  //   "app",
-  //   "Brush",
-  //   "BrushType",
-  //   "Color",
-  //   "Dialog",
-  //   "Point",
-  //   "Rectangle",
-  //   "SelectionMode",
-  //   "Sprite",
-  // ],
+  "Lua.diagnostics.globals": [
+    "app",
+    "Brush",
+    "BrushType",
+    "Color",
+    "Dialog",
+    "Point",
+    "Rectangle",
+    "SelectionMode",
+    "Sprite"
+  ]
 
   // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
 

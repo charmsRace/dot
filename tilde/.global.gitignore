@@ -2,7 +2,7 @@
 # adding the following to your `~/.gitconfig`:
 #
 # [core]
-#     excludesfile = ~/.gitignore-global
+#     excludesfile = ~/.global.gitignore
 
 # Personal ad-hoc folders. This means I can keep an `@clarity`
 # directory anywhere in a repo without version-controlling

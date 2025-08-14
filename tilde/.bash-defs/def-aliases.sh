@@ -9,9 +9,11 @@ alias .edit-bash-envars="vim ${D_DEFS}/def-envars.sh"
 alias .edit-bash-private="vim ${D_DEFS}/def-private.sh"
 
 alias .edit-gitconfig="vim ${D_HOME}/.gitconfig"
-alias .edit-gitignore="vim ${D_HOME}/.gitignore-global"
+alias .edit-gitignore="vim ${D_HOME}/.gitignore-global" # TODO: rename
+# alias .edit-gitignore="vim ${D_HOME}/global.gitignore"
 alias .edit-vimrc="vim ${D_HOME}/.vimrc"
 alias .edit-hosts="sudoedit /c/WINDOWS/System32/drivers/etc/hosts"
+# alias .edit-hosts="code /c/WINDOWS/System32/drivers/etc/hosts"
 
 # general
 alias _="sudo"
@@ -47,7 +49,7 @@ alias isup="ping 8.8.8.8"
 
 # navigation shortcuts
 alias .cd-="cd - > /dev/null"
-alias .cg="cd !$:t:r" # e.g. `git clone ...repo.git && cg
+alias .cg="cd !$:t:r" # e.g. `git clone ...repo.git && .cg
 
 # dotfile tools
 alias .cd.="cd ${D_DOT}"
@@ -62,6 +64,7 @@ alias .code-defs="code ${D_DEFS}"
 alias .code-ahk="code ${D_AHK}/.vscode/ahk.code-workspace"
 alias .code-vs="code ${D_VS}"
 alias .code-snippets="code ${D_VS}/snippets-meta/snippets.code-workspace"
+
 alias .code-akasha="code ${AKASHA}"
 alias .code-aseprite="code ${AK_ASEPRITE}"
 alias .code-revelator="code ${D_REVELATOR}"
@@ -72,13 +75,18 @@ alias .code-revelator="code ${D_REVELATOR}"
 
 alias .dc="git dcode"
 
-alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
-alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
+# alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},sharpkeys,vimrc} ${D_SOURCE}"
+# alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 alias .ssh-start="eval \"$(ssh-agent -s)\""
+alias .ssh-github=".ssh; ssh-add ${D_SSH}/github" # TODO: ?
+
 alias .kill-ahk="WMIC PROCESS where \"Name='AutoHotkey.exe'\" CALL Terminate"
 alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
 alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
+
+# PGP
+alias decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
 
 # Akasha
 alias @K="cd ${AKASHA}"
@@ -120,3 +128,12 @@ alias .set-yall=".set-yall-ticket"
   sed -i "s/\(^ *IntegrationTicket := \)[[:digit:]]\+$/\1$1/" ${D_AHK}/scripts/private/ticket-interpolation.ahk
   .run-ahk
 }
+
+# Unused
+# alias python2="winpty /c/Python27/python.exe"
+# alias py2=python2
+# alias py3=python3
+# alias protocol="code ${D_GIT}/protocol_1/protocol.txt"
+# alias .net="dotnet"
+# alias .tg=".net run --"
+# alias .code-tg="code ${AKASHA}/revelator/Tropogram/.vscode/tropogram.code-workspace"
