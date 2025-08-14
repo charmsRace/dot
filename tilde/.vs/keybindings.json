@@ -16,19 +16,32 @@
    *
    * ## Keybindings
    *
-   * > [-⇧⎇] q → ...
+   * > [ ⇧⎇] q → ...
    *
-   * ... q :: editorLayoutSingle
-   * ... w :: editorLayoutTwoColumns
-   * ... e :: editorLayoutThreeColumns
-   * ... a :: editorLayoutTwoRows
-   * ... z :: editorLayoutThreeRows
-   * ... d :: editorLayoutTwoRowsRight
-   * ... x :: editorLayoutTwoColumnsBottom
-   * ... c :: editorLayoutTwoByTwoGrid
-   * ... s :: maximizeEditor
-   * ... r :: evenEditorWidths
-   * ... ↓ :: closeOtherEditors
+   * ...    q :: editorLayoutSingle
+   * ...    w :: editorLayoutTwoColumns
+   * ...    e :: editorLayoutThreeColumns
+   * ...    a :: editorLayoutTwoRows
+   * ...    z :: editorLayoutThreeRows
+   * ...    d :: editorLayoutTwoRowsRight
+   * ...    x :: editorLayoutTwoColumnsBottom
+   * ...    c :: editorLayoutTwoByTwoGrid
+   * ...    s :: maximizeEditor
+   * ...    r :: evenEditorWidths
+   * ...    ↓ :: closeOtherEditors
+   * ...    ← :: closeEditorsToTheLeft
+   * ...    → :: closeEditorsToTheRight
+   * ...    ⭾ :: firstEditorInGroup
+   * ...    2 :: toggleSplitEditorInGroup
+   * ... ⇧  2 :: toggleSplitEditorInGroupLayout
+   * ...    f :: toggleZenMode
+   * ... ⇧⎇ s :: toggleCenteredLayout
+   * ... ⇧  q :: pinEditor
+   * ... ⇧  w :: unpinEditor
+   * ... ⇧⎇ ↑ :: moveActiveEditorGroupUp
+   * ... ⇧⎇ ↓ :: moveActiveEditorGroupDown
+   * ... ⇧⎇ ← :: moveActiveEditorGroupLeft
+   * ... ⇧⎇ → :: moveActiveEditorGroupRight
    */
   {
     "key": "shift+alt+q q",
@@ -74,6 +87,77 @@
     "key": "shift+alt+q down",
     "command": "workbench.action.closeOtherEditors"
   },
+  {
+    "key": "shift+alt+q left",
+    "command": "workbench.action.closeEditorsToTheLeft"
+  },
+  {
+    "key": "shift+alt+q right",
+    "command": "workbench.action.closeEditorsToTheRight"
+  },
+  {
+    "key": "shift+alt+q tab",
+    "command": "workbench.action.firstEditorInGroup"
+  },
+  {
+    "key": "shift+alt+q 2",
+    "command": "workbench.action.toggleSplitEditorInGroup"
+  },
+  {
+    "key": "shift+alt+q shift+2",
+    "command": "workbench.action.toggleSplitEditorInGroupLayout"
+  },
+  {
+    "key": "shift+alt+q f",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "shift+alt+q shift+q",
+    "command": "workbench.action.pinEditor"
+  },
+  {
+    "key": "shift+alt+q shift+alt+s", // NEW
+    "command": "workbench.action.toggleCenteredLayout",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "shift+alt+q shift+w",
+    "command": "workbench.action.unpinEditor"
+  },
+  {
+    "key": "shift+alt+q shift+alt+up",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "shift+alt+q shift+alt+down",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "shift+alt+q shift+alt+left",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "shift+alt+q shift+alt+right",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+
+  /**
+   * More layout stuff
+   * 2 - workbench.action.toggleSplitEditorInGroup
+   * f - workbench.action.toggleZenMode
+   * v - workbench.action.toggleMaximizePanel (?)
+   *
+   * tab - workbench.action.firstEditorInGroup
+   * ↓ - workbench.action.closeOtherEditors
+   * ← - workbench.action.closeEditorsToTheLeft
+   * → - workbench.action.closeEditorsToTheRight
+   * [⇧⎇] ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
+   * enter - workbench.action.{un,}pinEditor
+   */
+  // {
+  //   "key": "shift+alt+q v",
+  //   "command": "workbench.action.toggleMaximizedPanel"
+  // },
 
   /**
    * # VS Code Config Chord System
@@ -359,68 +443,6 @@
   // "command": "editor.",
   // "when": "editorTextFocus && foldingEnabled",
   // },
-
-  /**
-   * More layout stuff
-   * 2 - workbench.action.toggleSplitEditorInGroup
-   * f - workbench.action.toggleZenMode
-   * v - workbench.action.toggleMaximizePanel (?)
-   *
-   * tab - workbench.action.firstEditorInGroup
-   * ↓ - workbench.action.closeOtherEditors
-   * ← - workbench.action.closeEditorsToTheLeft
-   * → - workbench.action.closeEditorsToTheRight
-   * [⇧⎇] ←↑→↓ - workbench.action.moveActiveEditorGroup{Left,Up,Right,Down}
-   * enter - workbench.action.{un,}pinEditor
-   */
-  {
-    "key": "shift+alt+q 2",
-    "command": "workbench.action.toggleSplitEditorInGroup"
-  },
-  {
-    "key": "shift+alt+q f",
-    "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "key": "shift+alt+q v",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
-    "key": "shift+alt+q shift+alt+up",
-    "command": "workbench.action.moveActiveEditorGroupUp"
-  },
-  {
-    "key": "shift+alt+q shift+alt+down",
-    "command": "workbench.action.moveActiveEditorGroupDown"
-  },
-  {
-    "key": "shift+alt+q shift+alt+left",
-    "command": "workbench.action.moveActiveEditorGroupLeft"
-  },
-  {
-    "key": "shift+alt+q shift+alt+right",
-    "command": "workbench.action.moveActiveEditorGroupRight"
-  },
-  {
-    "key": "shift+alt+q shift+q",
-    "command": "workbench.action.pinEditor"
-  },
-  {
-    "key": "shift+alt+q shift+w",
-    "command": "workbench.action.unpinEditor"
-  },
-  {
-    "key": "shift+alt+q tab",
-    "command": "workbench.action.firstEditorInGroup"
-  },
-  {
-    "key": "shift+alt+q left",
-    "command": "workbench.action.closeEditorsToTheLeft"
-  },
-  {
-    "key": "shift+alt+q right",
-    "command": "workbench.action.closeEditorsToTheRight"
-  },
 
   // More IntelliSense
   {
@@ -794,18 +816,6 @@
  *
  * - un/folding chords
  * - [⎈⇧⎇] {← →} format
- */
-
-// all - "key": "[^"]*?"
-// chords - "key": "[^" ]+ [^" ]+x"
-// any modifiers - ctrl\+(\w+\+),
-// taken alt menu keys: [wertsdfgklcvbm]
-
-/**
- * ctrl: ⎈
- * shift: ⇧
- * alt: ⎇
- * meta: ◆
  */
 
 // TODO: regex to find relevant JSON lines without trailing comma

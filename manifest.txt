@@ -1,0 +1,29 @@
+- tilde/
+  - .bash-defs/
+    - def-aliases.sh
+    - def-envars.sh
+    - def-path.sh
+    - def-prompt.sh
+    - def-scripts.sh
+    - def-symlinks.sh
+    - def-utils.sh
+    - index.sh
+  - .conemu/
+    - settings.xml
+  - .ssh/
+    - generate.sh (wip)
+  - .vs/
+    - css/
+      - disable-italics.css
+    - snippets/
+      - ...
+    - keybindings.json
+    - settings.json
+  - .bash_history
+  - .bash_profile
+  - .bashrc
+  - .gitconfig
+  - .gitignore-global
+  - .prettierignore
+  - .prettierrc
+  - .vimrc
