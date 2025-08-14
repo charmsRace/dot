@@ -76,6 +76,9 @@ alias .cp~="cp -r ~/.{bash{-defs,_profile,rc},conemu,git{config,ignore-global},s
 alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 alias .ssh-start="eval \"$(ssh-agent -s)\""
+alias .kill-ahk="WMIC PROCESS where \"Name='AutoHotkey.exe'\" CALL Terminate"
+alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
+alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
 
 # Akasha
 alias @K="cd ${AKASHA}"
@@ -98,7 +101,7 @@ alias .set=".set-ticket"
 .set-ticket() {
   local regex='^[0-9]+$'
   if [[ ! $1 =~ $regex ]]; then
-    echo "Error: Not a number" >&2
+    echo "ERROR: Invalid ticket number" >&2
     return
   fi
 
@@ -110,7 +113,7 @@ alias .set-yall=".set-yall-ticket"
 .set-yall-ticket() {
   local regex='^[0-9]+$'
   if [[ ! $1 =~ $regex ]]; then
-    echo "Error: Not a number" >&2
+    echo "ERROR: Invalid ticket number" >&2
     return
   fi
 
