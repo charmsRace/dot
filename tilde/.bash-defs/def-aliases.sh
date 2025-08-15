@@ -80,6 +80,8 @@ alias .dc="git dcode"
 alias .ssh-start="eval \"$(ssh-agent -s)\""
 alias .ssh-github=".ssh; ssh-add ${D_SSH}/github" # TODO: ?
 
+alias .start-ahk=".run-if-exists ${D_AHK}/run.sh"
+
 alias .kill-ahk="WMIC PROCESS where \"Name='AutoHotkey.exe'\" CALL Terminate"
 alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
 alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
