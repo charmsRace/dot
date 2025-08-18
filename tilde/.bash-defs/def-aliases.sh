@@ -55,17 +55,23 @@ alias .cd.="cd ${D_DOT}"
 alias .cd-defs="cd ${D_DEFS}"
 alias .cd-ahk="cd ${D_AHK}"
 alias .cd-vs="cd ${D_VS}"
-alias .cd-snippets="cd ${D_VS_SNIPPETS}"
-alias .cd-revelator="cd ${D_REVELATOR}"
+# alias .cd-snippets="cd ${D_VS_SNIPPETS}"
+
+alias .open.="start ${D_DOT}"
+alias .open-defs="start ${D_DEFS}"
+alias .open-ahk="start ${D_AHK}"
+alias .open-vs="start ${D_VS}"
 
 alias .code.="code ${D_DOT}/.vscode/dot.code-workspace"
 alias .code-defs="code ${D_DEFS}"
 alias .code-ahk="code ${D_AHK}/.vscode/ahk.code-workspace"
 alias .code-vs="code ${D_VS}"
-alias .code-snippets="code ${D_VS}/snippets-meta/snippets.code-workspace"
+# alias .code-snippets="code ${D_VS}/snippets-meta/snippets.code-workspace"
 
 alias .code-akasha="code ${AKASHA}"
 alias .code-aseprite="code ${AK_ASEPRITE}"
+
+alias .cd-revelator="cd ${D_REVELATOR}"
 alias .code-revelator="code ${D_REVELATOR}"
 
 .code() {
@@ -81,8 +87,9 @@ alias .ssh-start="eval \"$(ssh-agent -s)\""
 alias .ssh-github=".ssh; ssh-add ${D_SSH}/github" # TODO: ?
 
 alias .start-ahk=".run-if-exists ${D_AHK}/run.sh"
-
 alias .kill-ahk="WMIC PROCESS where \"Name='AutoHotkey.exe'\" CALL Terminate"
+alias .cycle-ahk=".kill-ahk; .start-ahk" # correct connective? quiet?
+
 alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
 alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
 
