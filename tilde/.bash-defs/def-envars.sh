@@ -27,4 +27,4 @@ declare AKASHA=${D_HOME}/.obsidian/akasha
 declare AK_ASEPRITE=${AKASHA}/aseprite
 declare AK_REVELATOR=${AKASHA}/revelator
 
-declare D_REVELATOR=${D_HOME}/godot/revelator
+declare D_REVELATOR=${D_HOME}/git/REVELATOR
