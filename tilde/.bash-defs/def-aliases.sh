@@ -94,7 +94,7 @@ alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
 alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
 
 # PGP
-alias decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
+alias .decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
 
 # Akasha
 alias @K="cd ${AKASHA}"
