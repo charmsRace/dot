@@ -587,6 +587,12 @@
   "diffEditor.renderSideBySide": true,
 
   /**
+   * # Terminal
+   */
+
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  /**
    * # Lua
    */
 

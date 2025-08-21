@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
 
-  "printWidth": 100,
+  "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
@@ -21,18 +21,22 @@
         "printWidth": 0
       }
     },
+
+    {
+      "files": [
+        "*.sql"
+      ],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+
     {
       "files": [
         "*.component.html"
       ],
       "options": {
         "parser": "angular"
-      }
-    },
-    {
-      "files": "*.sql",
-      "options": {
-        "tabWidth": 4
       }
     }
   ]
