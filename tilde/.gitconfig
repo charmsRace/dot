@@ -2,11 +2,11 @@
     name = Clarity Amaranthine
     email = clarity.amaranthine@gmail.com
 
-[credential]
-    helper = store
+# [credential]
+#     helper = store
 
-[credential "https://github.com"]
-    username = charmsRace
+# [credential "https://github.com"]
+#     username = charmsRace
 
 [init]
     defaultBranch = main

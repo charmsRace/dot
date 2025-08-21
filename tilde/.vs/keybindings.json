@@ -35,7 +35,7 @@
    * ...    2 :: toggleSplitEditorInGroup
    * ... ⇧  2 :: toggleSplitEditorInGroupLayout
    * ...    f :: toggleZenMode
-   * ... ⇧⎇ s :: toggleCenteredLayout
+   * ... ⇧  s :: toggleCenteredLayout
    * ... ⇧  q :: pinEditor
    * ... ⇧  w :: unpinEditor
    * ... ⇧⎇ ↑ :: moveActiveEditorGroupUp
@@ -116,7 +116,7 @@
     "command": "workbench.action.pinEditor"
   },
   {
-    "key": "shift+alt+q shift+alt+s", // NEW
+    "key": "shift+alt+q shift+s",
     "command": "workbench.action.toggleCenteredLayout",
     "when": "!isAuxiliaryWindowFocusedContext"
   },
@@ -808,6 +808,26 @@
     "key": "ctrl+alt+numpad0 ctrl+alt+numpad7",
     "command": "editor.foldLevel7",
     "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+numpad2",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "ctrl+numpad1",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+numpad3",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "ctrl+numpad4",
+    "command": "workbench.action.focusFourthEditorGroup"
+  },
+  {
+    "key": "ctrl+numpad5",
+    "command": "workbench.action.focusFifthEditorGroup"
   }
 ]
 
@@ -816,6 +836,18 @@
  *
  * - un/folding chords
  * - [⎈⇧⎇] {← →} format
+ */
+
+// all - "key": "[^"]*?"
+// chords - "key": "[^" ]+ [^" ]+x"
+// any modifiers - ctrl\+(\w+\+),
+// taken alt menu keys: [wertsdfgklcvbm]
+
+/**
+ * ctrl: ⎈
+ * shift: ⇧
+ * alt: ⎇
+ * meta: ◆
  */
 
 // TODO: regex to find relevant JSON lines without trailing comma

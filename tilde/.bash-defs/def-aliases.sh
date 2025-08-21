@@ -72,6 +72,7 @@ alias .code-akasha="code ${AKASHA}"
 alias .code-aseprite="code ${AK_ASEPRITE}"
 
 alias .cd-revelator="cd ${D_REVELATOR}"
+alias .open-revelator="start ${D_REVELATOR}"
 alias .code-revelator="code ${D_REVELATOR}"
 
 .code() {

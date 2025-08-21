@@ -104,7 +104,7 @@
    * Source Control
    */
   "scm.alwaysShowProviders": true,
-  "workbench.colorTheme": "Monokai",
+  // "workbench.colorTheme": "Monokai",
   "workbench.commandPalette.history": 500,
   "workbench.editor.closeOnFileDelete": false,
 
@@ -586,7 +586,10 @@
   "editor.foldingHighlight": false,
   "diffEditor.renderSideBySide": true,
 
-  // New
+  /**
+   * # Lua
+   */
+
   "Lua.diagnostics.globals": [
     "app",
     "Brush",
@@ -597,7 +600,45 @@
     "Rectangle",
     "SelectionMode",
     "Sprite"
-  ]
+  ],
+
+  /**
+   * # Theme
+   */
+
+  // "workbench.colorTheme": null,
+  "workbench.colorTheme": "Monokai",
+  // ↓ Need less italics
+  // "workbench.colorTheme": "Noctis Minimus"
+  // "workbench.colorTheme": "Noctis Obscuro"
+  // "workbench.colorTheme": "Noctis Uva",
+
+  /**
+   * # Copilot
+   */
+
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+
+  // TODO: path?
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.reviewSelection.enabled": false,
+
+  "github.copilot.advanced": {
+    // 1px: {
+    //   "enable": true,
+    //   "showInlineSuggestions": true,
+    //   "showStatusBar": true,
+    //   "showToolBar": true,
+    //   "showWelcomeMessage": false,
+    //   "showWelcomeMessageOnStartup": false,
+    //   "showWelcomeMessageOnNewFile": false
+    // }
+  }
 
   // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
 
@@ -616,4 +657,8 @@
   //   "editor.defaultFormatter": "jock.svg"
   // },
   // "editor.wordBasedSuggestions": "off"
+
+  /**
+   * THEME OPTIONS
+   */
 }
