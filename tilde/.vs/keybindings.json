@@ -31,10 +31,10 @@
    * ...    ↓ :: closeOtherEditors
    * ...    ← :: closeEditorsToTheLeft
    * ...    → :: closeEditorsToTheRight
-   * ...    ⭾ :: firstEditorInGroup
+   * ... ⇧  ⭾ :: firstEditorInGroup
    * ...    2 :: toggleSplitEditorInGroup
    * ... ⇧  2 :: toggleSplitEditorInGroupLayout
-   * ...    f :: toggleZenMode
+   * ... ⇧  f :: toggleZenMode
    * ... ⇧  s :: toggleCenteredLayout
    * ... ⇧  q :: pinEditor
    * ... ⇧  w :: unpinEditor
@@ -96,7 +96,7 @@
     "command": "workbench.action.closeEditorsToTheRight"
   },
   {
-    "key": "shift+alt+q tab",
+    "key": "shift+alt+q shift+tab",
     "command": "workbench.action.firstEditorInGroup"
   },
   {
@@ -108,7 +108,7 @@
     "command": "workbench.action.toggleSplitEditorInGroupLayout"
   },
   {
-    "key": "shift+alt+q f",
+    "key": "shift+alt+q shift+f",
     "command": "workbench.action.toggleZenMode"
   },
   {
@@ -828,6 +828,13 @@
   {
     "key": "ctrl+numpad5",
     "command": "workbench.action.focusFifthEditorGroup"
+  },
+
+  // NEW
+  {
+    "key": "shift+alt+\\",
+    "command": "editor.action.inlineSuggest.hide",
+    "when": "inlineEditIsVisible || inlineSuggestionVisible"
   }
 ]
 
