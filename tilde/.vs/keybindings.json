@@ -293,13 +293,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+down",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-
-  // Text manipulation
-  {
     "key": "ctrl+alt+j",
     "command": "editor.action.joinLines",
     "when": "editorTextFocus && !editorReadonly"
@@ -463,17 +456,22 @@
 
   {
     "key": "alt+q",
-    "command": "workbench.action.quickOpenView"
+    "command": "workbench.action.quickOpen"
+    // "command": "workbench.action.quickOpenView"
   },
   {
     "key": "alt+q",
-    "command": "workbench.action.quickOpenNavigateNextInViewPicker",
-    "when": "inQuickOpen && inViewsPicker"
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inQuickOpen && inFilesPicker"
+    // "command": "workbench.action.quickOpenNavigateNextInViewPicker",
+    // "when": "inQuickOpen && inViewsPicker"
   },
   {
     "key": "shift+alt+q",
-    "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
-    "when": "inQuickOpen && inViewsPicker"
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inQuickOpen && inFilesPicker"
+    // "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
+    // "when": "inQuickOpen && inViewsPicker"
   },
 
   /**
@@ -835,6 +833,35 @@
     "key": "shift+alt+\\",
     "command": "editor.action.inlineSuggest.hide",
     "when": "inlineEditIsVisible || inlineSuggestionVisible"
+  },
+
+  // these are ctrl+shift+{up,down}, can be re-used
+  {
+    "key": "shift+alt+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "-editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+
+  // doesn't work with ahk mouse Page{Up,Down}
+  {
+    "key": "shift+alt+pageup",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+pagedown",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
   }
 ]
 

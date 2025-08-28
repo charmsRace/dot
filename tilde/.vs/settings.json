@@ -644,7 +644,9 @@
     //   "showWelcomeMessageOnStartup": false,
     //   "showWelcomeMessageOnNewFile": false
     // }
-  }
+  },
+  "security.promptForLocalFileProtocolHandling": false,
+  "workbench.editor.splitInGroupLayout": "vertical"
 
   // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
 
