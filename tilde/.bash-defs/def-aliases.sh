@@ -96,6 +96,7 @@ alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like 
 
 # PGP
 alias .decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
+alias .decrypt-sw="cat ${CLIP} | gpg --decrypt > ${CLIP}"
 
 # Akasha
 alias @K="cd ${AKASHA}"
