@@ -5,8 +5,9 @@ declare SSH_EXAMPLE=${D_SSH}/example
 # Generate key
 ssh-keygen \
   -f ${SSH_EXAMPLE} \
-  -t ed25519 \
-  -C "ex@mple.com"
+  -t rsa \
+  -b 4096 \
+  -C "example@gmail.com"
 
 # Start `ssh-agent`
 eval $(ssh-agent -s)

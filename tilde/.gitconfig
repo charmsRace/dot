@@ -1,12 +1,19 @@
-[user]
-    name = Clarity Amaranthine
-    email = clarity.amaranthine@gmail.com
+# [user]
+    # name = clarity
 
 # [credential]
 #     helper = store
 
-# [credential "https://github.com"]
-#     username = charmsRace
+# (cf. [multi-credential guide](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e))
+
+[includeIf "gitdir:~/git/.ahk/"]
+    path = ~/git/charmsRace.gitconfig
+
+[includeIf "gitdir:~/git/dot/"]
+    path = ~/git/charmsRace.gitconfig
+
+[includeIf "gitdir:~/k/"]
+    path = ~/k/k.gitconfig
 
 [init]
     defaultBranch = main
@@ -33,6 +40,7 @@
     # TODO:
     # - print git root
     # - https://stackoverflow.com/q/4327708
+    whoami = config --get user.name
 
     ########
     # Run from directory
