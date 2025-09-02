@@ -646,7 +646,13 @@
     // }
   },
   "security.promptForLocalFileProtocolHandling": false,
-  "workbench.editor.splitInGroupLayout": "vertical"
+  "workbench.editor.splitInGroupLayout": "vertical",
+
+  // Svelte
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
 
   // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
 

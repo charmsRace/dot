@@ -293,6 +293,13 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+shift+down",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+
+  // Text manipulation
+  {
     "key": "ctrl+alt+j",
     "command": "editor.action.joinLines",
     "when": "editorTextFocus && !editorReadonly"
@@ -472,26 +479,6 @@
     "when": "inQuickOpen && inFilesPicker"
     // "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
     // "when": "inQuickOpen && inViewsPicker"
-  },
-
-  /**
-   * Editor sizing
-   */
-  {
-    "key": "ctrl+shift+alt+h",
-    "command": "workbench.action.decreaseViewWidth"
-  },
-  {
-    "key": "ctrl+shift+alt+j",
-    "command": "workbench.action.increaseViewHeight"
-  },
-  {
-    "key": "ctrl+shift+alt+k",
-    "command": "workbench.action.decreaseViewHeight"
-  },
-  {
-    "key": "ctrl+shift+alt+l",
-    "command": "workbench.action.increaseViewWidth"
   },
 
   /**
@@ -858,10 +845,32 @@
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
   },
+
+  /**
+   * Editor sizing
+   * - ijkl
+   */
   {
-    "key": "ctrl+shift+down",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
+    "key": "ctrl+shift+alt+j",
+    "command": "workbench.action.decreaseViewWidth"
+  },
+  {
+    "key": "ctrl+shift+alt+i",
+    "command": "workbench.action.increaseViewHeight"
+  },
+  {
+    "key": "ctrl+shift+alt+k",
+    "command": "workbench.action.decreaseViewHeight"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "workbench.action.increaseViewWidth"
+  },
+
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "-workbench.action.quickchat.toggle",
+    "when": "chatIsEnabled"
   }
 ]
 

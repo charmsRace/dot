@@ -75,6 +75,8 @@ alias .cd-revelator="cd ${D_REVELATOR}"
 alias .open-revelator="start ${D_REVELATOR}"
 alias .code-revelator="code ${D_REVELATOR}"
 
+alias .cdk="cd ${D_K}"
+
 .code() {
   code "$(ls ./.vscode/*.code-workspace | head -1)"
 }
@@ -95,11 +97,12 @@ alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
 alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
 
 # PGP
-alias .decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
-alias .decrypt-sw="cat ${CLIP} | gpg --decrypt > ${CLIP}"
+# alias .decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
+alias .decrypt="cat ${CLIP} | gpg --decrypt > ${CLIP}"
 
 # Akasha
 alias @K="cd ${AKASHA}"
+alias .treemap-akasha="~/WinDirStat/WinDirStat.exe \"0|C:\Users\clarity\obsidian\akasha\""
 
 # JS tools
 alias ts-node="npx ts-node"
