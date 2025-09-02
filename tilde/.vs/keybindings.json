@@ -871,6 +871,23 @@
     "key": "ctrl+shift+alt+l",
     "command": "-workbench.action.quickchat.toggle",
     "when": "chatIsEnabled"
+  },
+
+  // line manipulation
+  {
+    "key": "ctrl+alt+q",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
   }
 ]
 
