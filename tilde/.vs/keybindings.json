@@ -862,6 +862,23 @@
     "key": "ctrl+shift+down",
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
+  },
+
+  // NEW line manipulation
+  {
+    "key": "ctrl+alt+q",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
   }
 ]
 
