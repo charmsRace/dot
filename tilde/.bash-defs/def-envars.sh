@@ -28,3 +28,4 @@ declare AK_ASEPRITE=${AKASHA}/aseprite
 declare AK_REVELATOR=${AKASHA}/revelator
 
 declare D_REVELATOR=${D_HOME}/git/REVELATOR
+declare D_K=${D_HOME}/k
