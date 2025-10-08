@@ -640,6 +640,17 @@
   },
 
   // Comment stuff
+
+  {
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
+  },
+  {
+    "key": "alt+z",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
   {
     "key": "shift+alt+z",
     "command": "-rest-client.generate-codesnippet",
@@ -652,9 +663,9 @@
   },
   {
     "key": "shift+alt+z",
-    "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
+    "command": "editor.action.toggleWordWrap"
   },
+
   {
     "key": "ctrl+enter",
     "command": "-github.copilot.generate",
@@ -879,6 +890,11 @@
     "key": "ctrl+alt+e",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+x",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]
 
