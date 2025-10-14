@@ -7,6 +7,8 @@ export PATH=\
 :"${AKASHA}/aseprite/"\
 :"${D_HOME}/sunshine"
 
+# Godot?
+
 # :"${D_I2PD}"\
 # :"/c/Users/clarity/AppData/Local/Programs/Microsoft VS Code"
 

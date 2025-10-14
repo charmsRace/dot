@@ -73,7 +73,8 @@ alias .code-aseprite="code ${AK_ASEPRITE}"
 
 alias .cd-revelator="cd ${D_REVELATOR}"
 alias .open-revelator="start ${D_REVELATOR}"
-alias .code-revelator="code ${D_REVELATOR}"
+alias .code-revelator="code ${D_REVELATOR}/.vscode/REVELATOR.code-workspace"
+alias .godot-revelator="start ${D_REVELATOR}/project.godot"
 
 alias .cdk="cd ${D_K}"
 
@@ -87,7 +88,7 @@ alias .dc="git dcode"
 # alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 alias .ssh-start="eval \"$(ssh-agent -s)\""
-alias .ssh-github=".ssh; ssh-add ${D_SSH}/github" # TODO: ?
+alias .ssh-github=".ssh && ssh-add ${D_SSH}/github" # TODO: ?
 
 alias .start-ahk=".run-if-exists ${D_AHK}/run.sh"
 alias .kill-ahk="WMIC PROCESS where \"Name='AutoHotkey.exe'\" CALL Terminate"
@@ -103,6 +104,12 @@ alias .decrypt="cat ${CLIP} | gpg --decrypt > ${CLIP}"
 # Akasha
 alias @K="cd ${AKASHA}"
 alias .treemap-akasha="~/WinDirStat/WinDirStat.exe \"0|C:\Users\clarity\obsidian\akasha\""
+
+alias .cd-foolproof="cd ${FOOLPROOF}"
+alias .code-foolproof="code ${FOOLPROOF}/.vscode/FOOLPROOF.code-workspace"
+alias .obs-foolproof="start obsidian://open?vault=FOOLPROOF"
+alias .foolproof=".cd-foolproof && .code-foolproof && .obs-foolproof"
+alias .fp="yarn --cwd ${FOOLPROOF}/generator"
 
 # JS tools
 alias ts-node="npx ts-node"
