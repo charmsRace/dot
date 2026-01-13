@@ -42,6 +42,9 @@
    * ... ⇧⎇ ↓ :: moveActiveEditorGroupDown
    * ... ⇧⎇ ← :: moveActiveEditorGroupLeft
    * ... ⇧⎇ → :: moveActiveEditorGroupRight
+   *
+   * TODO: DESIDERATA
+   * - unpin AND close editor
    */
   {
     "key": "shift+alt+q q",
@@ -114,11 +117,6 @@
   {
     "key": "shift+alt+q shift+q",
     "command": "workbench.action.pinEditor"
-  },
-  {
-    "key": "shift+alt+q shift+s",
-    "command": "workbench.action.toggleCenteredLayout",
-    "when": "!isAuxiliaryWindowFocusedContext"
   },
   {
     "key": "shift+alt+q shift+w",
@@ -859,18 +857,22 @@
 
   /**
    * Editor sizing
-   * - ijkl
+   * - hjkl
+   * // - ijkl
    */
   {
-    "key": "ctrl+shift+alt+j",
+    "key": "ctrl+shift+alt+h",
+    // "key": "ctrl+shift+alt+j",
     "command": "workbench.action.decreaseViewWidth"
   },
   {
-    "key": "ctrl+shift+alt+i",
+    "key": "ctrl+shift+alt+j",
+    // "key": "ctrl+shift+alt+k",
     "command": "workbench.action.increaseViewHeight"
   },
   {
     "key": "ctrl+shift+alt+k",
+    // "key": "ctrl+shift+alt+i",
     "command": "workbench.action.decreaseViewHeight"
   },
   {
@@ -885,11 +887,11 @@
   },
 
   // line manipulation
-  {
-    "key": "ctrl+alt+q",
-    "command": "editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
-  },
+  // {
+  //   "key": "ctrl+alt+q",
+  //   "command": "editor.action.deleteLines",
+  //   "when": "textInputFocus && !editorReadonly"
+  // },
   {
     "key": "ctrl+alt+w",
     "command": "expandLineSelection",
@@ -904,8 +906,141 @@
     "key": "alt+x",
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
+  },
+
+  // NEW
+
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "nextBlankLine"
+    }
+  },
+  {
+    "key": "ctrl+shift+alt+a",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "prevBlankLine"
+    }
+  },
+
+  {
+    "key": "ctrl+shift+alt+w",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "nextBlankLine",
+      "select": true
+    }
+  },
+  {
+    "key": "ctrl+shift+alt+q",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "prevBlankLine",
+      "select": true
+    }
+  },
+
+  {
+    "key": "ctrl+shift+alt+x",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "prevBlankLine"
+          }
+        },
+        {
+          "command": "cursorMove",
+          "args": {
+            "to": "nextBlankLine",
+            "select": true
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "ctrl+shift+alt+z",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "editor.action.copyLinesDownAction",
+        "editor.action.addCommentLine",
+        "cursorUp"
+      ]
+    }
+  },
+  {
+    "key": "shift+alt+q shift+s",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+  },
+  {
+    "key": "shift+alt+q shift+alt+s",
+    "command": "workbench.action.toggleCenteredLayout"
+  },
+  {
+    "key": "ctrl+shift+alt+m",
+    "command": "editor.action.transformToLowercase"
+  },
+
+  // RECENTLY ADDED
+
+  {
+    "key": "ctrl+shift+alt+,",
+    "command": "editor.action.transformToLowercase"
+  },
+  {
+    "key": "ctrl+shift+alt+.",
+    "command": "editor.action.transformToUppercase"
+  },
+
+  {
+    "key": "ctrl+shift+alt+d",
+    "command": "editor.actions.findWithArgs",
+    "args": {
+      "searchString": "^diff .*?$",
+      "isRegex": true,
+      "matchWholeWord": false,
+      "isCaseSensitive": false
+    },
+    "when": "editorFocus"
+  },
+
+  {
+    "key": "ctrl+shift+alt+/",
+    "command": "editor.actions.findWithArgs",
+    "args": {
+      "searchString": "//\\?",
+      "isRegex": true,
+      "matchWholeWord": false,
+      "isCaseSensitive": false
+    },
+    "when": "editorFocus"
+  },
+
+  // END RECENTLY ADDED
+
+  {
+    "": "🐇" // trailing...
   }
 ]
+
+/**
+ * # DESIDERATA
+ *
+ * - {mods} + ([{ = open, newLineDown, close, newLineUp
+ */
 
 /**
  * # CHANGELOG

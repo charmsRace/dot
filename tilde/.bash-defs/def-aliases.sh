@@ -49,6 +49,7 @@ alias isup="ping 8.8.8.8"
 # navigation shortcuts
 alias .cd-="cd - > /dev/null"
 alias .cg="cd !$:t:r" # e.g. `git clone ...repo.git && .cg
+alias .open="start ."
 
 # dotfile tools
 alias .cd.="cd ${D_DOT}"
@@ -67,6 +68,7 @@ alias .code-defs="code ${D_DEFS}"
 alias .code-ahk="code ${D_AHK}/.vscode/ahk.code-workspace"
 alias .code-vs="code ${D_VS}"
 # alias .code-snippets="code ${D_VS}/snippets-meta/snippets.code-workspace"
+alias .code-visx="code ${D_GIT}/visx"
 
 alias .code-akasha="code ${AKASHA}"
 alias .code-aseprite="code ${AK_ASEPRITE}"
