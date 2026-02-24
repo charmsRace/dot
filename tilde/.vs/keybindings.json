@@ -1018,6 +1018,18 @@
   },
 
   {
+    "key": "ctrl+shift+alt+p",
+    "command": "editor.actions.findWithArgs",
+    "args": {
+      "searchString": "^ *prettyPrint\\(",
+      "isRegex": true,
+      "matchWholeWord": false,
+      "isCaseSensitive": false
+    },
+    "when": "editorFocus"
+  },
+
+  {
     "key": "ctrl+shift+alt+/",
     "command": "editor.actions.findWithArgs",
     "args": {

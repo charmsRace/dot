@@ -43,6 +43,7 @@ alias .g="git"
 alias g="git"
 alias gi="git"
 alias gt="git"
+alias it="git"
 
 alias isup="ping 8.8.8.8"
 
