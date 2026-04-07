@@ -49,13 +49,13 @@
     ########
     # Branch-specific stuff
     ########
-    chy = checkout yall-SD-5275
-    dy = diff -w yall-SD-5275..
-    my = merge yall-SD-5275
-    chrb = checkout RB_1_1_10_0
-    mrb = merge RB_1_1_10_0
-    chrc = checkout RB_1_1_0_0
-    mrc = merge RB_1_1_0_0
+    # chy = checkout yall-SD-5275
+    # dy = diff -w yall-SD-5275..
+    # my = merge yall-SD-5275
+    # chrb = checkout RB_1_1_10_0
+    # mrb = merge RB_1_1_10_0
+    # chrc = checkout RB_1_1_0_0
+    # mrc = merge RB_1_1_0_0
     ########
     recommit = commit --amend -m
     uncommit = reset --soft @~
@@ -97,6 +97,8 @@
     ccount = rev-list @ --count # count total commits
     ########
     cl = clone -c core.longpaths=true
+    ########
+    credit = blame
     ########
     d = diff -w
     dbranch = diff -w master...@
