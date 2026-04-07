@@ -564,6 +564,9 @@
     // Spaces inside code span elements (`no-space-in-code`)
     "MD038": false,
 
+    // first-line-heading/first-line-h1
+    "MD041": false,
+
     // Allow link text like 'link' (`descriptive-link-text`)
     "MD059": false
   },
@@ -679,6 +682,8 @@
     "ρ": true
   },
 
+  "files.hotExit": "onExitAndWindowClose",
+  "editor.accessibilitySupport": "off",
   "": "🐇"
 
   // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
