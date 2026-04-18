@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# echo "index.sh entered"
 
 declare -a SOURCES=( \
   envars \ # ensure this comes first
@@ -11,6 +10,7 @@ declare -a SOURCES=( \
   prompt \
   scripts \
   symlinks \
+  # roost # outdated
 )
 
 declare FILE_NAME

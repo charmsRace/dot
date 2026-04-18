@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# echo "def-path.sh entered"
 
 export PATH=\
-:${PATH}\
-:${D_BIN}\
+:"${PATH}"\
+:"${D_BIN}"\
 :"${AKASHA}/aseprite/"\
 :"${D_HOME}/sunshine"
 

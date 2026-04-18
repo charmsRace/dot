@@ -6,5 +6,15 @@
 
 def-private.sh
 
+*.private.gitconfig
+!*.example.private.gitconfig
+
+*.id.gitconfig
+!*.example.id.gitconfig
+
+tilde/.gitconfig/id/test.sh
+tilde/.gitconfig/id/*.gitconfig
+!tilde/.gitconfig/id/*.example.gitconfig
+
 tilde/.bin/*
 !tilde/.bin/index.md

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# echo "def-utils.sh entered"
 
 .run-if-exists() {
   [[ -f ${1} ]] && . ${1}

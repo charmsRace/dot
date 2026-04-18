@@ -119,6 +119,11 @@
     "command": "workbench.action.pinEditor"
   },
   {
+    "key": "shift+alt+q shift+s",
+    "command": "workbench.action.toggleCenteredLayout",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
     "key": "shift+alt+q shift+w",
     "command": "workbench.action.unpinEditor"
   },
@@ -887,11 +892,11 @@
   },
 
   // line manipulation
-  // {
-  //   "key": "ctrl+alt+q",
-  //   "command": "editor.action.deleteLines",
-  //   "when": "textInputFocus && !editorReadonly"
-  // },
+  {
+    "key": "ctrl+alt+q",
+    "command": "editor.action.deleteLines", //?
+    "when": "textInputFocus && !editorReadonly"
+  },
   {
     "key": "ctrl+alt+w",
     "command": "expandLineSelection",
@@ -1043,8 +1048,29 @@
 
   // END RECENTLY ADDED
 
+  // remap extensions because clashing
+  // {
+  //   "key": "ctrl+shift+x",
+  //   "command": "-workbench.view.extensions",
+  //   "when": "viewContainer.workbench.view.extensions.enabled"
+  // },
+  // {
+  //   "key": "ctrl+shift+alt+x",
+  //   "command": "workbench.view.extensions"
+  // },
+
+  // Claude Code
+  // interesting search to create this...
+  // `@command:claude-vscode.editor.openLast +when:!config.claudeCode.useTerminal`
+  // TODO: created by `vscode://` protocol??
   {
-    "": "🐇" // trailing...
+    "key": "ctrl+shift+alt+;",
+    "command": "claude-vscode.editor.openLast",
+    "when": "!config.claudeCode.useTerminal"
+  },
+
+  {
+    "": "🐇" // trailing commas for all!
   }
 ]
 

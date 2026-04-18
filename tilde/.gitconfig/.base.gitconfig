@@ -1,19 +1,13 @@
 # [user]
-    # name = clarity
+#     name = clair
 
-# [credential]
-#     helper = store
+# at ~/.gitconfig:
+# [include]
+#     path = ~/git/dot/tilde/.gitconfig
 
 # (cf. [multi-credential guide](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e))
-
-[includeIf "gitdir:~/git/.ahk/"]
-    path = ~/git/charmsRace.gitconfig
-
-[includeIf "gitdir:~/git/dot/"]
-    path = ~/git/charmsRace.gitconfig
-
-[includeIf "gitdir:~/k/"]
-    path = ~/k/k.gitconfig
+[include]
+    path = ~/git/dot/tilde/.private.gitconfig
 
 [init]
     defaultBranch = main
@@ -41,21 +35,16 @@
     # - print git root
     # - https://stackoverflow.com/q/4327708
     whoami = config --get user.name
+    idtest = !bash ~/git/dot/tilde/.gitconfig/id/test.sh
 
     ########
     # Run from directory
-    # aaa = !git -C ${D_STADIUM}
+    # aaa = !git -C ${DIR}
 
     ########
-    # Branch-specific stuff
-    ########
-    # chy = checkout yall-SD-5275
-    # dy = diff -w yall-SD-5275..
-    # my = merge yall-SD-5275
-    # chrb = checkout RB_1_1_10_0
-    # mrb = merge RB_1_1_10_0
-    # chrc = checkout RB_1_1_0_0
-    # mrc = merge RB_1_1_0_0
+    # Branch-specific
+    # mrb = merge release
+    # chrb = checkout release
     ########
     recommit = commit --amend -m
     uncommit = reset --soft @~

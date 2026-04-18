@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# echo "def-aliases.sh entered"
+
+# J
+alias j='~/j/J9.6/bin/jconsole.exe'
 
 # shortcuts to quickly edit configuration files
 alias .edit-bashrc="vim ${D_HOME}/.bashrc"
@@ -27,13 +29,6 @@ alias ...="cd ../.."
 alias lsd="ls -aghpr --group-directories-first"
 alias lst="ls -aghpt"
 alias ..l="cd ..; ls -agGhp"
-
-alias tree-raw="npx @structure-codes/cli"
-alias tree="tree-raw | sed -E 's/│  /│ /g' -"
-_treews() {
-  tree-raw | sed -E 's/│  /│ /g; s/[(└─)(─ )(├─)(│ )]/  /g; s/ {4}/  /g; s/^ {4}//g'
-}
-alias tree-ws="_treews" # '-' disallowed in function names
 
 alias tailf="clear && tail -fn +1"
 alias tailw="clear && tail -fn +1 \"$(ls -t | head -n1)\""
@@ -78,6 +73,12 @@ alias .cd-revelator="cd ${D_REVELATOR}"
 alias .open-revelator="start ${D_REVELATOR}"
 alias .code-revelator="code ${D_REVELATOR}/.vscode/REVELATOR.code-workspace"
 alias .godot-revelator="start ${D_REVELATOR}/project.godot"
+alias .revelator=".cd-revelator && .code-revelator && .godot-revelator"
+
+alias .cd-aletheia="cd ${D_ALETHEIA}"
+alias .open-aletheia="start ${D_ALETHEIA}"
+alias .code-aletheia="code ${D_ALETHEIA}/.vscode/aletheia.code-workspace"
+alias .aletheia=".cd-aletheia && .code-aletheia"
 
 alias .cdk="cd ${D_K}"
 
@@ -91,7 +92,8 @@ alias .dc="git dcode"
 # alias .cp-vs="cp -r ${D_VS}/{css,snippets,{keybindings,settings}.json} ${D_SOURCE}/.vs"
 
 alias .ssh-start="eval \"$(ssh-agent -s)\""
-alias .ssh-github=".ssh && ssh-add ${D_SSH}/github" # TODO: ?
+alias .ssh-github=".ssh-start && ssh-add ${D_SSH}/github" # TODO: ?
+alias .ssh-k=".ssh-start && ssh-add ${D_SSH}/?????" # TODO: ?
 
 alias .start-ahk=".run-if-exists ${D_AHK}/run.sh"
 alias .kill-ahk="WMIC PROCESS where \"Name='AutoHotkey.exe'\" CALL Terminate"
@@ -152,11 +154,15 @@ alias .set-yall=".set-yall-ticket"
   .run-ahk
 }
 
-# Unused
+# Unused / unsorted
 # alias python2="winpty /c/Python27/python.exe"
 # alias py2=python2
 # alias py3=python3
 # alias protocol="code ${D_GIT}/protocol_1/protocol.txt"
-# alias .net="dotnet"
+alias .net="dotnet"
 # alias .tg=".net run --"
 # alias .code-tg="code ${AKASHA}/revelator/Tropogram/.vscode/tropogram.code-workspace"
+
+# YESTERDAVIARY 🥚🕙🐦
+alias .roost="openclaw"
+alias .daemon="openclaw gateway"

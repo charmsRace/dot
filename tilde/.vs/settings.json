@@ -395,11 +395,7 @@
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "[java]": {
-    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
-    // "editor.detectIndentation": false,
-    // "editor.insertSpaces": false,
-  },
+  // "[java]": {},
 
   "[javascript]": {
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -630,17 +626,6 @@
   ],
 
   /**
-   * # Theme
-   */
-
-  // "workbench.colorTheme": null,
-  "workbench.colorTheme": "Monokai",
-  // ↓ Need less italics
-  // "workbench.colorTheme": "Noctis Minimus"
-  // "workbench.colorTheme": "Noctis Obscuro"
-  // "workbench.colorTheme": "Noctis Uva",
-
-  /**
    * # Copilot
    */
 
@@ -669,42 +654,67 @@
   "security.promptForLocalFileProtocolHandling": false,
   "workbench.editor.splitInGroupLayout": "vertical",
 
+  // -------------------------
+  // MORE RECENT & UNORGANIZED
+  // -------------------------
+
   // Svelte
   "svelte.enable-ts-plugin": true,
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
 
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "dotnet.codeLens.enableReferencesCodeLens": false,
+
+  "claudeCode.preferredLocation": "panel",
+  // "claudeCode.preferredLocation": "sidebar",
+
+  "window.customMenuBarAltFocus": false,
+  "files.hotExit": "onExitAndWindowClose",
+
+  /** Theme */
+  "workbench.colorTheme": "Monokai",
+  // "workbench.colorTheme": null,
+  // ↓ Need less italics
+  // "workbench.colorTheme": "Noctis Minimus"
+  // "workbench.colorTheme": "Noctis Obscuro"
+  // "workbench.colorTheme": "Noctis Uva",
+
   "editor.unicodeHighlight.allowedCharacters": {
     "⍳": true,
     "ι": true,
     "⍴": true,
-    "ρ": true
+    "ρ": true,
+    "𝕮": true,
+    "𝕬": true
   },
 
-  "files.hotExit": "onExitAndWindowClose",
-  "editor.accessibilitySupport": "off",
-  "": "🐇"
+  "editor.accessibilitySupport": "off", // TODO: ?
+  "extensions.autoCheckUpdates": true,
+  "extensions.autoUpdate": false,
 
-  // "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
-
-  // // New
-  // "csharp.inlayHints.enableInlayHintsForTypes": true,
-  // "dotnet.codeLens.enableReferencesCodeLens": false,
-  // "[csharp]": {
-  //   "editor.defaultFormatter": "ms-dotnettools.csharp"
-  // },
-  // "terminal.integrated.defaultProfile.windows": "Git Bash",
-  // "godotTools.editorPath.godot4": "\"C:\\Users\\clarity\\godot\\Godot_v4.3-stable_win64.exe\"",
-  // "[gdscript]": {
-  //   "editor.defaultFormatter": "geequlim.godot-tools"
-  // },
-  // "[svg]": {
-  //   "editor.defaultFormatter": "jock.svg"
-  // },
-  // "editor.wordBasedSuggestions": "off"
-
-  /**
-   * THEME OPTIONS
-   */
+  "": "🐇" // trailing commas for all!
 }
+
+// "aseprite-debugger.asepriteExe": "C:\\users\\clarity\\.obsidian\\akasha\\aseprite\\Aseprite.exe",
+
+// // New
+// "csharp.inlayHints.enableInlayHintsForTypes": true,
+// "dotnet.codeLens.enableReferencesCodeLens": false,
+// "[csharp]": {
+//   "editor.defaultFormatter": "ms-dotnettools.csharp"
+// },
+// "terminal.integrated.defaultProfile.windows": "Git Bash",
+// "godotTools.editorPath.godot4": "\"C:\\Users\\clarity\\godot\\Godot_v4.3-stable_win64.exe\"",
+// "[gdscript]": {
+//   "editor.defaultFormatter": "geequlim.godot-tools"
+// },
+// "[svg]": {
+//   "editor.defaultFormatter": "jock.svg"
+// },
+// "editor.wordBasedSuggestions": "off"
+
+/**
+ * THEME OPTIONS
+ */

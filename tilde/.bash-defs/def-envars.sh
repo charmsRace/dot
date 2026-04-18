@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# echo "def-envars.sh entered"
 
 ### Constants ###
 declare DOTFILE_HOSTNAME=REPLACEME # CONTINGENT
@@ -14,6 +13,7 @@ declare CLIP=/dev/clipboard
 # declare D_DEFS=${D_HOME}/.bash-defs # already in ~/.bashrc
 declare D_SSH=${D_HOME}/.ssh
 declare D_BIN=${D_HOME}/.bin
+# declare D_BIN=${D_DEFS}/.bin ?
 declare D_I2PD=${D_HOME}/.i2pd
 declare D_GIT=${D_HOME}/git
 declare D_VIM=${D_HOME}/.vim
@@ -26,6 +26,8 @@ declare D_TILDE=${D_DOT}/tilde
 declare AKASHA=${D_HOME}/.obsidian/akasha
 declare AK_ASEPRITE=${AKASHA}/aseprite
 declare AK_REVELATOR=${AKASHA}/revelator
+# declare FOOLPROOF=${D_HOME}/obsidian/FOOLPROOF
 
 declare D_REVELATOR=${D_HOME}/git/REVELATOR
+declare D_ALETHEIA=${D_HOME}/git/aletheia
 declare D_K=${D_HOME}/k
