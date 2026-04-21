@@ -3,11 +3,11 @@
 
 # at ~/.gitconfig:
 # [include]
-#     path = ~/git/dot/tilde/.gitconfig
+#     path = ~/git/dot/tilde/.gitconfig/.base.gitconfig
 
 # (cf. [multi-credential guide](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e))
 [include]
-    path = ~/git/dot/tilde/.private.gitconfig
+    path = ~/git/dot/tilde/.gitconfig/.private.gitconfig
 
 [init]
     defaultBranch = main
