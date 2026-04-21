@@ -863,21 +863,18 @@
   /**
    * Editor sizing
    * - hjkl
-   * // - ijkl
+   * // - or ijkl
    */
   {
-    "key": "ctrl+shift+alt+h",
-    // "key": "ctrl+shift+alt+j",
+    "key": "ctrl+shift+alt+h", // or j
     "command": "workbench.action.decreaseViewWidth"
   },
   {
-    "key": "ctrl+shift+alt+j",
-    // "key": "ctrl+shift+alt+k",
+    "key": "ctrl+shift+alt+j", // or k
     "command": "workbench.action.increaseViewHeight"
   },
   {
-    "key": "ctrl+shift+alt+k",
-    // "key": "ctrl+shift+alt+i",
+    "key": "ctrl+shift+alt+k", // or i
     "command": "workbench.action.decreaseViewHeight"
   },
   {

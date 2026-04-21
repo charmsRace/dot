@@ -28,6 +28,6 @@ declare AK_ASEPRITE=${AKASHA}/aseprite
 declare AK_REVELATOR=${AKASHA}/revelator
 # declare FOOLPROOF=${D_HOME}/obsidian/FOOLPROOF
 
-declare D_REVELATOR=${D_HOME}/git/REVELATOR
+declare D_REVELATOR=${D_HOME}/git/REVELATOR // TODO: ?
 declare D_ALETHEIA=${D_HOME}/git/aletheia
 declare D_K=${D_HOME}/k

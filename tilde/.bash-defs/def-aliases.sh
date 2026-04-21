@@ -103,7 +103,7 @@ alias .kill-java="WMIC PROCESS where \"Name like 'java%'\" CALL Terminate"
 alias .kill-gradle="WMIC PROCESS where \"Name like 'java%' AND CommandLine like '%GradleDaemon%'\" CALL Terminate"
 
 # PGP
-# alias .decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
+alias .decrypt-clipboard="cat ${CLIP} | gpg --decrypt"
 alias .decrypt="cat ${CLIP} | gpg --decrypt > ${CLIP}"
 
 # Akasha
@@ -163,6 +163,13 @@ alias .net="dotnet"
 # alias .tg=".net run --"
 # alias .code-tg="code ${AKASHA}/revelator/Tropogram/.vscode/tropogram.code-workspace"
 
-# YESTERDAVIARY 🥚🕙🐦
-alias .roost="openclaw"
-alias .daemon="openclaw gateway"
+# quickWit's YESTERDAVIARY
+alias .code-qwk="code ~/.openclaw"
+alias qwk-roost="openclaw"
+alias qwk="openclaw gateway"
+alias qwk-stop="qwk stop"
+alias qwk-start="qwk start"
+alias qwk-restart="qwk restart"
+alias qwk-cycle="qwk-stop && qwk-start"
+alias qwk-dash="qwk-roost dashboard"
+alias qwk-deploy="qwk-cycle && qwk-roost dashboard"
